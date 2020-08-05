@@ -1,0 +1,73 @@
+[{
+    "type": "ENTER",
+    "index": ["SUB", 0, "SUB", 0, "SUB"]
+}, {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 1,
+    "content": {
+        "name": "brake",
+        "time": 1,
+        "repeat": false,
+        "frames": [1]
+    }
+}, {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 6,
+    "content": {
+        "name": "levelUpJump",
+        "time": 0.0666,
+        "repeat": true,
+        "frames": [9]
+    }
+}, {
+    "type": "EXIT",
+    "count": 4
+}, {
+    "type": "ENTER",
+    "index": [1, "SUB"]
+}, {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 1,
+    "content": {
+        "name": "levelUpPreJump",
+        "time": 0.1,
+        "repeat": true,
+        "frames": [0, 1, 2, 3]
+    }
+}, {
+    "type": "EXIT",
+    "count": 2
+}, {
+    "type": "ENTER",
+    "index": [2, "SUB"]
+}, {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 1,
+    "content": {
+        "name": "levelUpPre",
+        "time": 0.033,
+        "repeat": true,
+        "dirFrames": [
+            [5, 4, 3, 2, 1, 0],
+            [0, 5, 4, 3, 2, 1],
+            [1, 0, 5, 4, 3, 2],
+            [2, 1, 0, 5, 4, 3],
+            [3, 2, 1, 0, 5, 4],
+            [4, 3, 2, 1, 0, 5]
+        ]
+    }
+}, {
+    "type": "EXIT",
+    "count": 2
+}, {
+    "type": "ENTER",
+    "index": [4, "SUB"]
+}, {
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+        "name": "levelUpStand",
+        "time": 0.1,
+        "repeat": false,
+        "frames": [2]
+    }
+}]
