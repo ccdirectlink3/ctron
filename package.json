@@ -1,0 +1,28 @@
+{
+    "name": "ctron",
+    "version": "1.0.0",
+    "description": "Playable Emilie mod",
+    "main": "index.js",
+    "scripts": {
+        "format": "npm run minify-json && npm run json-beautify && npm run js-beautify",
+        "minify-json": "minify-json ./",
+        "js-beautify": "js-beautify -js -q -r -f ./**/*.js",
+        "json-beautify": "js-beautify -js -r -f ./**/*.{json,patch}"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CCDirectLink/emilie.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/CCDirectLink/emilie/issues"
+    },
+    "homepage": "https://github.com/CCDirectLink/emilie#readme",
+    "devDependencies": {
+        "minify-json": "^1.0.0"
+    },
+    "dependencies": {
+        "js-beautify": "^1.10.2"
+    }
+}
