@@ -1,0 +1,44 @@
+[{
+    "type": "SET_KEY",
+    "index": "special1",
+    "content": {
+        "animation": {
+            "frames": [0],
+            "name": "default",
+            "repeat": true,
+            "sheet": {
+                "height": 24,
+                "offY": 120,
+                "src": "media/entity/balls/default.png",
+                "width": 24
+            },
+            "time": 0.05
+        },
+        "attack": {
+            "damageFactor": 3,
+            "element": "NEUTRAL",
+            "guardable": "",
+            "hints": ["CHARGED"],
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "spFactor": 0,
+            "type": "HEAVY"
+        },
+        "behaviors": [],
+        "effectKeys": {
+            "air": "steelAir",
+            "bounce": "steelBounce",
+            "trail": "steelTrail",
+            "wall": "steelWall"
+        },
+        "effects": "ball-special",
+        "maxBounce": 3,
+        "multiHit": true,
+        "noLightGlow": false,
+        "speed": 600,
+        "timeBoni": null,
+        "timer": 1.5,
+        "trail": true,
+        "type": "BALL"
+    }
+}]

@@ -1,0 +1,117 @@
+[{
+    "type": "SET_KEY",
+    "index": "waveDashBoom",
+    "content": {
+        "action": [{
+            "focusType": "SELF",
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "FASTEST",
+            "transition": "EASE_OUT",
+            "type": "FOCUS_CAMERA",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 1.25
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "waveDashPreBoom",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "target": "SELF",
+            "target2": "PROXY_OWNER",
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "time": 0.4,
+            "type": "WAIT"
+        }, {
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "type": "RESET_CAMERA",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0.4,
+            "effect": {
+                "name": "waveDashBoom",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "element": "WAVE",
+                "fly": "MASSIVE++",
+                "guardable": "",
+                "limiter": "",
+                "reverse": false,
+                "skillBonus": "",
+                "status": 1,
+                "type": "MASSIVE"
+            },
+            "centralAngle": 1,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": true,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 112,
+            "rectangular": false,
+            "repeat": false,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 24
+        }, {
+            "time": 0.5,
+            "type": "WAIT"
+        }],
+        "breakType": "NEVER",
+        "config": {
+            "collType": "IGNORE"
+        },
+        "copyOwnerAnims": false,
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 16
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "TARGET",
+        "type": "GENERIC"
+    }
+}]

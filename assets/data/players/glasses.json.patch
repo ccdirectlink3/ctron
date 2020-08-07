@@ -1,0 +1,4 @@
+[{
+    "type": "INCLUDE",
+    "src": "patches/data/players/ctron/player.patch.json"
+}]

@@ -1,0 +1,24 @@
+[{
+    "type": "ENTER",
+    "index": ["defaultNeutral", "attack"]
+}, {
+    "type": "SET_KEY",
+    "index": "damageFactor",
+    "content": 0.7
+}, {
+    "type": "SET_KEY",
+    "index": "spFactor",
+    "content": 1.2
+}, {
+    "type": "EXIT"
+}, {
+    "type": "ENTER",
+    "index": ["behaviors", 0]
+}, {
+    "type": "SET_KEY",
+    "index": "steerDegree",
+    "content": 0.6
+}, {
+    "type": "EXIT",
+    "count": 3
+}]

@@ -1,0 +1,53 @@
+[{
+    "type": "SET_KEY",
+    "index": "laserNeutral",
+    "content": {
+        "animation": {
+            "frames": [0, 1, 2, 3, 4, 3, 2, 1],
+            "name": "default",
+            "renderMode": "lighter",
+            "repeat": true,
+            "sheet": {
+                "height": 20,
+                "offX": 0,
+                "offY": 105,
+                "src": "media/entity/balls/default3.png",
+                "width": 13
+            },
+            "time": 0.125
+        },
+        "attack": {
+            "damageFactor": 0.27,
+            "element": "NEUTRAL",
+            "guardable": "",
+            "limiter": "",
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "spFactor": 0,
+            "status": 0,
+            "type": "MEDIUM"
+        },
+        "behaviors": [{
+            "adjustTime": 0.2,
+            "steerDegree": 0.1,
+            "type": "FOLLOW_TARGET"
+        }],
+        "effect": "ar",
+        "effects": "ball",
+        "light": "XL",
+        "maxBounce": 0,
+        "maxBounds": 0,
+        "multiHit": true,
+        "noLightGlow": true,
+        "size": {
+            "x": 8,
+            "y": 8,
+            "z": 8
+        },
+        "speed": 400,
+        "timeBoni": null,
+        "timer": 0.8,
+        "trail": false,
+        "type": "BALL"
+    }
+}]

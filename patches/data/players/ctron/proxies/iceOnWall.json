@@ -1,0 +1,119 @@
+[{
+    "type": "SET_KEY",
+    "index": "iceOnWall",
+    "content": {
+        "action": [{
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "wallAppear",
+                "sheet": "specials.icicles"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": -1,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "type": "SET_SPEED",
+            "value": 0
+        }, {
+            "time": 1,
+            "type": "WAIT"
+        }, {
+            "ignoreCurrentTarget": false,
+            "prevHitBehavior": "NONE",
+            "searchType": "IN_VIEW",
+            "type": "SET_CLOSE_TEMP_TARGET"
+        }, {
+            "actionDetached": true,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "wallExplode",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": -1,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 0.3,
+            "circularArea": false,
+            "clockwise": true,
+            "count": 2,
+            "delay": 0,
+            "duration": 0,
+            "flipLeftFace": 8,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 12
+            },
+            "proxy": "magicMissibleIce",
+            "random": false,
+            "repeat": false,
+            "startDist": 12,
+            "startDistCollide": "CLOSER",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }],
+        "breakType": "COMBATANT",
+        "config": {
+            "collType": "NONE",
+            "zGravityFactor": 0
+        },
+        "copyOwnerAnims": false,
+        "faceAnims": {
+            "dirs": "1",
+            "faceRotate": true,
+            "flipX": [0],
+            "frames": [0],
+            "name": "default",
+            "pivot": {
+                "x": 24,
+                "y": 36
+            },
+            "shapeType": "Y_FLAT",
+            "sheet": {
+                "height": 40,
+                "offX": 208,
+                "offY": 16,
+                "src": "media/entity/effects/icicles.png",
+                "width": 48
+            },
+            "tileOffsets": [0],
+            "time": 1
+        },
+        "group": "",
+        "hp": 0,
+        "invisible": true,
+        "size": {
+            "x": 8,
+            "y": 8,
+            "z": 8
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "NONE",
+        "type": "GENERIC"
+    }
+}]

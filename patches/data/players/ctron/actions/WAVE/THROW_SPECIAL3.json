@@ -1,0 +1,255 @@
+[{
+    "type": "SET_KEY",
+    "index": "THROW_SPECIAL3",
+    "content": {
+        "description": {
+            "de_DE": "<<A<<[CHANGED 2017/12/14]",
+            "en_US": "Siphon HP from the enemies and trade it for a huge controllable wave beam that drains your HP. Causes \\c[3]Mark\\c[0].",
+            "ja_JP": "敵からHPを吸い取った後、そのHPを消費して極太の波動光線を放射する。光線は操作可能。敵を\\c[3]マーク\\c[0]状態にする。<<A<<[CHANGED 2017/12/14]",
+            "ko_KR": "적의 HP를 뽑아내 조종 가능하나 플레이어의 HP를 소모하는 거대 파동 빔을 생성합니다. \\c[3]표적\\c[0] 상태로 만듭니다.<<C<<Does 'wave beam that drains you HP' means giving me HP from the enemy I drained from?<<A<<[CHANGED 2017/12/13]",
+            "langUid": 268,
+            "zh_CN": "哔哔哔哔。从敌人身上吸取HP，随后消耗HP放出可控的巨型光波。造成\\c[3]标记\\c[0]效果。<<A<<[CHANGED 2017/12/14]"
+        },
+        "name": {
+            "de_DE": "<<A<<[CHANGED 2017/12/14]",
+            "en_US": "Wave Motion Beam",
+            "ja_JP": "ウェーブビーム<<A<<[CHANGED 2017/11/27]",
+            "ko_KR": "파동 모션 빔<<A<<[CHANGED 2017/11/20]",
+            "langUid": 267,
+            "zh_CN": "动感光波<<A<<[CHANGED 2017/12/12]"
+        },
+        "steps": [{
+            "blockData": {
+                "action": -1,
+                "dash": 0,
+                "move": -1,
+                "reaim": -1
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "anim": "special",
+            "followUp": "specialLoop",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 80
+        }, {
+            "type": "SET_HIT_STABLE",
+            "value": "MASSIVE"
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "stopBeforeEdge": false,
+            "time": 0.1,
+            "type": "MOVE_TO_DIR"
+        }, {
+            "name": "cannonReady",
+            "type": "SET_ATTRIB_BOOL",
+            "value": false
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 0,
+            "circularArea": false,
+            "clockwise": false,
+            "count": 1,
+            "delay": 0,
+            "duration": 0,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 12
+            },
+            "proxy": "waveAbsorbSource",
+            "random": false,
+            "repeat": false,
+            "startDist": 12,
+            "startDistCollide": "CLOSER",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "condition": "entity.attrib.cannonReady >= 1",
+            "type": "WAIT_UNTIL"
+        }, {
+            "focusType": "SELF",
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "FAST",
+            "transition": "EASE_OUT",
+            "type": "FOCUS_CAMERA",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 1.25
+        }, {
+            "condition": "entity.attrib.cannonReady >= 2",
+            "type": "WAIT_UNTIL"
+        }, {
+            "factor": 0.05,
+            "inversAccelerate": true,
+            "keepEntityStatic": false,
+            "time": 0,
+            "type": "ADD_SLOW_MOTION"
+        }, {
+            "anim": "startCharge",
+            "followUp": "charge",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "focusType": "SELF",
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "FASTEST",
+            "transition": "EASE_OUT",
+            "type": "FOCUS_CAMERA",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 1.5
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "waveCannonCharge",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": true,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "time": 0.6,
+            "type": "WAIT"
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "duration": 0.2,
+            "fadeIn": 0,
+            "fadeOut": 0.2,
+            "type": "SET_ZOOM_BLUR",
+            "zoomType": "LIGHT"
+        }, {
+            "speed": "FAST",
+            "transition": "EASE_OUT",
+            "type": "RESET_CAMERA",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "anim": "special",
+            "followUp": "specialLoop",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "waveCannonShoot",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": true,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 12
+            },
+            "rotOffset": {
+                "x": 0,
+                "y": -24
+            },
+            "rotateFace": -1,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 0,
+            "circularArea": false,
+            "clockwise": false,
+            "count": 1,
+            "delay": 0,
+            "duration": 0.1,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 12
+            },
+            "proxy": "waveCannon",
+            "random": false,
+            "repeat": true,
+            "startDist": 32,
+            "startDistCollide": "CLOSER",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "attribName": "startHp",
+            "changeType": "set",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": {
+                "varName": "entity.hpFactor"
+            }
+        }, {
+            "name": "loop",
+            "type": "LABEL"
+        }, {
+            "time": 0.2,
+            "type": "PLAYER_ADJUST_FACE"
+        }, {
+            "condition": "entity.hpFactor > 0.1 && (entity.attrib.startHp -\n entity.hpFactor) < 0.3",
+            "thenStep": [{
+                "basedOn": "ATTACK",
+                "factor": 0.25,
+                "hitNumberFactor": 0.3,
+                "type": "REDUCE_HP"
+            }, {
+                "name": "loop",
+                "type": "GOTO_LABEL"
+            }],
+            "type": "IF",
+            "withElse": false
+        }, {
+            "type": "STOP_REPEATING_FORCE"
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "removeEntityStatic": false,
+            "time": 0.1,
+            "type": "CLEAR_SLOW_MOTION"
+        }, {
+            "anim": "preIdle",
+            "followUp": "idle",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 0.05,
+            "type": "WAIT"
+        }, {
+            "blockData": {
+                "action": 0,
+                "dash": 0,
+                "move": 0,
+                "reaim": 0
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }]
+    }
+}]

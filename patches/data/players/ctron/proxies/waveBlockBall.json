@@ -1,0 +1,81 @@
+[{
+    "type": "SET_KEY",
+    "index": "waveBlockBall",
+    "content": {
+        "action": [{
+            "actionDetached": false,
+            "align": "CENTER",
+            "duration": -1,
+            "effect": {
+                "name": "waveBlockBall",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "type": "SET_SPEED",
+            "value": 300
+        }, {
+            "ccw": false,
+            "collision": false,
+            "distAdjustSpeed": 48,
+            "distance": 160,
+            "duration": 0.4,
+            "target": "PROXY_OWNER",
+            "type": "STICKY_CIRCLE_AROUND",
+            "waitTargetAlign": false,
+            "waitUntil": "entity.ownerAttrib.release"
+        }, {
+            "type": "SET_SPEED",
+            "value": 500
+        }, {
+            "ccw": false,
+            "collision": false,
+            "distAdjustSpeed": 200,
+            "distance": 0,
+            "duration": 1,
+            "target": "PROXY_OWNER",
+            "type": "STICKY_CIRCLE_AROUND",
+            "waitTargetAlign": false
+        }],
+        "attack": {
+            "element": "NEUTRAL",
+            "guardable": "",
+            "type": "NONE"
+        },
+        "behaviors": null,
+        "breakType": "ACTION",
+        "config": {
+            "collType": "NONE"
+        },
+        "copyOwnerAnims": false,
+        "effects": "",
+        "group": "lightningBall",
+        "hp": 0,
+        "invisible": false,
+        "maxBounce": 0,
+        "multiHit": false,
+        "noLightGlow": false,
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 16
+        },
+        "speed": 300,
+        "stickFaceAlign": false,
+        "stickToSource": "NONE",
+        "timeBoni": null,
+        "timer": 0,
+        "trail": false,
+        "type": "GENERIC"
+    }
+}]

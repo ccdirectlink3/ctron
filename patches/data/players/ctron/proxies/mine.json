@@ -1,0 +1,185 @@
+[{
+    "type": "SET_KEY",
+    "index": "mine",
+    "content": {
+        "action": [{
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "mineAppear",
+                "sheet": "specials.heat"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "type": "SET_SPEED",
+            "value": 0
+        }, {
+            "time": 1.1,
+            "type": "WAIT"
+        }, {
+            "anim": "blink",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "mineBlink",
+                "sheet": "specials.heat"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "time": 0.2,
+            "type": "WAIT"
+        }, {
+            "attack": {
+                "damageFactor": 0,
+                "element": "HEAT",
+                "guardable": "",
+                "hints": ["CHARGED"],
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "type": "LIGHT"
+            },
+            "cancelOnHit": true,
+            "ignoreLastHit": false,
+            "orthoDirFactor": 0,
+            "time": 5,
+            "type": "TACKLE"
+        }, {
+            "actionDetached": true,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "mineExplosion",
+                "sheet": "specials.heat"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 4.5,
+                "element": "HEAT",
+                "guardable": "",
+                "hints": ["CHARGED"],
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "spFactor": 0,
+                "type": "HEAVY"
+            },
+            "centralAngle": 0,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.2,
+            "expandRadius": 32,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 16,
+            "rectangular": false,
+            "repeat": false,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 32
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "time": 0.3,
+            "type": "WAIT"
+        }],
+        "animation": {
+            "SUB": [{
+                "frames": [0],
+                "name": "default",
+                "offset": {
+                    "x": 0,
+                    "y": -24,
+                    "z": 0
+                },
+                "repeat": true,
+                "shapeType": "Y_FLAT",
+                "sheet": {
+                    "height": 16,
+                    "offX": 0,
+                    "offY": 32,
+                    "src": "media/entity/effects/bomb-explo.png",
+                    "width": 24
+                },
+                "time": 0.05
+            }, {
+                "frames": [0, 1, 2, 3],
+                "name": "blink",
+                "offset": {
+                    "x": 0,
+                    "y": -24,
+                    "z": 0
+                },
+                "repeat": true,
+                "shapeType": "Y_FLAT",
+                "sheet": {
+                    "height": 16,
+                    "offX": 0,
+                    "offY": 32,
+                    "src": "media/entity/effects/bomb-explo.png",
+                    "width": 24
+                },
+                "time": 0.05
+            }]
+        },
+        "breakType": "COMBATANT",
+        "config": {
+            "collType": "IGNORE"
+        },
+        "copyOwnerAnims": false,
+        "group": "",
+        "hp": 0,
+        "invisible": true,
+        "size": {
+            "x": 64,
+            "y": 64,
+            "z": 32
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "NONE",
+        "type": "GENERIC"
+    }
+}]

@@ -1,0 +1,11 @@
+[{
+    "type": "ENTER",
+    "index": ["magicMissibleBoom", "action", 4]
+}, {
+    "type": "SET_KEY",
+    "index": "zHeight",
+    "content": 0
+}, {
+    "type": "EXIT",
+    "count": 3
+}]

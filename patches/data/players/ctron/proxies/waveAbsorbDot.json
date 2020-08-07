@@ -1,0 +1,72 @@
+[{
+    "type": "SET_KEY",
+    "index": "waveAbsorbDot",
+    "content": {
+        "action": [{
+            "actionDetached": false,
+            "align": "CENTER",
+            "duration": 0,
+            "effect": {
+                "name": "regenFly",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "target": "TARGET",
+            "target2": "PROXY_OWNER",
+            "target2Align": "CENTER",
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "time": 0.6,
+            "type": "WAIT"
+        }, {
+            "factor": 0.5,
+            "type": "ABSORB_DAMAGE"
+        }, {
+            "actionDetached": true,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "healingFast",
+                "sheet": "drops"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "target": "PROXY_OWNER",
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "time": 0.2,
+            "type": "WAIT"
+        }],
+        "breakType": "NEVER",
+        "config": {},
+        "copyOwnerAnims": false,
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 8,
+            "y": 8,
+            "z": 8
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "TARGET",
+        "type": "GENERIC"
+    }
+}]

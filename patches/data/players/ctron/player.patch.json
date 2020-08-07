@@ -1,0 +1,61 @@
+[{
+    "type": "ENTER",
+    "index": ["actions", "BASE"]
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/merged.json"
+}, {
+    "type": "EXIT"
+}, {
+    "type": "ENTER",
+    "index": "COLD"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/COLD/merged.json"
+}, {
+    "type": "EXIT"
+}, {
+    "type": "ENTER",
+    "index": "HEAT"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/HEAT/merged.json"
+}, {
+    "type": "EXIT"
+}, {
+    "type": "ENTER",
+    "index": "NEUTRAL"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/NEUTRAL/merged.json"
+}, {
+    "type": "EXIT"
+}, {
+    "type": "ENTER",
+    "index": "SHOCK"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/SHOCK/merged.json"
+}, {
+    "type": "EXIT"
+}, {
+    "type": "ENTER",
+    "index": "WAVE"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/WAVE/merged.json"
+}, {
+    "type": "EXIT",
+    "count": 2
+}, {
+    "type": "ENTER",
+    "index": "proxies"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/proxies/merged.json"
+}, {
+    "type": "EXIT"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/stats/merged.json"
+}]

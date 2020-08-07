@@ -1,0 +1,11 @@
+[{
+    "type": "ENTER",
+    "index": ["PERFECT_GUARD", 0]
+}, {
+    "type": "SET_KEY",
+    "index": "anim",
+    "content": "aim"
+}, {
+    "type": "EXIT",
+    "count": 2
+}]

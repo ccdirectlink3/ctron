@@ -1,0 +1,36 @@
+[{
+    "type": "SET_KEY",
+    "index": "specialSmall",
+    "content": {
+        "animation": {
+            "frames": [4],
+            "name": "default",
+            "repeat": true,
+            "sheet": {
+                "height": 24,
+                "src": "media/entity/balls/default.png",
+                "width": 24
+            },
+            "time": 0.05
+        },
+        "attack": {
+            "damageFactor": 0.8,
+            "element": "NEUTRAL",
+            "guardable": "",
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "spFactor": 0,
+            "type": "MEDIUM"
+        },
+        "behaviors": [],
+        "effects": "ball",
+        "maxBounce": 0,
+        "multiHit": false,
+        "noLightGlow": false,
+        "speed": 550,
+        "timeBoni": null,
+        "timer": 1,
+        "trail": false,
+        "type": "BALL"
+    }
+}]

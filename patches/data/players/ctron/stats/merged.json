@@ -1,0 +1,26 @@
+[{
+    "type": "SET_KEY",
+    "index": "stats",
+    "content": {
+        "hp": {
+            "base": 150,
+            "increase": 1500,
+            "variance": 0.1
+        },
+        "attack": {
+            "base": 22,
+            "increase": 220,
+            "variance": 0.9
+        },
+        "defense": {
+            "base": 18,
+            "increase": 180,
+            "variance": 0.5
+        },
+        "focus": {
+            "base": 25,
+            "increase": 250,
+            "variance": 0.3
+        }
+    }
+}]

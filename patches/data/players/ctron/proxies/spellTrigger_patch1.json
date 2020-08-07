@@ -1,0 +1,26 @@
+[{
+    "type": "ENTER",
+    "index": "spellTrigger"
+}, {
+    "type": "SET_KEY",
+    "index": "maxBounce",
+    "content": 3
+}, {
+    "type": "SET_KEY",
+    "index": "speed",
+    "content": 600
+}, {
+    "type": "SET_KEY",
+    "index": "timer",
+    "content": 3
+}, {
+    "type": "ENTER",
+    "index": ["behaviors", 0]
+}, {
+    "type": "SET_KEY",
+    "index": "steerDegree",
+    "content": 0.5
+}, {
+    "type": "EXIT",
+    "count": 3
+}]

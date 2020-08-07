@@ -1,0 +1,433 @@
+[{
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/CrystalNeutral.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/Explode.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/Explode2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/Explode3.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/Explode4.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/Explode5.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/Explode6.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/buffHax2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/chargedCold_patch1.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/chargedHeat_patch1.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/chargedNeutral_patch1.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/chargedShock_patch1.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/chargedWave_patch1.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/defaultNeutral_patch1.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/defaultNeutral2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/defaultNeutral2Stop.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/defaultNeutral3.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/defaultNeutralLow.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/flame.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/flameRing.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/flameRing2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/flameRing3.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/flameRingMelee.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/flameWall.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/gemCold.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/gemHeat.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/gemShock.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/gemWave.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceFreeze.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceFreeze2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceFreezeFall.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceOnWall.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceSlowMo.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceSlowShield.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceSlowShield2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceSnowExplode.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceSnowExplode2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceSnowball.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceSnowball2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceSpecialBig.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceSpecialSmall.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceSpecialSmallHoming.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceSpecialSmallHoming2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceSpecialSmallHomingx.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/iceSpecialSmallTurret.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/defaultWave_patch1.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/laser.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/laserCounter.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/laserCounter2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/laserNeutral.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/laserNeutralHeavy.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/lightningSlowMo.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/lightningSmall.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/lightningStarter.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/lightningStarter2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/lightningStarter3.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/lightningStop.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/lightningTarget.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magic.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicBolt.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicCold.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicHeat.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleBolt2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleBolt3.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleBolt4.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleBoom2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleBoom3.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleBoomNew.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleCrystal.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleDash.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleDash2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleHeat2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleHeat3.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleIce2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleIce3.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleIce4.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleIce5.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleNeutral.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleWave2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleWave3.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicWave.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicWave2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/meteor.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/meteorShower.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/meteorTarget.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/mine.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/moveMine.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/neutralBarrier.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/neutralBarrier2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/neutralBarrierRev.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/neutralDashDummy.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/neutralDashWave.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/neutralDmgShield.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/neutralHugeDisk.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/neutralMegaTri.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/powerball.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/shockDash2End.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/shockDash2Start.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/shockDash3End.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/shockDash3EndSub.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/shockDash3Start.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/shockDash3StartSub.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/shockDashLine.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/shockDummy.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/shockHoming.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/shockHomingGen.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/shockHomingGen2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/shockHomingGenSub.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/special1.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/specialSmall.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/specialSmallHoming.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/spellTriggerNeutral.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/spellTriggerNeutral2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/spellTriggerNeutralNew.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/targetMarker.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waldoBall.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveAbsorbBall.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveAbsorbBall2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveAbsorbDot.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveAbsorbSource.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveAuraBall.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveBlockBall.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveBlockCollector.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveBomb.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveCannon.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveDashBoom.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveDashStun.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveDummy.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveDummy2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveDummy3.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveDummyManager.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveDust.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveGun.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveGun2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveGunBounce.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveGunEnd.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveGunExplosion.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveGunMega.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveGunMegaPreview.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/waveGunMegaShooter.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/wavePushAura.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/wavePushAura2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/magicMissibleBoom_patch1.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/spellTrigger_patch1.json"
+}]

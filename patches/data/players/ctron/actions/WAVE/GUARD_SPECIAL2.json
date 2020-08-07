@@ -1,0 +1,76 @@
+[{
+    "type": "SET_KEY",
+    "index": "GUARD_SPECIAL2",
+    "content": {
+        "description": {
+            "en_US": "Spawns aura that pushes away nearby enemies and throws projectiles for several seconds.",
+            "ja_JP": "近くの敵を押し返し、さらに弾丸も発射するオーラを、自身の周囲に数秒間発生させる。",
+            "ko_KR": "근처의 적을 몇 초간 밀어내고 발사체를 던지는 아우라를 생성합니다.",
+            "langUid": 223,
+            "zh_CN": "衍生光环，击退附近的敌人，并能在几秒钟之内投掷飞弹。"
+        },
+        "name": {
+            "en_US": "Poltergeist",
+            "ja_JP": "ポルターガイスト",
+            "ko_KR": "폴터가이스트",
+            "langUid": 222,
+            "zh_CN": "驱灵"
+        },
+        "steps": [{
+            "group": "pushAura",
+            "sticking": false,
+            "type": "REMOVE_PROXIES"
+        }, {
+            "blockData": {
+                "action": -1,
+                "dash": 0,
+                "move": -1,
+                "reaim": -1
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "duration": 0.2,
+            "fadeIn": 0,
+            "fadeOut": 0.2,
+            "type": "SET_ZOOM_BLUR",
+            "zoomType": "LIGHT"
+        }, {
+            "focusType": "SELF",
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "FASTEST",
+            "transition": "EASE_IN_OUT",
+            "type": "FOCUS_CAMERA",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 1.5
+        }, {
+            "anim": "itemEffect",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "align": "BOTTOM",
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "wavePushAura2",
+            "type": "SHOOT_PROXY"
+        }, {
+            "time": 0.4,
+            "type": "WAIT"
+        }, {
+            "focusType": "SELF",
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "SLOW",
+            "transition": "EASE_IN_OUT",
+            "type": "FOCUS_CAMERA",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 1
+        }]
+    }
+}]

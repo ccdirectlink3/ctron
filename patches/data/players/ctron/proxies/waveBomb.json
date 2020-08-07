@@ -1,0 +1,120 @@
+[{
+    "type": "SET_KEY",
+    "index": "waveBomb",
+    "content": {
+        "action": [{
+            "anim": "runStatic",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "dummyAura",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "duration": -1,
+            "fadeRadius": 0,
+            "minRadius": 0,
+            "pull": true,
+            "radius": 80,
+            "strength": "EASY_ESCAPE",
+            "type": "PUSH_PULL_FORCE",
+            "zHeight": 32
+        }, {
+            "condition": "entity.ownerAttrib.bombBoom",
+            "maxTime": 0,
+            "type": "WAIT_UNTIL"
+        }, {
+            "type": "STOP_REPEATING_FORCE"
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "waveBombBoom",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 2.25,
+                "element": "WAVE",
+                "fly": "MASSIVE+",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "status": 0.75,
+                "stunSteps": [],
+                "type": "MASSIVE"
+            },
+            "centralAngle": 0,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 48,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 24,
+            "rectangular": false,
+            "repeat": false,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "time": 0.5,
+            "type": "WAIT"
+        }],
+        "breakType": "ACTION",
+        "config": {
+            "collType": "IGNORE"
+        },
+        "copyOwnerAnims": true,
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 16
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "TARGET",
+        "type": "GENERIC"
+    }
+}]

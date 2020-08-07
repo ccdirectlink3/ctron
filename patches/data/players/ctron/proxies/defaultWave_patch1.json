@@ -1,0 +1,47 @@
+[{
+    "type": "ENTER",
+    "index": "defaultWave"
+}, {
+    "type": "SET_KEY",
+    "index": "timer",
+    "content": 1.5
+}, {
+    "type": "SET_KEY",
+    "index": "trail",
+    "content": true
+}, {
+    "type": "ENTER",
+    "index": "attack"
+}, {
+    "type": "SET_KEY",
+    "index": "spFactor",
+    "content": 4
+}, {
+    "type": "SET_KEY",
+    "index": "damageFactor",
+    "content": 0.6
+}, {
+    "type": "SET_KEY",
+    "index": "status",
+    "content": 1
+}, {
+    "type": "SET_KEY",
+    "index": "type",
+    "content": "HEAVY"
+}, {
+    "type": "EXIT"
+}, {
+    "type": "ENTER",
+    "index": ["behaviors", 0]
+}, {
+    "type": "SET_KEY",
+    "index": "adjustTime",
+    "content": 0
+}, {
+    "type": "SET_KEY",
+    "index": "steerDegree",
+    "content": 10
+}, {
+    "type": "EXIT",
+    "count": 3
+}]

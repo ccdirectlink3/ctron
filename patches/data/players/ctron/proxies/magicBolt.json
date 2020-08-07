@@ -1,0 +1,39 @@
+[{
+    "type": "SET_KEY",
+    "index": "magicBolt",
+    "content": {
+        "animation": {
+            "frames": [0],
+            "name": "default",
+            "repeat": true,
+            "sheet": {
+                "height": 24,
+                "offX": 168,
+                "offY": 48,
+                "src": "media/entity/balls/default.png",
+                "width": 24
+            },
+            "time": 0.05
+        },
+        "attack": {
+            "damageFactor": 0,
+            "element": "COLD",
+            "guardable": "",
+            "limiter": "",
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "type": "LIGHT"
+        },
+        "behaviors": [],
+        "destroyProxy": "Explode4",
+        "effects": "ball",
+        "maxBounce": 0,
+        "multiHit": false,
+        "noLightGlow": false,
+        "speed": 600,
+        "timeBoni": null,
+        "timer": 3,
+        "trail": true,
+        "type": "BALL"
+    }
+}]

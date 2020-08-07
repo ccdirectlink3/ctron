@@ -1,0 +1,10 @@
+[{
+    "type": "ENTER",
+    "index": "chargedNeutral"
+}, {
+    "type": "SET_KEY",
+    "index": "timer",
+    "content": 5
+}, {
+    "type": "EXIT"
+}]

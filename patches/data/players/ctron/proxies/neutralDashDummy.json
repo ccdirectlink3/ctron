@@ -1,0 +1,83 @@
+[{
+    "type": "SET_KEY",
+    "index": "neutralDashDummy",
+    "content": {
+        "action": [{
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "dashCopyTrail",
+                "sheet": "specials.neutral"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "immediately": true,
+            "type": "FACE_TO_TARGET",
+            "value": false
+        }, {
+            "anim": "attack1End",
+            "followUp": "attackMirrEndAir",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_AIR_FRICTION",
+            "value": 1
+        }, {
+            "type": "SET_SPEED",
+            "value": 300
+        }, {
+            "attack": {
+                "damageFactor": 1.2,
+                "element": "NEUTRAL",
+                "fly": "HEAVY",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "stunSteps": [{
+                    "type": "BLOCK_XY"
+                }, {
+                    "type": "Z_VEL",
+                    "value": 100
+                }],
+                "type": "LIGHT"
+            },
+            "cancelOnHit": false,
+            "ignoreLastHit": false,
+            "orthoDirFactor": 0,
+            "time": 0.15,
+            "type": "TACKLE"
+        }, {
+            "time": 0.3,
+            "type": "WAIT"
+        }],
+        "breakType": "COMBATANT",
+        "config": {
+            "collType": "TRIGGER",
+            "zGravityFactor": 0
+        },
+        "copyOwnerAnims": true,
+        "group": "",
+        "hp": 0,
+        "invisible": true,
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 24
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "NONE",
+        "type": "GENERIC"
+    }
+}]

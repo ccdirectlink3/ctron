@@ -1,0 +1,30 @@
+[{
+    "type": "SET_KEY",
+    "index": "waveGunEnd",
+    "content": {
+        "action": [{
+            "attribName": "ended",
+            "changeConnected": "PROXY_SOURCE",
+            "changeType": "set",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 1
+        }],
+        "breakType": "ACTION",
+        "config": {
+            "collType": "NONE",
+            "zGravityFactor": 0
+        },
+        "copyOwnerAnims": false,
+        "group": "waveBounce",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 16
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "NONE",
+        "type": "GENERIC"
+    }
+}]

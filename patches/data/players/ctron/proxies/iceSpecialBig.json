@@ -1,0 +1,58 @@
+[{
+    "type": "SET_KEY",
+    "index": "iceSpecialBig",
+    "content": {
+        "animation": {
+            "frames": [0],
+            "name": "default",
+            "repeat": true,
+            "sheet": {
+                "height": 24,
+                "offX": 192,
+                "offY": 16,
+                "src": "media/entity/effects/icicles.png",
+                "width": 16
+            },
+            "time": 0.05
+        },
+        "attack": {
+            "damageFactor": 2,
+            "element": "COLD",
+            "guardable": "",
+            "limiter": "",
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "spFactor": 0,
+            "status": 0.75,
+            "type": "HEAVY"
+        },
+        "behaviors": [{
+            "fadeIn": 0.2,
+            "fadeOut": 0.1,
+            "fadeOutVary": 0,
+            "pause": 0.1,
+            "pauseVary": 0.1,
+            "speedFactor": 0.05,
+            "startWait": 0,
+            "type": "SLOW_DOWN"
+        }],
+        "bounceProxy": "iceOnWall",
+        "effectKeys": {
+            "trail": "snowballTrail"
+        },
+        "effects": "ball-cold",
+        "maxBounce": 2,
+        "multiHit": true,
+        "noLightGlow": false,
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 16
+        },
+        "speed": 650,
+        "timeBoni": null,
+        "timer": 3.5,
+        "trail": true,
+        "type": "BALL"
+    }
+}]

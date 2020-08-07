@@ -1,0 +1,56 @@
+[{
+    "type": "SET_KEY",
+    "index": "waveDummy",
+    "content": {
+        "action": [{
+            "type": "SET_OWNER_REPLACE_TARGET"
+        }, {
+            "actionDetached": false,
+            "align": "CENTER",
+            "duration": -1,
+            "effect": {
+                "name": "dummyAura",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "anim": "idle",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 3,
+            "type": "WAIT"
+        }],
+        "breakType": "COMBATANT",
+        "config": {
+            "collType": "IGNORE"
+        },
+        "copyOwnerAnims": true,
+        "group": "",
+        "hp": 1.5,
+        "invisible": false,
+        "killEffect": {
+            "name": "dummyAuraEnd",
+            "sheet": "specials.wave"
+        },
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 24
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "NONE",
+        "type": "GENERIC"
+    }
+}]

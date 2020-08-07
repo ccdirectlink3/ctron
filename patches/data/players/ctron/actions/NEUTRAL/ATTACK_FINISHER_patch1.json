@@ -1,0 +1,1 @@
+[{"type":"ENTER","index":["ATTACK_FINISHER","steps",9,"attack"]},{"type":"SET_KEY","index":"spFactor","content":4},{"type":"EXIT","count":2},{"type":"ENTER","index":[11,"attack"]},{"type":"SET_KEY","index":"spFactor","content":3},{"type":"EXIT","count":2},{"type":"ENTER","index":[13,"attack"]},{"type":"SET_KEY","index":"spFactor","content":3},{"type":"EXIT","count":4}]

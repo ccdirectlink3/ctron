@@ -1,0 +1,104 @@
+[{
+    "type": "SET_KEY",
+    "index": "laserCounter2",
+    "content": {
+        "action": [{
+            "type": "SET_FLY_HEIGHT",
+            "value": 8
+        }, {
+            "type": "SET_SPEED",
+            "value": 400
+        }, {
+            "stopBeforeEdge": false,
+            "time": 0.05,
+            "type": "MOVE_FORWARD"
+        }, {
+            "actionDetached": false,
+            "align": "BASE",
+            "duration": -1,
+            "effect": {
+                "name": "laserShootMega",
+                "sheet": "specials.heat"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "target2": "PROXY_OWNER",
+            "target2Align": "FACE",
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BASE",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 1.3,
+                "element": "HEAT",
+                "guardable": "",
+                "limiter": "",
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "status": 1,
+                "stunSteps": [{
+                    "type": "BLOCK_XY"
+                }],
+                "type": "HEAVY"
+            },
+            "centralAngle": 0,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 48,
+            "rectangular": false,
+            "repeat": true,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "type": "SET_SPEED",
+            "value": 150
+        }, {
+            "forceTime": true,
+            "max": 8,
+            "maxTime": 1.5,
+            "min": 0,
+            "type": "MOVE_TO_DISTANCE"
+        }, {
+            "type": "STOP_REPEATING_FORCE"
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }],
+        "breakType": "ACTION",
+        "config": {
+            "airFriction": 1,
+            "flyHeight": 4,
+            "zGravityFactor": 1
+        },
+        "copyOwnerAnims": false,
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 8,
+            "y": 8,
+            "z": 0
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "NONE",
+        "type": "GENERIC"
+    }
+}]

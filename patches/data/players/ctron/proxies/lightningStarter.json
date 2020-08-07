@@ -1,0 +1,82 @@
+[{
+    "type": "SET_KEY",
+    "index": "lightningStarter",
+    "content": {
+        "action": [{
+            "align": "CENTER",
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "posType": "TARGET",
+            "proxy": "lightningSmall",
+            "type": "SET_HIT_PROXY"
+        }, {
+            "type": "SET_SPEED",
+            "value": 700
+        }, {
+            "attack": {
+                "damageFactor": 0.5,
+                "element": "SHOCK",
+                "guardable": "",
+                "skillBonus": "RANGED_DMG",
+                "spFactor": 0,
+                "type": "MEDIUM"
+            },
+            "cancelOnHit": true,
+            "time": 1,
+            "type": "TACKLE"
+        }],
+        "animation": {
+            "frames": [0],
+            "gfxOffset": {
+                "x": 0,
+                "y": 0
+            },
+            "name": "default",
+            "renderMode": "lighter",
+            "repeat": true,
+            "sheet": {
+                "height": 16,
+                "offX": 144,
+                "offY": 0,
+                "src": "media/entity/effects/lighter-particle.png",
+                "width": 16
+            },
+            "time": 0.05
+        },
+        "attack": {
+            "damageFactor": 0.5,
+            "element": "SHOCK",
+            "guardable": "",
+            "hints": ["CHARGED"],
+            "limiter": "",
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "type": "MEDIUM"
+        },
+        "behaviors": [],
+        "breakType": "COMBATANT",
+        "config": {
+            "airFriction": 1,
+            "collType": "PROJECTILE",
+            "relativeVel": 1,
+            "zGravityFactor": 0
+        },
+        "effects": "ball-shock",
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "light": "XL",
+        "maxBounce": 0,
+        "multiHit": false,
+        "noLightGlow": false,
+        "speed": 700,
+        "stickToSource": "NONE",
+        "timeBoni": null,
+        "timer": 1,
+        "trail": true,
+        "type": "BALL"
+    }
+}]

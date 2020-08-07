@@ -1,0 +1,58 @@
+[{
+    "type": "SET_KEY",
+    "index": "waveDust",
+    "content": {
+        "animation": {
+            "SUB": [{
+                "frames": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                "name": "default",
+                "offset": {
+                    "x": 0,
+                    "y": 64,
+                    "z": 64
+                },
+                "renderMode": "lighter",
+                "repeat": true,
+                "sheet": {
+                    "height": 48,
+                    "offX": 0,
+                    "offY": 128,
+                    "src": "media/entity/effects/wave.png",
+                    "width": 48,
+                    "xCount": 6
+                },
+                "time": 0.033
+            }]
+        },
+        "attack": {
+            "damageFactor": 0.5,
+            "element": "WAVE",
+            "guardable": "",
+            "limiter": "",
+            "reverse": false,
+            "skillBonus": "",
+            "status": 0.5,
+            "type": "LIGHT"
+        },
+        "behaviors": [],
+        "effectKeys": {
+            "trail": "waveDustTrail"
+        },
+        "effects": "specials.wave",
+        "light": "L",
+        "maxBounce": 0,
+        "multiHit": true,
+        "noLightGlow": true,
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 16
+        },
+        "speed": 500,
+        "timeBoni": null,
+        "timeConnect": true,
+        "timer": 0.33,
+        "trail": true,
+        "type": "BALL"
+    }
+}]

@@ -1,0 +1,61 @@
+[{
+    "type": "SET_KEY",
+    "index": "lightningTarget",
+    "content": {
+        "action": [{
+            "group": "lightningTarget",
+            "sticking": false,
+            "target": "TARGET",
+            "type": "REMOVE_PROXIES"
+        }, {
+            "type": "CONNECT_PROXY_TO_TARGET"
+        }, {
+            "condition": "entity.srcAttrib.contract",
+            "type": "WAIT_UNTIL"
+        }, {
+            "actionDetached": false,
+            "align": "CENTER",
+            "duration": -1,
+            "effect": {
+                "name": "mjolConnect",
+                "sheet": "specials.shock"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "target": "TARGET",
+            "target2": "PROXY_SRC",
+            "target2Align": "CENTER",
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "condition": "entity.srcAttrib.done",
+            "type": "WAIT_UNTIL"
+        }],
+        "breakType": "COMBATANT",
+        "config": {
+            "collType": "NONE",
+            "floatVariance": 0,
+            "flyHeight": 1
+        },
+        "copyOwnerAnims": false,
+        "group": "lightningTarget",
+        "hp": 0,
+        "invisible": false,
+        "label": "worstbirthdayever",
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 32
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "TARGET",
+        "type": "GENERIC"
+    }
+}]

@@ -1,0 +1,85 @@
+[{
+    "type": "SET_KEY",
+    "index": "waveBlockCollector",
+    "content": {
+        "action": [{
+            "attribName": "collected",
+            "changeConnected": "PROXY_OWNER",
+            "changeType": "set",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 0
+        }, {
+            "name": "start",
+            "type": "LABEL"
+        }, {
+            "condition": "entity.owner.blockedFactor >= entity.ownerAttrib.collected + 0.25 || entity.ownerAttrib.release",
+            "type": "WAIT_UNTIL"
+        }, {
+            "condition": "!entity.ownerAttrib.release",
+            "thenStep": [{
+                "attribName": "collected",
+                "changeConnected": "PROXY_OWNER",
+                "changeType": "add",
+                "type": "SET_ATTRIB_NUMBER",
+                "value": 0.25
+            }, {
+                "align": "BOTTOM",
+                "angleVary": 0,
+                "centralAngle": 1,
+                "circularArea": false,
+                "clockwise": false,
+                "count": 1,
+                "delay": 0,
+                "duration": 0,
+                "flipLeftFace": 0,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "proxy": "waveBlockBall",
+                "random": true,
+                "repeat": false,
+                "startDist": 16,
+                "startDistCollide": "NONE",
+                "type": "SHOOT_PROXY_RANGE",
+                "uniformDir": 0
+            }, {
+                "time": 0.05,
+                "type": "WAIT"
+            }, {
+                "condition": "entity.ownerAttrib.collected < 3",
+                "thenStep": [{
+                    "name": "start",
+                    "type": "GOTO_LABEL"
+                }],
+                "type": "IF",
+                "withElse": false
+            }],
+            "type": "IF",
+            "withElse": false
+        }, {
+            "condition": "entity.ownerAttrib.release",
+            "type": "WAIT_UNTIL"
+        }, {
+            "time": 20,
+            "type": "WAIT"
+        }],
+        "breakType": "ACTION",
+        "config": {
+            "collType": "NONE"
+        },
+        "copyOwnerAnims": false,
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "OWNER",
+        "type": "GENERIC"
+    }
+}]

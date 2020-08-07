@@ -1,0 +1,54 @@
+[{
+    "type": "SET_KEY",
+    "index": "spellTriggerNeutral2",
+    "content": {
+        "animation": {
+            "frames": [5, 6, 7, 6],
+            "name": "default",
+            "renderMode": "lighter",
+            "repeat": true,
+            "sheet": {
+                "height": 24,
+                "offX": 80,
+                "offY": 31,
+                "src": "media/entity/balls/default3.png",
+                "width": 24
+            },
+            "time": 0.125
+        },
+        "attack": {
+            "damageFactor": 1.3,
+            "element": "NEUTRAL",
+            "guardable": "",
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "type": "LIGHT"
+        },
+        "behaviors": [{
+            "adjustTime": 1.5,
+            "steerDegree": 0.8,
+            "type": "FOLLOW_TARGET"
+        }, {
+            "fadeIn": 0.5,
+            "fadeOut": 0,
+            "fadeOutVary": 0,
+            "pause": 0,
+            "pauseVary": 0,
+            "speedFactor": 0,
+            "startWait": 0,
+            "type": "SLOW_DOWN"
+        }],
+        "effectKeys": {
+            "trail": "ballTrailHexa"
+        },
+        "effects": "combat.hexacast",
+        "maxBounce": 0,
+        "multiHit": false,
+        "noLightGlow": false,
+        "speed": 600,
+        "timeBoni": null,
+        "timer": 3,
+        "trail": true,
+        "type": "BALL"
+    }
+}]

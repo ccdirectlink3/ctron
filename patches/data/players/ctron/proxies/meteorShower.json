@@ -1,0 +1,137 @@
+[{
+    "type": "SET_KEY",
+    "index": "meteorShower",
+    "content": {
+        "action": [{
+            "attribName": "meteorShower",
+            "changeConnected": "PROXY_OWNER",
+            "changeType": "add",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 1
+        }, {
+            "condition": "entity.ownerAttrib.meteorStart",
+            "maxTime": 1.5,
+            "type": "WAIT_UNTIL"
+        }, {
+            "condition": "entity.ownerAttrib.meteorStart",
+            "thenStep": [{
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": -1,
+                "effect": {
+                    "name": "meteorAura",
+                    "sheet": "specials.heat"
+                },
+                "fixPos": false,
+                "flipLeftFace": false,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 300
+                },
+                "rotateFace": 0,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "time": 1.5,
+                "type": "WAIT"
+            }, {
+                "attribName": "meteors",
+                "changeType": "set",
+                "type": "SET_ATTRIB_NUMBER",
+                "value": 12
+            }, {
+                "type": "DETACH_TIME_PARENT"
+            }, {
+                "name": "shoot",
+                "type": "LABEL"
+            }, {
+                "attribName": "meteors",
+                "changeType": "sub",
+                "type": "SET_ATTRIB_NUMBER",
+                "value": 1
+            }, {
+                "align": "BOTTOM",
+                "angleVary": 0,
+                "centralAngle": 1,
+                "circularArea": true,
+                "clockwise": false,
+                "count": 1,
+                "delay": 0,
+                "duration": 0,
+                "flipLeftFace": 0,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 350
+                },
+                "proxy": "meteor",
+                "random": true,
+                "repeat": false,
+                "startDist": 120,
+                "startDistCollide": "CLOSER",
+                "type": "SHOOT_PROXY_RANGE",
+                "uniformDir": 0
+            }, {
+                "time": 0.2,
+                "type": "WAIT"
+            }, {
+                "condition": "entity.attrib.meteors > 4",
+                "thenStep": [{
+                    "time": 0.1,
+                    "type": "WAIT"
+                }],
+                "type": "IF",
+                "withElse": false
+            }, {
+                "condition": "entity.attrib.meteors > 8",
+                "thenStep": [{
+                    "time": 0.1,
+                    "type": "WAIT"
+                }],
+                "type": "IF",
+                "withElse": false
+            }, {
+                "condition": "entity.attrib.meteors > 0",
+                "thenStep": [{
+                    "name": "shoot",
+                    "type": "GOTO_LABEL"
+                }],
+                "type": "IF",
+                "withElse": false
+            }],
+            "type": "IF",
+            "withElse": false
+        }, {
+            "attribName": "meteorShower",
+            "changeConnected": "PROXY_OWNER",
+            "changeType": "sub",
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 1
+        }, {
+            "condition": "entity.ownerAttrib.meteorShower <= 0",
+            "thenStep": [{
+                "group": "leaMeteorTarget",
+                "sticking": false,
+                "type": "REMOVE_PROXIES"
+            }],
+            "type": "IF",
+            "withElse": false
+        }],
+        "breakType": "COMBATANT",
+        "config": {},
+        "copyOwnerAnims": false,
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 8,
+            "y": 8,
+            "z": 8
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "OWNER",
+        "type": "GENERIC"
+    }
+}]

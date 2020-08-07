@@ -1,0 +1,34 @@
+[{
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/AIM_START.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/ATTACK.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/ATTACK_FINISHER.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/ATTACK_REV.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/CHARGING_patch1.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/DASH_patch1.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/GUARD_patch1.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/GUARD_patch2.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/THROW_CHARGED_REV.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/THROW_CHARGED_patch1.json"
+}, {
+    "type": "INCLUDE",
+    "src": "mod:patches/data/players/ctron/actions/BASE/PERFECT_GUARD_patch1.json"
+}]

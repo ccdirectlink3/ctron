@@ -1,0 +1,133 @@
+[{
+    "type": "SET_KEY",
+    "index": "wavePushAura2",
+    "content": {
+        "action": [{
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "wavePush2",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 12
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 0.2,
+                "element": "WAVE",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "type": "NONE",
+                "visualType": "LIGHT"
+            },
+            "centralAngle": 1,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.5,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 80,
+            "rectangular": false,
+            "repeat": true,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 24
+        }, {
+            "align": "BOTTOM",
+            "duration": -1,
+            "fadeRadius": 64,
+            "minRadius": 0,
+            "pull": false,
+            "radius": 64,
+            "strength": "WALK_ESCAPE",
+            "type": "PUSH_PULL_FORCE",
+            "zHeight": 32
+        }, {
+            "attribName": "shots",
+            "changeType": "set",
+            "proxyOwner": false,
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 50
+        }, {
+            "name": "start",
+            "type": "LABEL"
+        }, {
+            "random": 1,
+            "time": 0,
+            "turn": 1,
+            "type": "ROTATE_FACE"
+        }, {
+            "ignoreCurrentTarget": false,
+            "prevHitBehavior": "NONE",
+            "searchType": "IN_VIEW",
+            "type": "SET_CLOSE_TEMP_TARGET"
+        }, {
+            "align": "BOTTOM",
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 12
+            },
+            "proxy": "defaultWave",
+            "type": "SHOOT_PROXY"
+        }, {
+            "attribName": "shots",
+            "changeType": "sub",
+            "proxyOwner": false,
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 1
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }, {
+            "condition": "entity.attrib.shots > 0",
+            "thenStep": [{
+                "name": "start",
+                "type": "GOTO_LABEL"
+            }],
+            "type": "IF",
+            "withElse": false
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "type": "STOP_REPEATING_FORCE"
+        }, {
+            "time": 0.4,
+            "type": "WAIT"
+        }],
+        "breakType": "COMBATANT",
+        "config": {},
+        "copyOwnerAnims": false,
+        "group": "pushAura",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "OWNER",
+        "type": "GENERIC"
+    }
+}]

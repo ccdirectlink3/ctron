@@ -1,0 +1,51 @@
+[{
+    "type": "SET_KEY",
+    "index": "waveAbsorbBall2",
+    "content": {
+        "animation": {
+            "frames": [4],
+            "name": "default",
+            "repeat": true,
+            "sheet": {
+                "height": 24,
+                "offY": 96,
+                "src": "media/entity/balls/default.png",
+                "width": 24
+            },
+            "time": 0.05
+        },
+        "attack": {
+            "damageFactor": 0.33,
+            "element": "WAVE",
+            "fly": "MEDIUM",
+            "guardable": "",
+            "limiter": "",
+            "reverse": true,
+            "skillBonus": "RANGED_DMG",
+            "type": "LIGHT"
+        },
+        "behaviors": [{
+            "fadeIn": 0,
+            "fadeOut": 1.5,
+            "fadeOutVary": 0,
+            "pause": 5,
+            "pauseVary": 0,
+            "speedFactor": 0,
+            "startWait": 0,
+            "type": "SLOW_DOWN"
+        }, {
+            "adjustTime": 0,
+            "steerDegree": 0.4,
+            "type": "FOLLOW_TARGET"
+        }],
+        "effects": "ball-wave",
+        "maxBounce": 0,
+        "multiHit": false,
+        "noLightGlow": false,
+        "speed": 500,
+        "timeBoni": null,
+        "timer": 1.5,
+        "trail": false,
+        "type": "BALL"
+    }
+}]

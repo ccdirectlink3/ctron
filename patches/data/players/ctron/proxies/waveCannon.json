@@ -1,0 +1,124 @@
+[{
+    "type": "SET_KEY",
+    "index": "waveCannon",
+    "content": {
+        "action": [{
+            "condition": "entity.ownerAttrib.flip",
+            "elseStep": [{
+                "changeConnected": "PROXY_OWNER",
+                "name": "flip",
+                "type": "SET_ATTRIB_BOOL",
+                "value": true
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": -1,
+                "effect": {
+                    "name": "waveCannon2",
+                    "sheet": "specials.wave"
+                },
+                "fixPos": false,
+                "flipLeftFace": false,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotateFace": -1,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }],
+            "thenStep": [{
+                "changeConnected": "PROXY_OWNER",
+                "name": "flip",
+                "type": "SET_ATTRIB_BOOL",
+                "value": false
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": -1,
+                "effect": {
+                    "name": "waveCannon",
+                    "sheet": "specials.wave"
+                },
+                "fixPos": false,
+                "flipLeftFace": false,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotateFace": -1,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }],
+            "type": "IF",
+            "withElse": true
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 1.5,
+                "element": "WAVE",
+                "fly": "MASSIVE+",
+                "guardable": "",
+                "limiter": "",
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "type": "MASSIVE",
+                "visualType": "MEDIUM"
+            },
+            "centralAngle": 1,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 10,
+            "expandRadius": 48,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 16,
+            "rectangular": false,
+            "repeat": true,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "type": "SET_ACCEL_SPEED",
+            "value": 5
+        }, {
+            "type": "SET_SPEED",
+            "value": 400
+        }, {
+            "collideCancel": 1,
+            "stopBeforeEdge": false,
+            "time": 2,
+            "type": "MOVE_FORWARD"
+        }, {
+            "type": "STOP_REPEATING_FORCE"
+        }],
+        "breakType": "NEVER",
+        "config": {
+            "collType": "PROJECTILE",
+            "zGravityFactor": 0
+        },
+        "copyOwnerAnims": false,
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 16
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "NONE",
+        "type": "GENERIC"
+    }
+}]

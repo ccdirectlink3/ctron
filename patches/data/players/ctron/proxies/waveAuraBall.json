@@ -1,0 +1,41 @@
+[{
+    "type": "SET_KEY",
+    "index": "waveAuraBall",
+    "content": {
+        "animation": {
+            "frames": [4],
+            "name": "default",
+            "repeat": true,
+            "sheet": {
+                "height": 24,
+                "offY": 96,
+                "src": "media/entity/balls/default.png",
+                "width": 24
+            },
+            "time": 0.05
+        },
+        "attack": {
+            "damageFactor": 0.6,
+            "element": "WAVE",
+            "fly": "MEDIUM",
+            "guardable": "",
+            "limiter": "",
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "type": "LIGHT"
+        },
+        "behaviors": [{
+            "steerDegree": 0.9,
+            "type": "FOLLOW_TARGET"
+        }],
+        "effects": "ball-wave",
+        "maxBounce": 0,
+        "multiHit": false,
+        "noLightGlow": false,
+        "speed": 400,
+        "timeBoni": null,
+        "timer": 1,
+        "trail": false,
+        "type": "BALL"
+    }
+}]

@@ -1,0 +1,65 @@
+[{
+    "type": "ENTER",
+    "index": ["THROW_CHARGED", "steps"]
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 1
+}, {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 1,
+    "content": {
+        "charged": true,
+        "type": "SHOW_THROW_FX"
+    }
+}, {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 2,
+    "content": {
+        "elementProxy": "CHARGED",
+        "type": "SHOOT_PROXY_PLAYER"
+    }
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 4
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 4
+}, {
+    "type": "ENTER",
+    "index": 3
+}, {
+    "type": "SET_KEY",
+    "index": "anim",
+    "content": "attackEndLoop"
+}, {
+    "type": "SET_KEY",
+    "index": "followUp",
+    "content": "throwEnd"
+}, {
+    "type": "EXIT"
+}, {
+    "type": "ENTER",
+    "index": 4
+}, {
+    "type": "SET_KEY",
+    "index": "value",
+    "content": 80
+}, {
+    "type": "EXIT"
+}, {
+    "type": "ENTER",
+    "index": 5
+}, {
+    "type": "SET_KEY",
+    "index": "stopBeforeEdge",
+    "content": false
+}, {
+    "type": "SET_KEY",
+    "index": "time",
+    "content": 0.1
+}, {
+    "type": "EXIT"
+}, {
+    "type": "EXIT",
+    "count": 2
+}]

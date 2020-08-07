@@ -1,0 +1,56 @@
+[{
+    "type": "SET_KEY",
+    "index": "waveGun",
+    "content": {
+        "animation": {
+            "frames": [0],
+            "gfxOffset": {
+                "x": 0,
+                "y": -4
+            },
+            "name": "default",
+            "renderMode": "lighter",
+            "repeat": true,
+            "sheet": {
+                "height": 16,
+                "offX": 144,
+                "offY": 0,
+                "src": "media/entity/effects/lighter-particle.png",
+                "width": 16
+            },
+            "time": 0.05
+        },
+        "attack": {
+            "damageFactor": 4,
+            "element": "WAVE",
+            "guardable": "",
+            "hints": ["CHARGED"],
+            "limiter": "",
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "spFactor": 0,
+            "type": "HEAVY"
+        },
+        "behaviors": [],
+        "effectKeys": {
+            "air": "waveGunXplode",
+            "trail": "waveGun",
+            "wall": "waveGunXplode"
+        },
+        "effects": "specials.wave",
+        "light": "XL",
+        "maxBounce": 0,
+        "multiHit": true,
+        "noLightGlow": false,
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 8
+        },
+        "speed": 1200,
+        "timeBoni": null,
+        "timer": 1,
+        "trail": true,
+        "type": "BALL"
+    }
+}]

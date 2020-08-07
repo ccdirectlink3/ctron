@@ -1,0 +1,107 @@
+[{
+    "type": "SET_KEY",
+    "index": "neutralDashWave",
+    "content": {
+        "action": [{
+            "type": "ADD_TARGET_STUN_LOCK"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "dashStun",
+                "sheet": "specials.neutral"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "target": "TARGET",
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "time": 1,
+            "type": "WAIT"
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "dashExplode",
+                "sheet": "specials.neutral"
+            },
+            "fixPos": true,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "target": "TARGET",
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 1,
+                "element": "NEUTRAL",
+                "fly": "MASSIVE++",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "stunSteps": [{
+                    "type": "END_LOCK"
+                }, {
+                    "type": "BLOCK_XY"
+                }],
+                "type": "MASSIVE"
+            },
+            "centralAngle": 1,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 24,
+            "rectangular": false,
+            "repeat": false,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "time": 0.2,
+            "type": "WAIT"
+        }],
+        "breakType": "COMBATANT",
+        "config": {},
+        "copyOwnerAnims": false,
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "TARGET",
+        "type": "GENERIC"
+    }
+}]

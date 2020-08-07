@@ -1,0 +1,53 @@
+[{
+    "type": "SET_KEY",
+    "index": "waveGunMegaPreview",
+    "content": {
+        "animation": {
+            "flipY": true,
+            "frames": [0],
+            "gfxOffset": {
+                "x": 0,
+                "y": -4
+            },
+            "guiSprites": true,
+            "name": "default",
+            "renderMode": "lighter",
+            "repeat": true,
+            "sheet": {
+                "height": 8,
+                "offX": 184,
+                "offY": 40,
+                "src": "media/entity/effects/particles1.png",
+                "width": 8
+            },
+            "time": 0.05
+        },
+        "attack": {
+            "damageFactor": 0,
+            "element": "WAVE",
+            "guardable": "",
+            "limiter": "NO_EFFECT",
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "spFactor": 0,
+            "type": "LIGHT"
+        },
+        "behaviors": [],
+        "effects": "",
+        "light": "NONE",
+        "maxBounce": 3,
+        "multiHit": false,
+        "noLightGlow": false,
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 8
+        },
+        "speed": 2000,
+        "timeBoni": null,
+        "timeConnect": true,
+        "timer": 1,
+        "trail": false,
+        "type": "BALL"
+    }
+}]

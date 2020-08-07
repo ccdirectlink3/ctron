@@ -1,0 +1,86 @@
+[{
+    "type": "SET_KEY",
+    "index": "flameRing",
+    "content": {
+        "action": [{
+            "face": "SOUTH",
+            "rotate": false,
+            "rotateSpeed": 3,
+            "type": "SET_FACE"
+        }, {
+            "type": "SET_FACE_FIX",
+            "value": true
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "flameRing",
+                "sheet": "specials.heat"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": false,
+            "attack": {
+                "damageFactor": 0.3,
+                "element": "HEAT",
+                "guardable": "",
+                "skillBonus": "RANGED_DMG",
+                "spFactor": 0,
+                "type": "NONE",
+                "visualType": "LIGHT"
+            },
+            "centralAngle": 20,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 6,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 32,
+            "rectangular": false,
+            "repeat": false,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 32
+        }, {
+            "time": 6,
+            "type": "WAIT"
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }],
+        "breakType": "COMBATANT",
+        "config": {
+            "collType": "NONE"
+        },
+        "copyOwnerAnims": false,
+        "group": "aura",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 24,
+            "y": 24,
+            "z": 32
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "OWNER",
+        "type": "GENERIC"
+    }
+}]

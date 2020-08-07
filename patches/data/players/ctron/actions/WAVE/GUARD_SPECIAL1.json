@@ -1,0 +1,51 @@
+[{
+    "type": "SET_KEY",
+    "index": "GUARD_SPECIAL1",
+    "content": {
+        "description": {
+            "de_DE": "Aktiviert eine Aura, die nahe Gegner für einige Sekunden wegstößt.",
+            "en_US": "Spawns aura that pushes away nearby enemies for several seconds.",
+            "ja_JP": "近くの敵を押し返すオーラを、自身の周囲に数秒間発生させる。",
+            "ko_KR": "근처의 적을 몇 초간 밀어내는 아우라를 생성합니다.",
+            "langUid": 135,
+            "zh_CN": "召唤一个光环，在数秒内阻挡周围敌人靠近。"
+        },
+        "name": {
+            "en_US": "Guarding Gale",
+            "ja_JP": "ガード・ゲイル",
+            "ko_KR": "강풍 막기",
+            "langUid": 134,
+            "zh_CN": "守护光环"
+        },
+        "steps": [{
+            "group": "pushAura",
+            "sticking": false,
+            "type": "REMOVE_PROXIES"
+        }, {
+            "blockData": {
+                "action": -1,
+                "dash": 0,
+                "move": -1,
+                "reaim": -1
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "anim": "itemEffect",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "align": "BOTTOM",
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "wavePushAura",
+            "type": "SHOOT_PROXY"
+        }, {
+            "time": 0.3,
+            "type": "WAIT"
+        }]
+    }
+}]

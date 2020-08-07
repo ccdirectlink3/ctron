@@ -1,0 +1,164 @@
+[{
+    "type": "SET_KEY",
+    "index": "DASH_SPECIAL1",
+    "content": {
+        "description": {
+            "de_DE": "Schneller Sprint, der alle Gegner auf dem Weg beschädigt und betäubt. Verursacht \\c[3]Markiert\\c[0].",
+            "en_US": "Dash with high speed, damaging and stunning enemies along the way. Causes \\c[3]Mark\\c[0].",
+            "ja_JP": "高速ダッシュし、当たった敵を気絶させる攻撃。敵を\\c[3]マーク\\c[0]状態にする。",
+            "ko_KR": "고속으로 대시하며 가는 길목에 있는 적에게 대미지를 입히고 기절시킵니다. \\c[3]표적\\c[0] 상태로 만듭니다.",
+            "langUid": 155,
+            "zh_CN": "高速冲刺，对触碰的敌人造成伤害和眩晕效果。"
+        },
+        "name": {
+            "en_US": "Verdant Strike",
+            "ja_JP": "ヴェルダント・ストライク",
+            "ko_KR": "초록색 타격",
+            "langUid": 154,
+            "zh_CN": "绿色闪电"
+        },
+        "steps": [{
+            "blockData": {
+                "action": 0.5,
+                "dash": 0.6,
+                "move": 0.6,
+                "reaim": 0.6
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "global": false,
+            "loop": false,
+            "sound": "media/sound/battle/dash-3.ogg",
+            "type": "PLAY_SOUND",
+            "volume": 0.9
+        }, {
+            "anim": "spinFull",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_JUMPING",
+            "value": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 450
+        }, {
+            "type": "SET_ACCEL_SPEED",
+            "value": 2.5
+        }, {
+            "type": "SET_COLL_TYPE",
+            "value": "IGNORE"
+        }, {
+            "actionDetached": false,
+            "align": "CENTER",
+            "duration": -1,
+            "effect": {
+                "name": "waveDashTrail",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "actionDetached": false,
+            "align": "CENTER",
+            "duration": -1,
+            "effect": {
+                "name": "waveDashRipple",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "group": "ripple",
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "type": "SET_FACE_TO_DIR"
+        }, {
+            "type": "SET_INVINCIBLE",
+            "value": 0.4
+        }, {
+            "align": "BOTTOM",
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "posType": "SELF",
+            "proxy": "waveDashStun",
+            "type": "SET_HIT_PROXY"
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 0,
+                "element": "WAVE",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "spFactor": 0,
+                "status": 1,
+                "type": "NONE"
+            },
+            "centralAngle": 0,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.4,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 32,
+            "rectangular": false,
+            "repeat": false,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "stopBeforeEdge": false,
+            "time": 0.4,
+            "type": "MOVE_FORWARD"
+        }, {
+            "type": "SET_COLL_TYPE",
+            "value": "VIRTUAL"
+        }, {
+            "stopBeforeEdge": false,
+            "time": 0.1,
+            "type": "MOVE_FORWARD"
+        }, {
+            "group": "ripple",
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }]
+    }
+}]

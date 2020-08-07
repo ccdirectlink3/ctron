@@ -1,0 +1,111 @@
+[{
+    "type": "SET_KEY",
+    "index": "Explode6",
+    "content": {
+        "action": [{
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "magicMissilePre",
+                "sheet": "combat.hexacast"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 1,
+                "element": "NEUTRAL",
+                "fly": "LIGHT",
+                "guardable": "",
+                "hints": ["CHARGED"],
+                "limiter": "",
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "status": 0,
+                "type": "HEAVY"
+            },
+            "centralAngle": 1,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.2,
+            "expandRadius": 32,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 32,
+            "rectangular": false,
+            "repeat": false,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 4
+        }, {
+            "time": 0.2,
+            "type": "WAIT"
+        }, {
+            "group": "wall",
+            "keepCount": 16,
+            "sticking": false,
+            "type": "REMOVE_PROXIES"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 1,
+            "circularArea": false,
+            "clockwise": false,
+            "count": 3,
+            "delay": 0,
+            "duration": 0,
+            "flipLeftFace": 0,
+            "limitRangeOnColl": true,
+            "maxGroundDistance": 24,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "magicMissibleWave3",
+            "random": false,
+            "repeat": false,
+            "startDist": 48,
+            "startDistCollide": "DROP",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }],
+        "breakType": "NEVER",
+        "config": {
+            "zGravityFactor": 0
+        },
+        "copyOwnerAnims": false,
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 16
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "NONE",
+        "type": "GENERIC"
+    }
+}]

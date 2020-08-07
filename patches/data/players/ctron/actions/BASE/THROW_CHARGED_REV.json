@@ -1,0 +1,40 @@
+[{
+    "type": "SET_KEY",
+    "index": "THROW_CHARGED_REV",
+    "content": {
+        "steps": [{
+            "blockData": {
+                "action": 0.2,
+                "dash": 0,
+                "move": 0.3,
+                "reaim": 0.4
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "charged": true,
+            "type": "SHOW_THROW_FX"
+        }, {
+            "elementProxy": "CHARGED",
+            "type": "SHOOT_PROXY_PLAYER"
+        }, {
+            "anim": "attackEndLoop",
+            "followUp": "throwEndRev",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 80
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "stopBeforeEdge": false,
+            "time": 0.1,
+            "type": "MOVE_TO_DIR"
+        }, {
+            "time": 0.4,
+            "type": "WAIT"
+        }]
+    }
+}]

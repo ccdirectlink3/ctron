@@ -1,0 +1,24 @@
+[{
+    "type": "ENTER",
+    "index": ["chargedWave", "attack"]
+}, {
+    "type": "SET_KEY",
+    "index": "damageFactor",
+    "content": 2
+}, {
+    "type": "SET_KEY",
+    "index": "status",
+    "content": 0.75
+}, {
+    "type": "EXIT"
+}, {
+    "type": "SET_KEY",
+    "index": "speed",
+    "content": 700
+}, {
+    "type": "SET_KEY",
+    "index": "timer",
+    "content": 3.5
+}, {
+    "type": "EXIT"
+}]

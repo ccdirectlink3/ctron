@@ -1,0 +1,218 @@
+[{
+    "type": "SET_KEY",
+    "index": "lightningStarter2",
+    "content": {
+        "action": [{
+            "actionDetached": false,
+            "align": "CENTER",
+            "duration": -1,
+            "effect": {
+                "name": "shockChainTrail",
+                "sheet": "specials.shock"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": -1,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "CENTER",
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "posType": "TARGET",
+            "proxy": "lightningSmall",
+            "type": "SET_HIT_PROXY"
+        }, {
+            "type": "SET_SPEED",
+            "value": 900
+        }, {
+            "attribName": "bounces",
+            "changeType": "set",
+            "proxyOwner": false,
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 4
+        }, {
+            "type": "SET_ACCEL_SPEED",
+            "value": 5
+        }, {
+            "name": "start",
+            "type": "LABEL"
+        }, {
+            "condition": "entity.attrib.bounces > 0",
+            "thenStep": [{
+                "attribName": "bounces",
+                "changeType": "sub",
+                "proxyOwner": false,
+                "type": "SET_ATTRIB_NUMBER",
+                "value": 1
+            }, {
+                "attack": {
+                    "damageFactor": 0.5,
+                    "element": "SHOCK",
+                    "guardable": "",
+                    "reverse": false,
+                    "skillBonus": "RANGED_DMG",
+                    "spFactor": 0,
+                    "type": "MEDIUM"
+                },
+                "cancelOnHit": true,
+                "collideCancel": 1,
+                "hit": [{
+                    "condition": "!entity.hasTmpTarget",
+                    "thenStep": [{
+                        "kind": "FIRST_HIT",
+                        "type": "SET_TEMP_TARGET"
+                    }],
+                    "type": "IF",
+                    "withElse": false
+                }, {
+                    "type": "STOP_XY"
+                }, {
+                    "type": "SET_SPEED",
+                    "value": 200
+                }, {
+                    "forceTime": true,
+                    "max": 4,
+                    "maxTime": 0.05,
+                    "min": 0,
+                    "type": "MOVE_TO_DISTANCE"
+                }, {
+                    "name": "retry",
+                    "type": "LABEL"
+                }, {
+                    "type": "SET_SPEED",
+                    "value": 900
+                }, {
+                    "ignoreCurrentTarget": true,
+                    "prevHitBehavior": "PREFER_NON_HIT",
+                    "searchType": "CLOSE_RANGE",
+                    "type": "SET_CLOSE_TEMP_TARGET"
+                }, {
+                    "type": "STOP_XY"
+                }, {
+                    "condition": "!entity.hasTmpTarget",
+                    "elseStep": [{
+                        "immediately": true,
+                        "type": "FACE_TO_TARGET",
+                        "value": false
+                    }],
+                    "thenStep": [{
+                        "random": 0,
+                        "time": 0,
+                        "turn": 0.5,
+                        "type": "ROTATE_FACE"
+                    }],
+                    "type": "IF",
+                    "withElse": true
+                }, {
+                    "name": "start",
+                    "type": "GOTO_LABEL"
+                }],
+                "ignoreLastHit": true,
+                "missed": [{
+                    "type": "CLEAR_PREV_HIT"
+                }, {
+                    "name": "retry",
+                    "type": "GOTO_LABEL"
+                }],
+                "orthoDirFactor": 0,
+                "time": 1,
+                "type": "TACKLE",
+                "withBranches": true
+            }],
+            "type": "IF",
+            "withElse": false
+        }, {
+            "type": "STOP_XY"
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "actionDetached": true,
+            "align": "CENTER",
+            "duration": 0,
+            "effect": {
+                "name": "shockChainFail",
+                "sheet": "specials.shock"
+            },
+            "fixPos": true,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "time": 0.3,
+            "type": "WAIT"
+        }],
+        "animation": {
+            "frames": [0],
+            "gfxOffset": {
+                "x": 0,
+                "y": -4
+            },
+            "name": "default",
+            "renderMode": "lighter",
+            "repeat": true,
+            "sheet": {
+                "height": 16,
+                "offX": 144,
+                "offY": 0,
+                "src": "media/entity/effects/lighter-particle.png",
+                "width": 16
+            },
+            "time": 0.05
+        },
+        "attack": {
+            "damageFactor": 0.5,
+            "element": "SHOCK",
+            "guardable": "",
+            "hints": ["CHARGED"],
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "type": "MEDIUM"
+        },
+        "behaviors": [],
+        "breakType": "COMBATANT",
+        "config": {
+            "airFriction": 1,
+            "collType": "PROJECTILE",
+            "relativeVel": 1,
+            "zGravityFactor": 0
+        },
+        "copyOwnerAnims": false,
+        "effects": "ball-shock",
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "light": "XL",
+        "maxBounce": 0,
+        "multiHit": false,
+        "noLightGlow": false,
+        "size": {
+            "x": 8,
+            "y": 8,
+            "z": 8
+        },
+        "speed": 700,
+        "stickFaceAlign": false,
+        "stickToSource": "NONE",
+        "timeBoni": null,
+        "timer": 1,
+        "trail": true,
+        "type": "GENERIC"
+    }
+}]

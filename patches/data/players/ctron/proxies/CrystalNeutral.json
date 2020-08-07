@@ -1,0 +1,86 @@
+[{
+    "type": "SET_KEY",
+    "index": "CrystalNeutral",
+    "content": {
+        "action": [{
+            "randAnims": ["default", "alt"],
+            "type": "SHOW_RANDOM_ANIMATION"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "gemSpawn",
+                "sheet": "combat.hexacast"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "type": "SET_SPEED",
+            "value": 0
+        }, {
+            "time": 0.3,
+            "type": "WAIT"
+        }, {
+            "attack": {
+                "damageFactor": 0.75,
+                "element": "NEUTRAL",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "spFactor": 0,
+                "status": 0,
+                "type": "MEDIUM"
+            },
+            "cancelOnHit": true,
+            "ignoreLastHit": false,
+            "orthoDirFactor": 0,
+            "time": 7,
+            "type": "TACKLE"
+        }],
+        "animation": {
+            "SUB": [{
+                "frames": [0, 1, 2, 3, 4, 3, 2, 1],
+                "name": "default",
+                "renderMode": "lighter",
+                "repeat": true,
+                "sheet": {
+                    "height": 20,
+                    "offX": 0,
+                    "offY": 105,
+                    "src": "media/entity/balls/default3.png",
+                    "width": 13
+                },
+                "time": 0.125
+            }]
+        },
+        "breakType": "COMBATANT",
+        "config": {
+            "collType": "IGNORE"
+        },
+        "copyOwnerAnims": false,
+        "group": "wall",
+        "hp": 0.5,
+        "invisible": true,
+        "killEffect": {
+            "name": "gemBoom",
+            "sheet": "combat.hexacast"
+        },
+        "size": {
+            "x": 13,
+            "y": 20,
+            "z": 20
+        },
+        "stickToSource": "NONE",
+        "type": "GENERIC"
+    }
+}]

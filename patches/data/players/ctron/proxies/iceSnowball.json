@@ -1,0 +1,39 @@
+[{
+    "type": "SET_KEY",
+    "index": "iceSnowball",
+    "content": {
+        "animation": {
+            "frames": [0],
+            "name": "default",
+            "repeat": true,
+            "sheet": {
+                "height": 16,
+                "offX": 192,
+                "offY": 0,
+                "src": "media/entity/effects/cold.png",
+                "width": 16
+            },
+            "time": 0.05
+        },
+        "attack": {
+            "damageFactor": 0,
+            "element": "COLD",
+            "guardable": "",
+            "limiter": "",
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "type": "LIGHT"
+        },
+        "behaviors": [],
+        "destroyProxy": "iceSnowExplode",
+        "effects": "ball-cold",
+        "maxBounce": 0,
+        "multiHit": false,
+        "noLightGlow": false,
+        "speed": 600,
+        "timeBoni": null,
+        "timer": 1.5,
+        "trail": true,
+        "type": "BALL"
+    }
+}]

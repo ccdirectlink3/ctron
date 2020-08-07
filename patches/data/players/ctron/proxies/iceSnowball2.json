@@ -1,0 +1,157 @@
+[{
+    "type": "SET_KEY",
+    "index": "iceSnowball2",
+    "content": {
+        "action": [{
+            "group": "wall",
+            "sticking": false,
+            "type": "REMOVE_PROXIES"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 0,
+            "circularArea": false,
+            "clockwise": false,
+            "count": 1,
+            "delay": 0.1,
+            "duration": 0.166,
+            "flipLeftFace": 0,
+            "maxGroundDistance": 16,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "icicleSmall",
+            "random": false,
+            "repeat": true,
+            "startDistCollide": "NONE",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "blueScreenLight",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "snowballTrail",
+                "sheet": "ball-cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "attack": {
+                "damageFactor": 0,
+                "element": "COLD",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "type": "NONE"
+            },
+            "cancelOnHit": true,
+            "collideCancel": 1,
+            "ignoreLastHit": false,
+            "orthoDirFactor": 0,
+            "time": 1.5,
+            "type": "TACKLE"
+        }, {
+            "type": "STOP_REPEATING_FORCE"
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "align": "BOTTOM",
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "magicMissibleWave3",
+            "type": "SHOOT_PROXY"
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }],
+        "animation": {
+            "frames": [0],
+            "name": "default",
+            "repeat": true,
+            "sheet": {
+                "height": 32,
+                "offX": 160,
+                "offY": 0,
+                "src": "media/entity/effects/cold.png",
+                "width": 32
+            },
+            "time": 0.05
+        },
+        "attack": {
+            "damageFactor": 0,
+            "element": "COLD",
+            "guardable": "",
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "type": "LIGHT"
+        },
+        "behaviors": [],
+        "breakType": "NEVER",
+        "config": {
+            "airFriction": 1,
+            "bounciness": 0.0001,
+            "collType": "PROJECTILE",
+            "maxVel": 500,
+            "zGravityFactor": 0
+        },
+        "copyOwnerAnims": false,
+        "destroyProxy": "iceSnowExplode2",
+        "effectKeys": {
+            "trail": "snowballTrail"
+        },
+        "effects": "ball-cold",
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "light": "XXL",
+        "maxBounce": 0,
+        "multiHit": false,
+        "noLightGlow": true,
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 16
+        },
+        "speed": 400,
+        "stickFaceAlign": false,
+        "stickToSource": "NONE",
+        "timeBoni": null,
+        "timer": 1.5,
+        "trail": true,
+        "type": "GENERIC"
+    }
+}]

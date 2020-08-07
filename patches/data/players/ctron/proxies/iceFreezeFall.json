@@ -1,0 +1,128 @@
+[{
+    "type": "SET_KEY",
+    "index": "iceFreezeFall",
+    "content": {
+        "action": [{
+            "type": "ADD_TARGET_STUN_LOCK"
+        }, {
+            "kind": "PART_TARGET_ROOT",
+            "type": "SET_TEMP_TARGET"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "coldGuardFreeze",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "target": "TARGET",
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "logicTimeScale": 1,
+            "moveXYScale": 1,
+            "target": "TARGET",
+            "timeScale": 0.00001,
+            "type": "ADD_TEMP_INFLUENCE"
+        }, {
+            "time": 1,
+            "type": "WAIT"
+        }, {
+            "type": "CLEAR_TEMP_INFLUENCE"
+        }, {
+            "logicTimeScale": 0.00001,
+            "moveXYScale": 1,
+            "target": "TARGET",
+            "timeScale": 1,
+            "type": "ADD_TEMP_INFLUENCE"
+        }, {
+            "maxTime": 1,
+            "type": "WAIT_UNTIL_ON_GROUND"
+        }, {
+            "type": "CLEAR_TEMP_INFLUENCE"
+        }, {
+            "type": "CLEAR_TEMP_TARGET"
+        }, {
+            "align": "BOTTOM",
+            "attack": {
+                "damageFactor": 3,
+                "element": "COLD",
+                "fly": "MASSIVE++",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "status": 1,
+                "stunSteps": [{
+                    "type": "BLOCK_XY"
+                }],
+                "type": "MASSIVE"
+            },
+            "hitCount": 1,
+            "hitDelay": 0,
+            "hitDir": "TOWARD",
+            "selectType": "TARGET",
+            "type": "DIRECT_HIT"
+        }, {
+            "actionDetached": true,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "icicleExplodeBig",
+                "sheet": "specials.icicles"
+            },
+            "fixPos": true,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "target": "TARGET",
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "time": 0.2,
+            "type": "WAIT"
+        }],
+        "attack": {
+            "element": "NEUTRAL",
+            "guardable": "",
+            "skillBonus": "",
+            "type": "NONE"
+        },
+        "breakType": "NEVER",
+        "config": {},
+        "copyOwnerAnims": false,
+        "effects": "",
+        "groundBounce": 0,
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "maxBounce": 0,
+        "multiHit": false,
+        "noLightGlow": false,
+        "shadow": 0,
+        "size": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "speed": 300,
+        "stickFaceAlign": false,
+        "stickToSource": "TARGET",
+        "type": "GENERIC",
+        "zBounciness": 0,
+        "zVel": 0
+    }
+}]

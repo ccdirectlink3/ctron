@@ -1,0 +1,53 @@
+[{
+    "type": "SET_KEY",
+    "index": "iceSlowShield2",
+    "content": {
+        "action": [{
+            "actionDetached": false,
+            "name": "techShield",
+            "shield": {
+                "settings": {
+                    "back": false,
+                    "baseFactor": 2,
+                    "effect": {
+                        "name": "shieldTrail",
+                        "sheet": "specials.cold"
+                    },
+                    "hitResist": "MASSIVE",
+                    "noDefaultFX": false,
+                    "noShieldDamage": true,
+                    "range": 1,
+                    "stableOverride": "HEAVY",
+                    "strength": "BLOCK_ALL"
+                },
+                "type": "PLAYER"
+            },
+            "type": "ADD_SHIELD"
+        }, {
+            "logicTimeScale": 1,
+            "moveXYScale": 0.5,
+            "target": "OWNER",
+            "timeScale": 1,
+            "type": "ADD_TEMP_INFLUENCE"
+        }, {
+            "time": 13,
+            "type": "WAIT"
+        }, {
+            "type": "STOP_REPEATING_FORCE"
+        }],
+        "breakType": "COMBATANT",
+        "config": {},
+        "copyOwnerAnims": false,
+        "group": "shield",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "OWNER",
+        "type": "GENERIC"
+    }
+}]

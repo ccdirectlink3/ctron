@@ -1,0 +1,68 @@
+[{
+    "type": "SET_KEY",
+    "index": "iceSlowMo",
+    "content": {
+        "action": [{
+            "kind": "PART_TARGET_ROOT",
+            "type": "SET_TEMP_TARGET"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "coldGuardSlowMo",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "target": "TARGET",
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "logicTimeScale": 1,
+            "moveXYScale": 1,
+            "target": "TARGET",
+            "timeScale": 0.15,
+            "type": "ADD_TEMP_INFLUENCE"
+        }, {
+            "time": 2,
+            "type": "WAIT"
+        }],
+        "attack": {
+            "element": "NEUTRAL",
+            "guardable": "",
+            "skillBonus": "",
+            "type": "NONE"
+        },
+        "breakType": "NEVER",
+        "config": {},
+        "copyOwnerAnims": false,
+        "effects": "",
+        "groundBounce": 0,
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "maxBounce": 0,
+        "multiHit": false,
+        "noLightGlow": false,
+        "shadow": 0,
+        "size": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "speed": 300,
+        "stickFaceAlign": false,
+        "stickToSource": "TARGET",
+        "type": "GENERIC",
+        "zBounciness": 0,
+        "zVel": 0
+    }
+}]

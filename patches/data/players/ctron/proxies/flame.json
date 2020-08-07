@@ -1,0 +1,61 @@
+[{
+    "type": "SET_KEY",
+    "index": "flame",
+    "content": {
+        "animation": {
+            "frames": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+            "guiSprites": true,
+            "name": "default",
+            "repeat": false,
+            "sheet": {
+                "height": 48,
+                "offX": 0,
+                "offY": 0,
+                "src": "media/entity/effects/heat.png",
+                "width": 48,
+                "xCount": 6
+            },
+            "time": 0.07
+        },
+        "attack": {
+            "damageFactor": 0.25,
+            "element": "HEAT",
+            "guardable": "",
+            "limiter": "",
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "spFactor": 0,
+            "status": 1.25,
+            "type": "LIGHT"
+        },
+        "behaviors": [{
+            "fadeIn": 0.2,
+            "fadeOut": 0.15,
+            "fadeOutVary": 0.15,
+            "pause": 5,
+            "speedFactor": 0,
+            "startWait": 0.3,
+            "type": "SLOW_DOWN"
+        }],
+        "effect": "ar",
+        "effectKeys": {
+            "wall": "flameKill"
+        },
+        "effects": "specials.heat",
+        "light": "XL",
+        "maxBounce": 0,
+        "maxBounds": 0,
+        "multiHit": true,
+        "noLightGlow": true,
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 16
+        },
+        "speed": 400,
+        "timeBoni": null,
+        "timer": 0.8,
+        "trail": false,
+        "type": "BALL"
+    }
+}]

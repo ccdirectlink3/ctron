@@ -1,0 +1,206 @@
+[{
+    "type": "SET_KEY",
+    "index": "shockHomingGen",
+    "content": {
+        "action": [{
+            "actionDetached": false,
+            "align": "CENTER",
+            "duration": -1,
+            "effect": {
+                "name": "shockChainTrail",
+                "sheet": "specials.shock"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": -1,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "attack": {
+                "damageFactor": 2,
+                "element": "SHOCK",
+                "guardable": "",
+                "hints": ["CHARGED"],
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "spFactor": 0,
+                "type": "HEAVY"
+            },
+            "cancelOnHit": true,
+            "collideCancel": 1,
+            "hit": [{
+                "kind": "FIRST_HIT",
+                "type": "SET_TEMP_TARGET"
+            }, {
+                "random": 0,
+                "time": 0,
+                "turn": 0.5,
+                "type": "ROTATE_FACE"
+            }, {
+                "type": "STOP_XY"
+            }, {
+                "type": "SET_SPEED",
+                "value": 300
+            }, {
+                "stopBeforeEdge": false,
+                "time": 0.05,
+                "type": "MOVE_FORWARD"
+            }, {
+                "type": "SET_AIR_FRICTION",
+                "value": 0.5
+            }, {
+                "time": 0.25,
+                "type": "WAIT"
+            }, {
+                "immediately": true,
+                "type": "FACE_TO_TARGET",
+                "value": true
+            }, {
+                "type": "CLEAR_EFFECTS"
+            }, {
+                "actionDetached": false,
+                "align": "CENTER",
+                "duration": -1,
+                "effect": {
+                    "name": "homingGen",
+                    "sheet": "specials.shock"
+                },
+                "fixPos": false,
+                "flipLeftFace": false,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotateFace": -1,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "align": "BOTTOM",
+                "angleVary": 0,
+                "centralAngle": 0.5,
+                "circularArea": false,
+                "clockwise": true,
+                "count": 1,
+                "delay": 0,
+                "duration": 0.5,
+                "flipLeftFace": 8,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 12
+                },
+                "proxy": "magicMissibleBolt",
+                "random": true,
+                "repeat": true,
+                "startDist": 12,
+                "startDistCollide": "CLOSER",
+                "type": "SHOOT_PROXY_RANGE",
+                "uniformDir": 0.25
+            }, {
+                "time": 1.7,
+                "type": "WAIT"
+            }, {
+                "type": "STOP_REPEATING_FORCE"
+            }],
+            "ignoreLastHit": true,
+            "missed": [],
+            "orthoDirFactor": 0,
+            "time": 1,
+            "type": "TACKLE",
+            "withBranches": true
+        }, {
+            "type": "STOP_XY"
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "actionDetached": true,
+            "align": "CENTER",
+            "duration": 0,
+            "effect": {
+                "name": "shockChainFail",
+                "sheet": "specials.shock"
+            },
+            "fixPos": true,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "time": 0.3,
+            "type": "WAIT"
+        }],
+        "animation": {
+            "frames": [0],
+            "gfxOffset": {
+                "x": 0,
+                "y": 0
+            },
+            "name": "default",
+            "renderMode": "lighter",
+            "repeat": true,
+            "sheet": {
+                "height": 16,
+                "offX": 144,
+                "offY": 0,
+                "src": "media/entity/effects/lighter-particle.png",
+                "width": 16
+            },
+            "time": 0.05
+        },
+        "attack": {
+            "damageFactor": 0.5,
+            "element": "SHOCK",
+            "guardable": "",
+            "hints": ["CHARGED"],
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "type": "MEDIUM"
+        },
+        "behaviors": [],
+        "breakType": "COMBATANT",
+        "config": {
+            "accelSpeed": 5,
+            "airFriction": 1,
+            "collType": "PROJECTILE",
+            "maxVel": 700,
+            "relativeVel": 1,
+            "zGravityFactor": 0
+        },
+        "copyOwnerAnims": false,
+        "effects": "ball-shock",
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "light": "XL",
+        "maxBounce": 0,
+        "multiHit": false,
+        "noLightGlow": false,
+        "size": {
+            "x": 8,
+            "y": 8,
+            "z": 8
+        },
+        "speed": 700,
+        "stickFaceAlign": false,
+        "stickToSource": "NONE",
+        "timeBoni": null,
+        "timeDisconnect": true,
+        "timer": 1,
+        "trail": true,
+        "type": "GENERIC"
+    }
+}]

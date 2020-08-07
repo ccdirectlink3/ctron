@@ -1,0 +1,108 @@
+[{
+    "type": "SET_KEY",
+    "index": "magicMissibleBoom2",
+    "content": {
+        "action": [{
+            "type": "SET_SPEED",
+            "value": 100
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "magicMissilePre",
+                "sheet": "combat.hexacast"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "time": 1,
+            "type": "WAIT"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "proximityBlast",
+                "sheet": "specials.neutral"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 6.5,
+                "element": "NEUTRAL",
+                "fly": "MASSIVE+",
+                "guardable": "",
+                "hints": ["CHARGED"],
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "stunSteps": [{
+                    "type": "BLOCK_XY"
+                }, {
+                    "accel": 0,
+                    "maxTime": 0,
+                    "offZ": 0,
+                    "type": "Z_VEL",
+                    "value": 250
+                }],
+                "type": "MASSIVE"
+            },
+            "centralAngle": 1,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 48,
+            "rectangular": false,
+            "repeat": false,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 32
+        }, {
+            "time": 0.3,
+            "type": "WAIT"
+        }],
+        "breakType": "NEVER",
+        "config": {},
+        "copyOwnerAnims": false,
+        "group": "",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 16
+        },
+        "stickToSource": "TARGET",
+        "type": "GENERIC"
+    }
+}]

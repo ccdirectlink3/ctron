@@ -1,0 +1,44 @@
+[{
+    "type": "SET_KEY",
+    "index": "iceSpecialSmallHoming2",
+    "content": {
+        "animation": {
+            "frames": [0],
+            "name": "default",
+            "repeat": true,
+            "sheet": {
+                "height": 24,
+                "offX": 144,
+                "offY": 16,
+                "src": "media/entity/effects/icicles.png",
+                "width": 16
+            },
+            "time": 0.05
+        },
+        "attack": {
+            "damageFactor": 0.3,
+            "element": "COLD",
+            "guardable": "",
+            "limiter": "",
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "spFactor": 0,
+            "status": 0.75,
+            "type": "MEDIUM"
+        },
+        "behaviors": [{
+            "adjustTime": 0,
+            "steerDegree": 0.8,
+            "type": "FOLLOW_TARGET"
+        }],
+        "effects": "ball",
+        "maxBounce": 0,
+        "multiHit": false,
+        "noLightGlow": false,
+        "speed": 550,
+        "timeBoni": null,
+        "timer": 1.5,
+        "trail": false,
+        "type": "BALL"
+    }
+}]

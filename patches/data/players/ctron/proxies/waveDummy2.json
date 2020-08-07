@@ -1,0 +1,134 @@
+[{
+    "type": "SET_KEY",
+    "index": "waveDummy2",
+    "content": {
+        "action": [{
+            "type": "SET_OWNER_REPLACE_TARGET"
+        }, {
+            "actionDetached": false,
+            "align": "CENTER",
+            "duration": -1,
+            "effect": {
+                "name": "dummyAura",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "dummyAuraEnd",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "duration": -1,
+            "fadeRadius": 0,
+            "minRadius": 12,
+            "pull": true,
+            "radius": 128,
+            "strength": "EASY_ESCAPE",
+            "type": "PUSH_PULL_FORCE",
+            "zHeight": 32
+        }, {
+            "align": "BOTTOM",
+            "duration": -1,
+            "fadeRadius": 0,
+            "minRadius": 12,
+            "pull": true,
+            "radius": 32,
+            "strength": "NO_ESCAPE",
+            "type": "PUSH_PULL_FORCE",
+            "zHeight": 32
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 0.2,
+                "element": "WAVE",
+                "fly": "LIGHT",
+                "guardable": "",
+                "limiter": "",
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "status": 1.5,
+                "stunSteps": [{
+                    "type": "BLOCK_XY"
+                }],
+                "type": "MASSIVE",
+                "visualType": "LIGHT"
+            },
+            "centralAngle": 1,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 16,
+            "rectangular": false,
+            "repeat": true,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "anim": "idle",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 5,
+            "type": "WAIT"
+        }, {
+            "type": "STOP_REPEATING_FORCE"
+        }],
+        "breakType": "COMBATANT",
+        "config": {
+            "collType": "IGNORE"
+        },
+        "copyOwnerAnims": true,
+        "group": "",
+        "hp": 2.5,
+        "invisible": false,
+        "killEffect": {
+            "name": "dummyAuraEnd",
+            "sheet": "specials.wave"
+        },
+        "size": {
+            "x": 16,
+            "y": 16,
+            "z": 24
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "NONE",
+        "type": "GENERIC"
+    }
+}]

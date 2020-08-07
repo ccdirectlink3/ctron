@@ -1,0 +1,50 @@
+[{
+    "type": "SET_KEY",
+    "index": "waldoBall",
+    "content": {
+        "animation": {
+            "frames": [4],
+            "name": "default",
+            "repeat": true,
+            "sheet": {
+                "height": 24,
+                "offY": 72,
+                "src": "media/entity/balls/default.png",
+                "width": 24
+            },
+            "time": 0.05
+        },
+        "attack": {
+            "damageFactor": 0.3,
+            "element": "SHOCK",
+            "guardable": "",
+            "limiter": "",
+            "reverse": false,
+            "skillBonus": "RANGED_DMG",
+            "type": "LIGHT"
+        },
+        "behaviors": [{
+            "adjustTime": 0,
+            "steerDegree": 0.6,
+            "type": "FOLLOW_TARGET"
+        }, {
+            "fadeIn": 1,
+            "fadeOut": 0,
+            "fadeOutVary": 0,
+            "pause": 0,
+            "pauseVary": 0,
+            "speedFactor": 0.05,
+            "startWait": 0,
+            "type": "SLOW_DOWN"
+        }],
+        "effects": "ball-shock",
+        "maxBounce": 0,
+        "multiHit": false,
+        "noLightGlow": true,
+        "speed": 550,
+        "timeBoni": null,
+        "timer": 1,
+        "trail": false,
+        "type": "BALL"
+    }
+}]

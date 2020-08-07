@@ -1,0 +1,242 @@
+[{
+    "type": "SET_KEY",
+    "index": "DASH_SPECIAL3",
+    "content": {
+        "description": {
+            "de_DE": "Schneller Sprint, der alle Gegner auf dem Weg beschädigt und betäubt. Verursacht \\c[3]Markiert\\c[0].<<A<<[CHANGED 2017/12/14]",
+            "en_US": "Charge up by creating a Vortex behind you and blast off leaving behind a huge wave explosion.",
+            "ja_JP": "\n背後に波動の渦を発生させながら力を溜めた後、背後に巨大な波動の爆発を残して猛発進する。<<A<<[CHANGED 2017/11/27]",
+            "ko_KR": "뒤쪽에 소용돌이를 만들어 충전하며 거대 파동 폭발을 남기며 적을 날립니다.<<A<<[CHANGED 2017/11/20]",
+            "langUid": 260,
+            "zh_CN": "通过在背后创造漩涡来进行冲刺，在原地留下巨大的波元素爆破。<<A<<[CHANGED 2017/12/12]"
+        },
+        "name": {
+            "de_DE": "<<A<<[CHANGED 2017/12/14]",
+            "en_US": "Vortex Tide",
+            "ja_JP": "ボルテックス・タイド<<A<<[CHANGED 2017/11/27]",
+            "ko_KR": "소용돌이 조수<<A<<[CHANGED 2017/11/20]",
+            "langUid": 259,
+            "zh_CN": "潮汐漩涡<<A<<[CHANGED 2017/12/12]"
+        },
+        "steps": [{
+            "blockData": {
+                "action": -1,
+                "dash": -1,
+                "move": -1,
+                "reaim": -1
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "type": "SET_FACE_TO_DIR"
+        }, {
+            "factor": 0.1,
+            "inversAccelerate": true,
+            "keepEntityStatic": false,
+            "time": 0,
+            "type": "ADD_SLOW_MOTION"
+        }, {
+            "type": "SET_HIT_STABLE",
+            "value": "MASSIVE"
+        }, {
+            "focusType": "SELF",
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "FASTEST",
+            "transition": "EASE_OUT",
+            "type": "FOCUS_CAMERA",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 2
+        }, {
+            "actionDetached": false,
+            "align": "CENTER",
+            "duration": -1,
+            "effect": {
+                "name": "wavePreCharge",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "anim": "charge",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 0.4,
+            "type": "WAIT"
+        }, {
+            "duration": 2,
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_ZOOM",
+            "zoom": 1
+        }, {
+            "actionDetached": false,
+            "align": "CENTER",
+            "duration": 2,
+            "effect": {
+                "name": "wavePreCharge2",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "anim": "run",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 25
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 0.2,
+            "circularArea": false,
+            "clockwise": false,
+            "count": 4,
+            "delay": 0,
+            "duration": 0.1,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "waveDust",
+            "random": true,
+            "repeat": true,
+            "startAngle": 0.4,
+            "startDist": 16,
+            "startDistCollide": "NONE",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "allowStop": false,
+            "rotateSpeed": 1,
+            "stopBeforeEdge": false,
+            "time": 2,
+            "type": "PLAYER_MOVE_TO_DIR"
+        }, {
+            "type": "STOP_REPEATING_FORCE"
+        }, {
+            "type": "SET_JUMPING",
+            "value": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 550
+        }, {
+            "type": "SET_ACCEL_SPEED",
+            "value": 2.5
+        }, {
+            "type": "SET_COLL_TYPE",
+            "value": "IGNORE"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 0,
+            "circularArea": false,
+            "clockwise": false,
+            "count": 0,
+            "delay": 0,
+            "duration": 0,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "waveDashBoom",
+            "random": false,
+            "repeat": false,
+            "startAngle": 0.5,
+            "startDist": 80,
+            "startDistCollide": "CLOSER",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.4,
+            "type": "WAIT"
+        }, {
+            "speed": "FAST",
+            "transition": "EASE_IN_OUT",
+            "type": "RESET_CAMERA",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "removeEntityStatic": false,
+            "time": 0.1,
+            "type": "CLEAR_SLOW_MOTION"
+        }, {
+            "actionDetached": false,
+            "align": "CENTER",
+            "duration": -1,
+            "effect": {
+                "name": "waveDashTrail",
+                "sheet": "specials.wave"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "type": "SET_INVINCIBLE",
+            "value": 0.4
+        }, {
+            "anim": "spinFull",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "stopBeforeEdge": false,
+            "time": 0.4,
+            "type": "MOVE_FORWARD"
+        }, {
+            "type": "SET_COLL_TYPE",
+            "value": "VIRTUAL"
+        }, {
+            "stopBeforeEdge": false,
+            "time": 0.1,
+            "type": "MOVE_FORWARD"
+        }, {
+            "group": "ripple",
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }]
+    }
+}]

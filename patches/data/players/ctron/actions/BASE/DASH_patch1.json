@@ -1,0 +1,21 @@
+[{
+    "type": "ENTER",
+    "index": ["DASH", "steps", 9]
+}, {
+    "type": "SET_KEY",
+    "index": "stopBeforeEdge",
+    "content": false
+}, {
+    "type": "EXIT",
+    "count": 1
+}, {
+    "type": "ENTER",
+    "index": 11
+}, {
+    "type": "SET_KEY",
+    "index": "stopBeforeEdge",
+    "content": false
+}, {
+    "type": "EXIT",
+    "count": 3
+}]

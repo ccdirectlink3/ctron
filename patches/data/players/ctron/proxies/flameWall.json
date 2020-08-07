@@ -1,0 +1,80 @@
+[{
+    "type": "SET_KEY",
+    "index": "flameWall",
+    "content": {
+        "action": [{
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "flameWall",
+                "sheet": "specials.heat"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 0.3,
+                "element": "HEAT",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "spFactor": 0,
+                "status": 1,
+                "type": "NONE",
+                "visualType": "LIGHT"
+            },
+            "centralAngle": 1,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.3,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 32,
+            "rectangular": false,
+            "repeat": true,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 32
+        }, {
+            "time": 5,
+            "type": "WAIT"
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }],
+        "breakType": "COMBATANT",
+        "config": {
+            "collType": "NONE"
+        },
+        "copyOwnerAnims": false,
+        "group": "wall",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 24,
+            "y": 24,
+            "z": 32
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "NONE",
+        "type": "GENERIC"
+    }
+}]

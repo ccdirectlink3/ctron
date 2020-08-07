@@ -1,0 +1,168 @@
+[{
+    "type": "SET_KEY",
+    "index": "flameRing2",
+    "content": {
+        "action": [{
+            "face": "SOUTH",
+            "rotate": false,
+            "rotateSpeed": 3,
+            "type": "SET_FACE"
+        }, {
+            "type": "SET_FACE_FIX",
+            "value": true
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "flameRing",
+                "sheet": "specials.heat"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": false,
+            "attack": {
+                "damageFactor": 0.3,
+                "element": "HEAT",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "spFactor": 0,
+                "type": "NONE",
+                "visualType": "LIGHT"
+            },
+            "centralAngle": 1,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.3,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 32,
+            "rectangular": false,
+            "repeat": true,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 32
+        }, {
+            "attribName": "bursts",
+            "changeType": "set",
+            "proxyOwner": false,
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 8
+        }, {
+            "name": "start",
+            "type": "LABEL"
+        }, {
+            "actionDetached": true,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "flameRingBurst",
+                "sheet": "specials.heat"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 1.2,
+                "element": "HEAT",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "spFactor": 0,
+                "stunSteps": [{
+                    "type": "BLOCK_XY"
+                }],
+                "type": "MEDIUM"
+            },
+            "centralAngle": 1,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.2,
+            "expandRadius": 80,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 0,
+            "rectangular": false,
+            "repeat": false,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 32
+        }, {
+            "attribName": "bursts",
+            "changeType": "sub",
+            "proxyOwner": false,
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 1
+        }, {
+            "condition": "entity.attrib.bursts > 0",
+            "thenStep": [{
+                "time": 1,
+                "type": "WAIT"
+            }, {
+                "name": "start",
+                "type": "GOTO_LABEL"
+            }],
+            "type": "IF",
+            "withElse": false
+        }, {
+            "time": 0.2,
+            "type": "WAIT"
+        }, {
+            "type": "STOP_REPEATING_FORCE"
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }],
+        "breakType": "COMBATANT",
+        "config": {
+            "collType": "NONE"
+        },
+        "copyOwnerAnims": false,
+        "group": "aura",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 24,
+            "y": 24,
+            "z": 32
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "OWNER",
+        "type": "GENERIC"
+    }
+}]

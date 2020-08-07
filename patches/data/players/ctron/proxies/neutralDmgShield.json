@@ -1,0 +1,99 @@
+[{
+    "type": "SET_KEY",
+    "index": "neutralDmgShield",
+    "content": {
+        "action": [{
+            "actionDetached": false,
+            "name": "techShield",
+            "shield": {
+                "settings": {
+                    "back": false,
+                    "baseFactor": 1,
+                    "effect": {
+                        "name": "shieldTrail",
+                        "sheet": "specials.neutral"
+                    },
+                    "hitResist": "MASSIVE",
+                    "noDefaultFX": false,
+                    "noShieldDamage": true,
+                    "range": 1,
+                    "stableOverride": "HEAVY",
+                    "strength": "BLOCK_ALL"
+                },
+                "type": "PLAYER"
+            },
+            "type": "ADD_SHIELD"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "shieldSpikes",
+                "sheet": "specials.neutral"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 12
+            },
+            "rotateFace": 0,
+            "target": "PROXY_OWNER",
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 0.4,
+                "element": "NEUTRAL",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "spFactor": 0,
+                "type": "NONE",
+                "visualType": "LIGHT"
+            },
+            "centralAngle": 1,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.25,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 32,
+            "rectangular": false,
+            "repeat": true,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 32
+        }, {
+            "time": 5,
+            "type": "WAIT"
+        }, {
+            "type": "STOP_REPEATING_FORCE"
+        }],
+        "breakType": "COMBATANT",
+        "config": {},
+        "copyOwnerAnims": false,
+        "group": "shield",
+        "hp": 0,
+        "invisible": false,
+        "size": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "stickFaceAlign": false,
+        "stickToSource": "OWNER",
+        "type": "GENERIC"
+    }
+}]
