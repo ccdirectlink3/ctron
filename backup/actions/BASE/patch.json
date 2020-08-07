@@ -1,0 +1,890 @@
+[{
+    "type": "SET_KEY",
+    "index": "AIM_START"
+}, {
+    "type": "SET_KEY",
+    "index": "ATTACK",
+    "content": {
+        "steps": [{
+            "blockData": {
+                "action": -1,
+                "dash": 0,
+                "move": 0.8,
+                "reaim": 0.9
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "anim": "spinShort",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": true
+        }, {
+            "anim": "attackEnd",
+            "followUp": "attackEndLoop",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "actionDetached": false,
+            "align": "FACE",
+            "duration": 0.48,
+            "effect": {
+                "name": "shootCharge3",
+                "sheet": "combat.hexacast"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "type": "SET_SPEED",
+            "value": 200
+        }, {
+            "type": "SET_ACCEL_SPEED",
+            "value": 3
+        }, {
+            "immediately": true,
+            "type": "FACE_TO_TARGET",
+            "value": false
+        }, {
+            "stopBeforeEdge": true,
+            "time": 0.05,
+            "type": "MOVE_FORWARD"
+        }, {
+            "actionDetached": false,
+            "align": "FACE",
+            "duration": 0,
+            "effect": {
+                "name": "meleeNeutral",
+                "sheet": "combat.hexacast"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "FACE",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 0.3,
+                "element": "NEUTRAL",
+                "guardable": "",
+                "skillBonus": "",
+                "spFactor": 2,
+                "stunSteps": [{
+                    "type": "BLOCK_XY"
+                }],
+                "type": "LIGHT"
+            },
+            "centralAngle": 0.6,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": -12
+            },
+            "radius": 32,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }, {
+            "align": "FACE",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 0.5,
+                "element": "NEUTRAL",
+                "guardable": "",
+                "skillBonus": "",
+                "spFactor": 2,
+                "stunSteps": [{
+                    "type": "BLOCK_XY"
+                }],
+                "type": "LIGHT"
+            },
+            "centralAngle": 0.6,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": -12
+            },
+            "radius": 32,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }, {
+            "align": "FACE",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 0.7,
+                "element": "NEUTRAL",
+                "guardable": "",
+                "skillBonus": "",
+                "spFactor": 2,
+                "stunSteps": [{
+                    "type": "BLOCK_XY"
+                }],
+                "type": "LIGHT"
+            },
+            "centralAngle": 0.6,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": -12
+            },
+            "radius": 32,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "time": 0.05,
+            "type": "WAIT"
+        }, {
+            "immediately": true,
+            "type": "FACE_TO_TARGET",
+            "value": false
+        }, {
+            "time": 0.05,
+            "type": "WAIT"
+        }, {
+            "align": "FACE",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 1.3,
+                "element": "NEUTRAL",
+                "fly": "MASSIVE",
+                "guardable": "",
+                "skillBonus": "",
+                "spFactor": 4,
+                "type": "HEAVY"
+            },
+            "centralAngle": 0.6,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": -12
+            },
+            "radius": 48,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "time": 0.3,
+            "type": "WAIT"
+        }, {
+            "anim": "postShoot",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": true
+        }, {
+            "type": "SET_FACE_FIX",
+            "value": true
+        }, {
+            "time": 0.05,
+            "type": "WAIT"
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "ATTACK_FINISHER",
+    "content": {
+        "steps": [{
+            "blockData": {
+                "action": -1,
+                "dash": 0,
+                "move": 0.8,
+                "reaim": 0.9
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "anim": "spinShort",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": true
+        }, {
+            "anim": "attackEnd",
+            "followUp": "attackEndLoop",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "actionDetached": false,
+            "align": "FACE",
+            "duration": 0.48,
+            "effect": {
+                "name": "shootCharge3",
+                "sheet": "combat.hexacast"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "type": "SET_SPEED",
+            "value": 200
+        }, {
+            "type": "SET_ACCEL_SPEED",
+            "value": 3
+        }, {
+            "immediately": true,
+            "type": "FACE_TO_TARGET",
+            "value": false
+        }, {
+            "stopBeforeEdge": true,
+            "time": 0.05,
+            "type": "MOVE_FORWARD"
+        }, {
+            "actionDetached": false,
+            "align": "FACE",
+            "duration": 0,
+            "effect": {
+                "name": "meleeNeutral",
+                "sheet": "combat.hexacast"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "FACE",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 0.3,
+                "element": "NEUTRAL",
+                "guardable": "",
+                "skillBonus": "",
+                "spFactor": 2,
+                "stunSteps": [{
+                    "type": "BLOCK_XY"
+                }],
+                "type": "LIGHT"
+            },
+            "centralAngle": 0.6,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": -12
+            },
+            "radius": 32,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }, {
+            "align": "FACE",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 0.5,
+                "element": "NEUTRAL",
+                "guardable": "",
+                "skillBonus": "",
+                "spFactor": 2,
+                "stunSteps": [{
+                    "type": "BLOCK_XY"
+                }],
+                "type": "LIGHT"
+            },
+            "centralAngle": 0.6,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": -12
+            },
+            "radius": 32,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }, {
+            "align": "FACE",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 0.7,
+                "element": "NEUTRAL",
+                "guardable": "",
+                "skillBonus": "",
+                "spFactor": 2,
+                "stunSteps": [{
+                    "type": "BLOCK_XY"
+                }],
+                "type": "LIGHT"
+            },
+            "centralAngle": 0.6,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": -12
+            },
+            "radius": 32,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "time": 0.05,
+            "type": "WAIT"
+        }, {
+            "immediately": true,
+            "type": "FACE_TO_TARGET",
+            "value": false
+        }, {
+            "time": 0.05,
+            "type": "WAIT"
+        }, {
+            "align": "FACE",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 1.3,
+                "element": "NEUTRAL",
+                "fly": "MASSIVE",
+                "guardable": "",
+                "skillBonus": "",
+                "spFactor": 4,
+                "type": "HEAVY"
+            },
+            "centralAngle": 0.6,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": -12
+            },
+            "radius": 48,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "time": 0.3,
+            "type": "WAIT"
+        }, {
+            "anim": "postShoot",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": true
+        }, {
+            "type": "SET_FACE_FIX",
+            "value": true
+        }, {
+            "time": 0.05,
+            "type": "WAIT"
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "ATTACK_REV",
+    "content": {
+        "steps": [{
+            "blockData": {
+                "action": -1,
+                "dash": 0,
+                "move": 0.8,
+                "reaim": 0.9
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "anim": "spinShort",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": true
+        }, {
+            "anim": "attackEnd",
+            "followUp": "attackEndLoop",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "actionDetached": false,
+            "align": "FACE",
+            "duration": 0.48,
+            "effect": {
+                "name": "shootCharge3",
+                "sheet": "combat.hexacast"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "type": "SET_SPEED",
+            "value": 200
+        }, {
+            "type": "SET_ACCEL_SPEED",
+            "value": 3
+        }, {
+            "immediately": true,
+            "type": "FACE_TO_TARGET",
+            "value": false
+        }, {
+            "stopBeforeEdge": true,
+            "time": 0.05,
+            "type": "MOVE_FORWARD"
+        }, {
+            "actionDetached": false,
+            "align": "FACE",
+            "duration": 0,
+            "effect": {
+                "name": "meleeNeutral",
+                "sheet": "combat.hexacast"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "FACE",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 0.3,
+                "element": "NEUTRAL",
+                "guardable": "",
+                "skillBonus": "",
+                "spFactor": 2,
+                "stunSteps": [{
+                    "type": "BLOCK_XY"
+                }],
+                "type": "LIGHT"
+            },
+            "centralAngle": 0.6,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": -12
+            },
+            "radius": 32,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }, {
+            "align": "FACE",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 0.5,
+                "element": "NEUTRAL",
+                "guardable": "",
+                "skillBonus": "",
+                "spFactor": 2,
+                "stunSteps": [{
+                    "type": "BLOCK_XY"
+                }],
+                "type": "LIGHT"
+            },
+            "centralAngle": 0.6,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": -12
+            },
+            "radius": 32,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }, {
+            "align": "FACE",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 0.7,
+                "element": "NEUTRAL",
+                "guardable": "",
+                "skillBonus": "",
+                "spFactor": 2,
+                "stunSteps": [{
+                    "type": "BLOCK_XY"
+                }],
+                "type": "LIGHT"
+            },
+            "centralAngle": 0.6,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": -12
+            },
+            "radius": 32,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "time": 0.05,
+            "type": "WAIT"
+        }, {
+            "immediately": true,
+            "type": "FACE_TO_TARGET",
+            "value": false
+        }, {
+            "time": 0.05,
+            "type": "WAIT"
+        }, {
+            "align": "FACE",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 1.3,
+                "element": "NEUTRAL",
+                "fly": "MASSIVE",
+                "guardable": "",
+                "skillBonus": "",
+                "spFactor": 4,
+                "type": "HEAVY"
+            },
+            "centralAngle": 0.6,
+            "checkCollision": false,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": -12
+            },
+            "radius": 48,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "time": 0.3,
+            "type": "WAIT"
+        }, {
+            "anim": "postShoot",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": true
+        }, {
+            "type": "SET_FACE_FIX",
+            "value": true
+        }, {
+            "time": 0.05,
+            "type": "WAIT"
+        }]
+    }
+}, {
+    "type": "ENTER",
+    "index": ["CHARGING", "steps", 0]
+}, {
+    "type": "SET_KEY",
+    "index": "anim",
+    "content": "aim"
+}, {
+    "type": "EXIT",
+    "count": 3
+}, {
+    "type": "ENTER",
+    "index": ["DASH", "steps", 9]
+}, {
+    "type": "SET_KEY",
+    "index": "stopBeforeEdge",
+    "content": false
+}, {
+    "type": "EXIT",
+    "count": 1
+}, {
+    "type": "ENTER",
+    "index": 11
+}, {
+    "type": "SET_KEY",
+    "index": "stopBeforeEdge",
+    "content": false
+}, {
+    "type": "EXIT",
+    "count": 3
+}, {
+    "type": "ENTER",
+    "index": ["GUARD", "steps", 0]
+}, {
+    "type": "SET_KEY",
+    "index": "anim",
+    "content": "aim"
+}, {
+    "type": "EXIT",
+    "count": 3
+}, {
+    "type": "ENTER",
+    "index": ["GUARD", "steps", 0]
+}, {
+    "type": "SET_KEY",
+    "index": "anim",
+    "content": "aim"
+}, {
+    "type": "EXIT",
+    "count": 3
+}, {
+    "type": "SET_KEY",
+    "index": "THROW_CHARGED_REV",
+    "content": {
+        "steps": [{
+            "blockData": {
+                "action": 0.2,
+                "dash": 0,
+                "move": 0.3,
+                "reaim": 0.4
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "charged": true,
+            "type": "SHOW_THROW_FX"
+        }, {
+            "elementProxy": "CHARGED",
+            "type": "SHOOT_PROXY_PLAYER"
+        }, {
+            "anim": "attackEndLoop",
+            "followUp": "throwEndRev",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 80
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "stopBeforeEdge": false,
+            "time": 0.1,
+            "type": "MOVE_TO_DIR"
+        }, {
+            "time": 0.4,
+            "type": "WAIT"
+        }]
+    }
+}, {
+    "type": "ENTER",
+    "index": ["THROW_CHARGED", "steps"]
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 1
+}, {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 1,
+    "content": {
+        "charged": true,
+        "type": "SHOW_THROW_FX"
+    }
+}, {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 2,
+    "content": {
+        "elementProxy": "CHARGED",
+        "type": "SHOOT_PROXY_PLAYER"
+    }
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 4
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 4
+}, {
+    "type": "ENTER",
+    "index": 3
+}, {
+    "type": "SET_KEY",
+    "index": "anim",
+    "content": "attackEndLoop"
+}, {
+    "type": "SET_KEY",
+    "index": "followUp",
+    "content": "throwEnd"
+}, {
+    "type": "EXIT"
+}, {
+    "type": "ENTER",
+    "index": 4
+}, {
+    "type": "SET_KEY",
+    "index": "value",
+    "content": 80
+}, {
+    "type": "EXIT"
+}, {
+    "type": "ENTER",
+    "index": 5
+}, {
+    "type": "SET_KEY",
+    "index": "stopBeforeEdge",
+    "content": false
+}, {
+    "type": "SET_KEY",
+    "index": "time",
+    "content": 0.1
+}, {
+    "type": "EXIT"
+}, {
+    "type": "EXIT",
+    "count": 2
+}, {
+    "type": "ENTER",
+    "index": ["PERFECT_GUARD", 0]
+}, {
+    "type": "SET_KEY",
+    "index": "anim",
+    "content": "aim"
+}, {
+    "type": "EXIT",
+    "count": 2
+}]

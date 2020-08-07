@@ -1,0 +1,2443 @@
+[{
+    "type": "SET_KEY",
+    "index": "ATTACK_FINISHER"
+}, {
+    "type": "SET_KEY",
+    "index": "ATTACK_SPECIAL1",
+    "content": {
+        "description": {
+            "de_DE": "Schleudere ein mächtiges Geschoss, welches Gegner durchdringt.",
+            "en_US": "Fire a powerful projectile that will fly through enemies.",
+            "ja_JP": "敵を貫通する強力な砲弾を発射する攻撃。",
+            "ko_KR": "적을 통과하는 강력한 발사체를 발사합니다.",
+            "langUid": 72,
+            "zh_CN": "射出一个可穿透敌人的强力钢弹。"
+        },
+        "dmgType": "RANGED",
+        "name": {
+            "en_US": "Ball of Steel",
+            "ja_JP": "スティールボール",
+            "ko_KR": "강철의 공",
+            "langUid": 71,
+            "zh_CN": "钢弹射击"
+        },
+        "status": false,
+        "steps": [{
+            "blockData": {
+                "action": 0.5,
+                "dash": 0,
+                "move": 0.5,
+                "reaim": 0.5
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "proxy": "magicMissibleBolt2",
+            "type": "SHOOT_PROXY_PLAYER"
+        }, {
+            "anim": "specialLoop",
+            "followUp": "throwMirrEnd",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 80
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "stopBeforeEdge": false,
+            "time": 0.1,
+            "type": "MOVE_TO_DIR"
+        }, {
+            "anim": "postShoot",
+            "followUp": "idle",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 0.52,
+            "type": "WAIT"
+        }],
+        "stunType": ""
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "ATTACK_SPECIAL2",
+    "content": {
+        "description": {
+            "de_DE": "Schleudere ein mächtiges Geschoss, welches Gegner durchdringt.",
+            "en_US": "Fire a powerful projectile that will fly through enemies.",
+            "ja_JP": "敵を貫通する強力な砲弾を発射する攻撃。",
+            "ko_KR": "적을 통과하는 강력한 발사체를 발사합니다.",
+            "langUid": 72,
+            "zh_CN": "射出一个可穿透敌人的强力钢弹。"
+        },
+        "dmgType": "RANGED",
+        "name": {
+            "en_US": "Ball of Steel",
+            "ja_JP": "スティールボール",
+            "ko_KR": "강철의 공",
+            "langUid": 71,
+            "zh_CN": "钢弹射击"
+        },
+        "status": false,
+        "steps": [{
+            "blockData": {
+                "action": 0.5,
+                "dash": 0,
+                "move": 0.5,
+                "reaim": 0.5
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "proxy": "Explode4",
+            "type": "SHOOT_PROXY_PLAYER"
+        }, {
+            "anim": "specialLoop",
+            "followUp": "throwMirrEnd",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 80
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "stopBeforeEdge": false,
+            "time": 0.1,
+            "type": "MOVE_TO_DIR"
+        }, {
+            "anim": "postShoot",
+            "followUp": "idle",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 0.52,
+            "type": "WAIT"
+        }],
+        "stunType": ""
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "ATTACK_SPECIAL3",
+    "content": {
+        "description": {
+            "en_US": "Spawn multiple icicles around you an create a protective but slowing shield that hurt enemies on contact.",
+            "ja_JP": "周りにつららを発生させる。触れた敵にダメージを与えるシールドも発生させるが、動きは遅くなる。",
+            "ko_KR": "자신 주변에 다수의 고드름을 생성해 이에 닿으면 적을 느리게 하는 방어막을 만듭니다.<<C<<\"an create a protective\" should be \"and create a protective\"?",
+            "langUid": 181,
+            "zh_CN": "在身周衍生多枚冰锥，并创造一道具有防护性，但会减慢速度的护盾。对触碰的敌人造成伤害。"
+        },
+        "name": {
+            "en_US": "Icy Bastion",
+            "ja_JP": "アイス・フォートレス",
+            "ko_KR": "얼음 요새",
+            "langUid": 180,
+            "zh_CN": "寒冰堡垒"
+        },
+        "steps": [{
+            "blockData": {
+                "action": -1,
+                "dash": 0,
+                "move": -1,
+                "reaim": -1
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "group": "wall",
+            "sticking": false,
+            "type": "REMOVE_PROXIES"
+        }, {
+            "group": "shield",
+            "sticking": false,
+            "type": "REMOVE_PROXIES"
+        }, {
+            "name": "techShield",
+            "type": "REMOVE_SHIELD"
+        }, {
+            "focusType": "SELF",
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "FASTEST",
+            "transition": "EASE_IN_OUT",
+            "type": "FOCUS_CAMERA",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 1.5
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "anim": "Charge",
+            "followUp": "charge",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 0.25,
+            "type": "WAIT"
+        }, {
+            "anim": "attackEndLoop",
+            "followUp": "attackMirrEnd",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "duration": 0.1,
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_ZOOM",
+            "zoom": 1
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "duration": 0.2,
+            "fadeIn": 0,
+            "fadeOut": 0.2,
+            "type": "SET_ZOOM_BLUR",
+            "zoomType": "LIGHT"
+        }, {
+            "align": "BOTTOM",
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "",
+            "type": "SHOOT_PROXY"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 1,
+            "circularArea": true,
+            "clockwise": false,
+            "count": 8,
+            "delay": 0,
+            "duration": 0.2,
+            "flipLeftFace": 0,
+            "maxGroundDistance": 16,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "magicMissibleBolt3",
+            "random": false,
+            "repeat": false,
+            "startDist": 32,
+            "startDistCollide": "CLOSER",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 1,
+            "circularArea": true,
+            "clockwise": true,
+            "count": 12,
+            "delay": 0,
+            "duration": 0.2,
+            "flipLeftFace": 0,
+            "maxGroundDistance": 16,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "magicMissibleBolt",
+            "random": false,
+            "repeat": false,
+            "startDist": 64,
+            "startDistCollide": "DROP",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 1,
+            "circularArea": true,
+            "clockwise": true,
+            "count": 8,
+            "delay": 0,
+            "duration": 0.2,
+            "flipLeftFace": 0,
+            "maxGroundDistance": 16,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "magicMissibleBolt2",
+            "random": false,
+            "repeat": false,
+            "startDist": 96,
+            "startDistCollide": "DROP",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.4,
+            "type": "WAIT"
+        }, {
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "type": "RESET_CAMERA",
+            "wait": false,
+            "waitSkip": 0
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "DASH_SPECIAL1",
+    "content": {
+        "description": {
+            "de_DE": "Schneller Sprint, der einen Gegner bei Kontakt mehrfach trifft. Verursacht \\c[3]Stottern\\c[0].",
+            "en_US": "Perform a fast dash that attacks one enemy multiple times on contact. Causes \\c[3]Jolt\\c[0].",
+            "ja_JP": "素早いダッシュを行い、当たった敵単体に複数回攻撃を与える。敵を\\c[3]感電\\c[0]状態にする。",
+            "ko_KR": "빠른 대시를 수행해 이에 닿는 한 적을 여러 번 공격합니다. \\c[3]감전\\c[0] 상태로 만듭니다.",
+            "langUid": 125,
+            "zh_CN": "对单个敌人造成数次冲刺攻击。"
+        },
+        "name": {
+            "en_US": "Amber Strike",
+            "ja_JP": "アンバーストライク",
+            "ko_KR": "호박색 타격",
+            "langUid": 124,
+            "zh_CN": "琥珀打击"
+        },
+        "steps": [{
+            "blockData": {
+                "action": 1.5,
+                "dash": 1.5,
+                "move": 1.5,
+                "reaim": 1.5
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "global": false,
+            "loop": false,
+            "sound": "media/sound/battle/dash-3.ogg",
+            "type": "PLAY_SOUND",
+            "volume": 0.9
+        }, {
+            "anim": "spinFull",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "dashFast",
+                "sheet": "specials.shock"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "type": "SET_HIT_STABLE",
+            "value": "HEAVY"
+        }, {
+            "type": "SET_JUMPING",
+            "value": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 450
+        }, {
+            "type": "SET_ACCEL_SPEED",
+            "value": 2
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0.5,
+            "effect": {
+                "name": "line",
+                "sheet": "dust"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 3,
+                "z": 6
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "type": "SET_FACE_TO_DIR"
+        }, {
+            "type": "SET_INVINCIBLE",
+            "value": 0.4
+        }, {
+            "attribName": "dashCnt",
+            "changeType": "set",
+            "proxyOwner": false,
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 3
+        }, {
+            "attack": {
+                "damageFactor": 1.5,
+                "element": "SHOCK",
+                "fly": "MASSIVE",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "spFactor": 0,
+                "status": 1.25,
+                "stunSteps": [{
+                    "type": "START_LOCK"
+                }, {
+                    "accel": 0,
+                    "maxTime": 0,
+                    "offZ": 4,
+                    "type": "Z_PULL"
+                }],
+                "type": "MASSIVE"
+            },
+            "cancelOnHit": true,
+            "hit": [{
+                "kind": "FIRST_HIT",
+                "type": "SET_TEMP_TARGET"
+            }, {
+                "focusType": "SELF",
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "FAST",
+                "target": "TARGET",
+                "transition": "EASE_IN_OUT",
+                "type": "FOCUS_CAMERA",
+                "wait": false,
+                "waitSkip": 0,
+                "zoom": 1
+            }, {
+                "type": "SET_Z_GRAVITY_FACTOR",
+                "value": 0
+            }, {
+                "name": "loop",
+                "type": "LABEL"
+            }, {
+                "actionDetached": false,
+                "align": "CENTER",
+                "duration": 0,
+                "effect": {
+                    "name": "dashHit",
+                    "sheet": "specials.shock"
+                },
+                "fixPos": false,
+                "flipLeftFace": false,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotateFace": -1,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "anim": "attackEndloop",
+                "type": "SHOW_ANIMATION",
+                "viaWalkConfig": false,
+                "wait": false
+            }, {
+                "attribName": "dashCnt",
+                "changeType": "sub",
+                "proxyOwner": false,
+                "type": "SET_ATTRIB_NUMBER",
+                "value": 1
+            }, {
+                "type": "STOP_XY"
+            }, {
+                "type": "SET_FACE_FIX",
+                "value": true
+            }, {
+                "type": "SET_SPEED",
+                "value": 80
+            }, {
+                "stopBeforeEdge": false,
+                "time": 0.05,
+                "type": "MOVE_BACKWARD"
+            }, {
+                "time": 0.1,
+                "type": "WAIT"
+            }, {
+                "type": "SET_SPEED",
+                "value": 700
+            }, {
+                "anim": "spinFull",
+                "type": "SHOW_ANIMATION",
+                "viaWalkConfig": false,
+                "wait": false
+            }, {
+                "condition": "entity.attrib.dashCnt > 1",
+                "elseStep": [{
+                    "attack": {
+                        "damageFactor": 2.5,
+                        "element": "SHOCK",
+                        "fly": "MASSIVE+",
+                        "guardable": "",
+                        "reverse": false,
+                        "skillBonus": "MELEE_DMG",
+                        "spFactor": 0,
+                        "status": 1,
+                        "stunSteps": [{
+                            "type": "END_LOCK"
+                        }],
+                        "type": "MASSIVE"
+                    },
+                    "cancelOnHit": true,
+                    "hit": [{
+                        "actionDetached": false,
+                        "align": "CENTER",
+                        "duration": 0,
+                        "effect": {
+                            "name": "dashHit",
+                            "sheet": "specials.shock"
+                        },
+                        "fixPos": false,
+                        "flipLeftFace": false,
+                        "offset": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "rotateFace": -1,
+                        "type": "SHOW_EFFECT",
+                        "wait": false,
+                        "waitSkip": 0
+                    }],
+                    "ignoreLastHit": false,
+                    "missed": [],
+                    "orthoDirFactor": 0,
+                    "time": 0.15,
+                    "type": "TACKLE",
+                    "withBranches": true
+                }],
+                "thenStep": [{
+                    "attack": {
+                        "damageFactor": 1.5,
+                        "element": "SHOCK",
+                        "fly": "MASSIVE",
+                        "guardable": "",
+                        "reverse": false,
+                        "skillBonus": "MELEE_DMG",
+                        "spFactor": 0,
+                        "status": 1,
+                        "stunSteps": [{
+                            "type": "START_LOCK"
+                        }, {
+                            "accel": 0,
+                            "maxTime": 0,
+                            "offZ": 4,
+                            "type": "Z_PULL"
+                        }],
+                        "type": "MASSIVE"
+                    },
+                    "cancelOnHit": true,
+                    "hit": [{
+                        "name": "loop",
+                        "type": "GOTO_LABEL"
+                    }],
+                    "ignoreLastHit": false,
+                    "missed": [],
+                    "orthoDirFactor": 0,
+                    "time": 0.15,
+                    "type": "TACKLE",
+                    "withBranches": true
+                }],
+                "type": "IF",
+                "withElse": true
+            }, {
+                "speed": "NORMAL",
+                "transition": "EASE_IN_OUT",
+                "type": "RESET_CAMERA",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "type": "STOP_XY"
+            }, {
+                "type": "CLEAR_STUN_LOCKED"
+            }, {
+                "type": "SET_COLL_TYPE",
+                "value": "IGNORE"
+            }, {
+                "type": "SET_FACE_FIX",
+                "value": true
+            }, {
+                "type": "SET_SPEED",
+                "value": 200
+            }, {
+                "type": "SET_Z_GRAVITY_FACTOR",
+                "value": 1
+            }, {
+                "type": "SET_Z_VEL",
+                "value": 180
+            }, {
+                "stopBeforeEdge": false,
+                "time": 0.4,
+                "type": "MOVE_BACKWARD"
+            }, {
+                "type": "CLEAR_EFFECTS"
+            }],
+            "ignoreLastHit": false,
+            "missed": [],
+            "orthoDirFactor": 0,
+            "time": 0.5,
+            "type": "TACKLE",
+            "withBranches": true
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "DASH_SPECIAL2",
+    "content": {
+        "description": {
+            "de_DE": "Ein sehr starker Angriff, der genau einen Gegner treffen wird. Sehr oft.",
+            "en_US": "An extremely powerful attack that will hit exactly one enemy. A lot.",
+            "ja_JP": "敵単体のみにヒットする、ものすごく強力な攻撃。",
+            "ko_KR": "정확히 하나의 적을 공격하는 극도로 강한 공격입니다. 엄청나게.",
+            "langUid": 161,
+            "zh_CN": "对单个敌人的极其强大的攻击。"
+        },
+        "dmgType": "MELEE",
+        "name": {
+            "en_US": "Final Showdown",
+            "ja_JP": "ファイナルショーダウン",
+            "ko_KR": "최후의 결전",
+            "langUid": 160,
+            "zh_CN": "落幕"
+        },
+        "status": false,
+        "steps": [{
+            "blockData": {
+                "action": -1,
+                "dash": -1,
+                "move": -1,
+                "reaim": -1
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "global": false,
+            "loop": false,
+            "sound": "media/sound/battle/dash-3.ogg",
+            "type": "PLAY_SOUND",
+            "volume": 0.9
+        }, {
+            "anim": "spinFull",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_JUMPING",
+            "value": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 450
+        }, {
+            "type": "SET_ACCEL_SPEED",
+            "value": 2
+        }, {
+            "type": "SET_COLL_TYPE",
+            "value": "IGNORE"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0.5,
+            "effect": {
+                "name": "line",
+                "sheet": "dust"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 3,
+                "z": 6
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "type": "SET_FACE_TO_DIR"
+        }, {
+            "type": "SET_INVINCIBLE",
+            "value": -1
+        }, {
+            "attack": {
+                "damageFactor": 2,
+                "element": "NEUTRAL",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "spFactor": 0,
+                "stunSteps": [{
+                    "type": "START_LOCK"
+                }, {
+                    "type": "BLOCK_XY"
+                }],
+                "type": "MASSIVE",
+                "visualType": "HEAVY"
+            },
+            "cancelOnHit": true,
+            "hit": [{
+                "type": "SET_WEIGHT",
+                "value": -1
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": -1,
+                "effect": {
+                    "name": "dashCopyHide",
+                    "sheet": "specials.neutral"
+                },
+                "fixPos": false,
+                "flipLeftFace": false,
+                "group": "hidden",
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotateFace": 0,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "duration": 0.2,
+                "fadeIn": 0,
+                "fadeOut": 0.2,
+                "type": "SET_ZOOM_BLUR",
+                "zoomType": "LIGHT"
+            }, {
+                "focusType": "BETWEEN_TARGET",
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "FASTEST",
+                "transition": "EASE_IN_OUT",
+                "type": "FOCUS_CAMERA",
+                "wait": false,
+                "waitSkip": 0,
+                "zoom": 1.2
+            }, {
+                "type": "STOP_XY"
+            }, {
+                "kind": "FIRST_HIT",
+                "type": "SET_TEMP_TARGET"
+            }, {
+                "align": "BOTTOM",
+                "angleVary": 0.2,
+                "centralAngle": 4,
+                "circularArea": false,
+                "clockwise": false,
+                "count": 8,
+                "delay": 0,
+                "duration": 1,
+                "flipLeftFace": 0,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "posEntity": "TARGET",
+                "proxy": "magicMissibleBolt3",
+                "random": false,
+                "repeat": false,
+                "startAngle": 0,
+                "startDist": 32,
+                "startDistCollide": false,
+                "type": "SHOOT_PROXY_RANGE",
+                "uniformDir": 0
+            }, {
+                "time": 0.1,
+                "type": "WAIT"
+            }, {
+                "focusType": "BETWEEN_TARGET",
+                "offsetX": 0,
+                "offsetY": -48,
+                "speed": "SLOWER",
+                "transition": "EASE_IN_OUT",
+                "type": "FOCUS_CAMERA",
+                "wait": false,
+                "waitSkip": 0,
+                "zoom": 1
+            }, {
+                "time": 1.1,
+                "type": "WAIT"
+            }, {
+                "duration": 0.2,
+                "fadeIn": 0,
+                "fadeOut": 0.2,
+                "type": "SET_ZOOM_BLUR",
+                "zoomType": "LIGHT"
+            }, {
+                "focusType": "SELF",
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "FASTEST",
+                "transition": "EASE_IN_OUT",
+                "type": "FOCUS_CAMERA",
+                "wait": false,
+                "waitSkip": 0,
+                "zoom": 1.5
+            }, {
+                "align": "BOTTOM",
+                "attack": {
+                    "damageFactor": 5,
+                    "element": "NEUTRAL",
+                    "fly": "MASSIVE++",
+                    "guardable": "",
+                    "reverse": false,
+                    "skillBonus": "MELEE_DMG",
+                    "spFactor": 0,
+                    "stunSteps": [{
+                        "type": "BLOCK_XY"
+                    }, {
+                        "accel": 0,
+                        "maxTime": 0,
+                        "offZ": 0,
+                        "type": "Z_VEL",
+                        "value": 200
+                    }, {
+                        "type": "END_LOCK"
+                    }],
+                    "type": "MASSIVE"
+                },
+                "hitCount": 1,
+                "hitDelay": 0,
+                "hitDir": "AWAY",
+                "selectType": "PREVIOUSLY_HIT",
+                "type": "DIRECT_HIT"
+            }, {
+                "group": "hidden",
+                "type": "CLEAR_EFFECTS"
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": -1,
+                "effect": {
+                    "name": "dashCopyReappear",
+                    "sheet": "specials.neutral"
+                },
+                "fixPos": false,
+                "flipLeftFace": false,
+                "group": "trail",
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotateFace": 0,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "stopBeforeEdge": true,
+                "time": 0.15,
+                "type": "MOVE_FORWARD"
+            }],
+            "ignoreLastHit": false,
+            "missed": [{
+                "stopBeforeEdge": true,
+                "time": 0.1,
+                "type": "MOVE_FORWARD"
+            }],
+            "orthoDirFactor": 0,
+            "time": 0.4,
+            "type": "TACKLE",
+            "withBranches": true
+        }, {
+            "type": "SET_INVINCIBLE",
+            "value": 0
+        }, {
+            "type": "SET_WEIGHT",
+            "value": 50
+        }, {
+            "anim": "attackEndLoop",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_COLL_TYPE",
+            "value": "VIRTUAL"
+        }, {
+            "time": 0.2,
+            "type": "WAIT"
+        }, {
+            "group": "trail",
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "speed": "SLOW",
+            "transition": "EASE_IN_OUT",
+            "type": "RESET_CAMERA",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "blockData": {
+                "action": -1,
+                "dash": 0,
+                "move": -1,
+                "reaim": -1
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "time": 0.2,
+            "type": "WAIT"
+        }, {
+            "anim": "preIdle",
+            "followUp": "idle",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }],
+        "stunType": "LOCK"
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "DASH_SPECIAL3",
+    "content": {
+        "description": {
+            "de_DE": "<<A<<[CHANGED 2017/12/14]",
+            "en_US": "Stop time and pummel an enemy with an uncontrollable series of attacks, finishing off with a diving spark and balls. Causes \\c[3]Jolt\\c[0].",
+            "ja_JP": "時を止め、敵単体をがむしゃらに殴りまくる攻撃。最後にダイビングスパークと球体による攻撃をお見舞いする。敵を\\c[3]感電\\c[0]状態にする。<<A<<[CHANGED 2017/11/27]",
+            "ko_KR": "시간을 멈춰 힘을 조절할 수 없을 정도의 공격으로 적 하나를 타격하고, 전기와 공으로 마무리합니다. \\c[3]감전\\c[0] 상태로 만듭니다.<<A<<[CHANGED 2017/11/20]",
+            "langUid": 252,
+            "zh_CN": "暂停时间，用一系列自动连击痛殴敌人，最后以闪电球终结。造成\\c[3]震慑\\c[0]效果。<<A<<[CHANGED 2017/12/12]"
+        },
+        "name": {
+            "de_DE": "<<A<<[CHANGED 2017/12/14]",
+            "en_US": "Flickering Stars",
+            "ja_JP": "シャイニングスター<<A<<[CHANGED 2017/12/11]",
+            "ko_KR": "깜빡이는 별들<<A<<TODO 0.9.8",
+            "langUid": 251,
+            "zh_CN": "白金星辰<<A<<[CHANGED 2017/12/12]"
+        },
+        "steps": [{
+            "blockData": {
+                "action": -1,
+                "dash": -1,
+                "move": -1,
+                "reaim": -1
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "global": false,
+            "loop": false,
+            "sound": "media/sound/battle/dash-3.ogg",
+            "type": "PLAY_SOUND",
+            "volume": 0.9
+        }, {
+            "anim": "spinFull",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "dashFast",
+                "sheet": "specials.shock"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "type": "SET_HIT_STABLE",
+            "value": "HEAVY"
+        }, {
+            "type": "SET_JUMPING",
+            "value": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 650
+        }, {
+            "type": "SET_ACCEL_SPEED",
+            "value": 2
+        }, {
+            "type": "SET_COLL_TYPE",
+            "value": "IGNORE"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0.5,
+            "effect": {
+                "name": "line",
+                "sheet": "dust"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 3,
+                "z": 6
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "type": "SET_FACE_TO_DIR"
+        }, {
+            "type": "SET_HIT_STABLE",
+            "value": "MASSIVE"
+        }, {
+            "type": "SET_INVINCIBLE",
+            "value": 0.4
+        }, {
+            "attribName": "dashCnt",
+            "changeType": "set",
+            "proxyOwner": false,
+            "type": "SET_ATTRIB_NUMBER",
+            "value": 3
+        }, {
+            "attack": {
+                "damageFactor": 1.5,
+                "element": "SHOCK",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "spFactor": 0,
+                "status": 1,
+                "stunSteps": [{
+                    "type": "START_LOCK"
+                }, {
+                    "type": "BLOCK_XY"
+                }],
+                "type": "MASSIVE"
+            },
+            "cancelOnHit": true,
+            "hit": [{
+                "kind": "FIRST_HIT",
+                "type": "SET_TEMP_TARGET"
+            }, {
+                "focusType": "BETWEEN_TARGET",
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "SLOWER",
+                "transition": "EASE_IN_OUT",
+                "type": "FOCUS_CAMERA",
+                "wait": false,
+                "waitSkip": 0,
+                "zoom": 3
+            }, {
+                "stopBeforeEdge": true,
+                "time": 0.066,
+                "type": "MOVE_FORWARD"
+            }, {
+                "type": "CLEAR_EFFECTS"
+            }, {
+                "anim": "attackEndLoop",
+                "type": "SHOW_ANIMATION",
+                "viaWalkConfig": false,
+                "wait": false
+            }, {
+                "factor": 0.2,
+                "inversAccelerate": true,
+                "keepEntityStatic": false,
+                "time": 0.2,
+                "type": "ADD_SLOW_MOTION"
+            }, {
+                "duration": 0.2,
+                "fadeIn": 0,
+                "fadeOut": 0.2,
+                "type": "SET_ZOOM_BLUR",
+                "zoomType": "LIGHT"
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": -1,
+                "effect": {
+                    "name": "mjolAura",
+                    "sheet": "specials.shock"
+                },
+                "fixPos": false,
+                "flipLeftFace": true,
+                "group": "aura",
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotateFace": 0,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": -1,
+                "effect": {
+                    "name": "waldoTarget",
+                    "sheet": "specials.shock"
+                },
+                "fixPos": false,
+                "flipLeftFace": true,
+                "group": "aura",
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotateFace": 0,
+                "target": "TARGET",
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": -1,
+                "effect": {
+                    "name": "waldoCharge",
+                    "sheet": "specials.shock"
+                },
+                "fixPos": false,
+                "flipLeftFace": true,
+                "group": "charge",
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotateFace": 0,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "time": 1,
+                "type": "WAIT"
+            }, {
+                "removeEntityStatic": false,
+                "time": 0.1,
+                "type": "CLEAR_SLOW_MOTION"
+            }, {
+                "duration": 0.2,
+                "fadeIn": 0,
+                "fadeOut": 0.2,
+                "type": "SET_ZOOM_BLUR",
+                "zoomType": "LIGHT"
+            }, {
+                "focusType": "SELF",
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "FASTEST",
+                "target": "TARGET",
+                "transition": "EASE_IN_OUT",
+                "type": "FOCUS_CAMERA",
+                "wait": false,
+                "waitSkip": 0,
+                "zoom": 1.25
+            }, {
+                "group": "charge",
+                "type": "CLEAR_EFFECTS"
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": -1,
+                "effect": {
+                    "name": "dashFast",
+                    "sheet": "specials.shock"
+                },
+                "fixPos": false,
+                "flipLeftFace": false,
+                "group": "hyper",
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotateFace": 0,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": -1,
+                "effect": {
+                    "name": "dashHyper",
+                    "sheet": "specials.shock"
+                },
+                "fixPos": false,
+                "flipLeftFace": false,
+                "group": "hyper",
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotateFace": 0,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "attribName": "dash",
+                "changeType": "set",
+                "proxyOwner": false,
+                "type": "SET_ATTRIB_NUMBER",
+                "value": 11
+            }, {
+                "type": "SET_INVINCIBLE",
+                "value": -1
+            }, {
+                "type": "SET_SPEED",
+                "value": 1500
+            }, {
+                "type": "SET_AIR_FRICTION",
+                "value": 1
+            }, {
+                "type": "SET_Z_GRAVITY_FACTOR",
+                "value": 0
+            }, {
+                "anim": "spinFull",
+                "type": "SHOW_ANIMATION",
+                "viaWalkConfig": false,
+                "wait": false
+            }, {
+                "name": "start",
+                "type": "LABEL"
+            }, {
+                "attribName": "dash",
+                "changeType": "sub",
+                "proxyOwner": false,
+                "type": "SET_ATTRIB_NUMBER",
+                "value": 1
+            }, {
+                "immediately": true,
+                "type": "FACE_TO_TARGET",
+                "value": false
+            }, {
+                "attack": {
+                    "element": "SHOCK",
+                    "guardable": "",
+                    "reverse": false,
+                    "skillBonus": "MELEE_DMG",
+                    "status": 1,
+                    "stunSteps": [{
+                        "type": "BLOCK_XY"
+                    }],
+                    "type": "MEDIUM"
+                },
+                "cancelOnHit": true,
+                "ignoreLastHit": false,
+                "missReactTime": 0,
+                "orthoDirFactor": 0,
+                "time": 0.1,
+                "type": "TACKLE"
+            }, {
+                "condition": "entity.attrib.dash > 0",
+                "thenStep": [{
+                    "maxTargetDistance": 32,
+                    "stopBeforeEdge": true,
+                    "time": 0.033,
+                    "type": "MOVE_FORWARD"
+                }, {
+                    "type": "STOP_XY"
+                }, {
+                    "name": "start",
+                    "type": "GOTO_LABEL"
+                }],
+                "type": "IF",
+                "withElse": false
+            }, {
+                "duration": 0.2,
+                "transition": "EASE_OUT",
+                "type": "SET_CAMERA_ZOOM",
+                "zoom": 2
+            }, {
+                "anim": "specialLoop",
+                "type": "SHOW_ANIMATION",
+                "viaWalkConfig": false,
+                "wait": false
+            }, {
+                "maxTargetDistance": 48,
+                "stopBeforeEdge": true,
+                "time": 0.1,
+                "type": "MOVE_FORWARD"
+            }, {
+                "type": "STOP_XY"
+            }, {
+                "group": "hyper",
+                "type": "CLEAR_EFFECTS"
+            }, {
+                "factor": 0.0001,
+                "inversAccelerate": true,
+                "keepEntityStatic": false,
+                "time": 0,
+                "type": "ADD_SLOW_MOTION"
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": -1,
+                "effect": {
+                    "name": "slowMotion3",
+                    "sheet": "specials.shock"
+                },
+                "fixPos": false,
+                "flipLeftFace": false,
+                "group": "slow",
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotateFace": 0,
+                "target": "TARGET",
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "time": 0.3,
+                "type": "WAIT"
+            }, {
+                "focusType": "BETWEEN_TARGET",
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "SLOW",
+                "transition": "EASE_IN_OUT",
+                "type": "FOCUS_CAMERA",
+                "wait": false,
+                "waitSkip": 0,
+                "zoom": 1.5
+            }, {
+                "type": "CLEAR_ANIMATION"
+            }, {
+                "immediately": false,
+                "type": "FACE_TO_TARGET",
+                "value": true
+            }, {
+                "time": 0.25,
+                "type": "WAIT"
+            }, {
+                "anim": "spinFull",
+                "type": "SHOW_ANIMATION",
+                "viaWalkConfig": false,
+                "wait": false
+            }, {
+                "type": "SET_SPEED",
+                "value": 180
+            }, {
+                "type": "SET_RELATIVE_SPEED",
+                "value": 0.5
+            }, {
+                "distance": 64,
+                "forceTime": false,
+                "maxTime": 0.3,
+                "planOnly": false,
+                "targetType": "ENEMY",
+                "throwing": true,
+                "type": "NAVIGATE_ESCAPE_TARGET"
+            }, {
+                "immediately": true,
+                "type": "FACE_TO_TARGET",
+                "value": true
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": 0,
+                "effect": {
+                    "name": "waldoThrow",
+                    "sheet": "specials.shock"
+                },
+                "fixPos": false,
+                "flipLeftFace": false,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 12
+                },
+                "rotateFace": 8,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "anim": "spinFull",
+                "followUp": "attackEnd",
+                "type": "SHOW_ANIMATION",
+                "viaWalkConfig": false,
+                "wait": false
+            }, {
+                "stopBeforeEdge": false,
+                "time": 0.05,
+                "type": "MOVE_BACKWARD"
+            }, {
+                "time": 0.05,
+                "type": "WAIT"
+            }, {
+                "align": "BOTTOM",
+                "angleVary": 0,
+                "centralAngle": 0.2,
+                "circularArea": false,
+                "clockwise": false,
+                "count": 6,
+                "delay": 0,
+                "duration": 0.1,
+                "flipLeftFace": 0,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 12
+                },
+                "proxy": "defaultWave",
+                "random": false,
+                "repeat": false,
+                "startDist": 32,
+                "startDistCollide": "CLOSER",
+                "type": "SHOOT_PROXY_RANGE",
+                "uniformDir": 1
+            }, {
+                "time": 0.05,
+                "type": "WAIT"
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": 0,
+                "effect": {
+                    "name": "waldoThrow",
+                    "sheet": "specials.shock"
+                },
+                "fixPos": false,
+                "flipLeftFace": false,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 12
+                },
+                "rotateFace": 8,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "anim": "spinFull",
+                "followUp": "attackEnd",
+                "type": "SHOW_ANIMATION",
+                "viaWalkConfig": false,
+                "wait": false
+            }, {
+                "stopBeforeEdge": false,
+                "time": 0.05,
+                "type": "MOVE_BACKWARD"
+            }, {
+                "time": 0.05,
+                "type": "WAIT"
+            }, {
+                "align": "BOTTOM",
+                "angleVary": 0,
+                "centralAngle": 0.3,
+                "circularArea": false,
+                "clockwise": false,
+                "count": 8,
+                "delay": 0,
+                "duration": 0.1,
+                "flipLeftFace": 0,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 12
+                },
+                "proxy": "defaultShock",
+                "random": false,
+                "repeat": false,
+                "startDist": 32,
+                "startDistCollide": "CLOSER",
+                "type": "SHOOT_PROXY_RANGE",
+                "uniformDir": 1
+            }, {
+                "time": 0.05,
+                "type": "WAIT"
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": 0,
+                "effect": {
+                    "name": "waldoThrow",
+                    "sheet": "specials.shock"
+                },
+                "fixPos": false,
+                "flipLeftFace": false,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 12
+                },
+                "rotateFace": 8,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "anim": "spinFull",
+                "followUp": "attackEnd",
+                "type": "SHOW_ANIMATION",
+                "viaWalkConfig": false,
+                "wait": false
+            }, {
+                "stopBeforeEdge": false,
+                "time": 0.05,
+                "type": "MOVE_BACKWARD"
+            }, {
+                "time": 0.05,
+                "type": "WAIT"
+            }, {
+                "align": "BOTTOM",
+                "angleVary": 0,
+                "centralAngle": 0.4,
+                "circularArea": false,
+                "clockwise": false,
+                "count": 10,
+                "delay": 0,
+                "duration": 0.1,
+                "flipLeftFace": 0,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 12
+                },
+                "proxy": "defaultCold",
+                "random": false,
+                "repeat": false,
+                "startDist": 32,
+                "startDistCollide": "CLOSER",
+                "type": "SHOOT_PROXY_RANGE",
+                "uniformDir": 1
+            }, {
+                "time": 0.05,
+                "type": "WAIT"
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": 0,
+                "effect": {
+                    "name": "waldoThrow",
+                    "sheet": "specials.shock"
+                },
+                "fixPos": false,
+                "flipLeftFace": false,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 12
+                },
+                "rotateFace": 8,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "anim": "spinFull",
+                "followUp": "attackEnd",
+                "type": "SHOW_ANIMATION",
+                "viaWalkConfig": false,
+                "wait": false
+            }, {
+                "stopBeforeEdge": false,
+                "time": 0.05,
+                "type": "MOVE_BACKWARD"
+            }, {
+                "time": 0.05,
+                "type": "WAIT"
+            }, {
+                "align": "BOTTOM",
+                "angleVary": 0,
+                "centralAngle": 0.5,
+                "circularArea": false,
+                "clockwise": false,
+                "count": 12,
+                "delay": 0,
+                "duration": 0.1,
+                "flipLeftFace": 0,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 12
+                },
+                "proxy": "defaultHeat",
+                "random": false,
+                "repeat": false,
+                "startDist": 32,
+                "startDistCollide": "CLOSER",
+                "type": "SHOOT_PROXY_RANGE",
+                "uniformDir": 1
+            }, {
+                "time": 0.05,
+                "type": "WAIT"
+            }, {
+                "focusType": "SELF",
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "NORMAL",
+                "transition": "EASE_IN_OUT",
+                "type": "FOCUS_CAMERA",
+                "wait": false,
+                "waitSkip": 0,
+                "zoom": 2
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": 0.5,
+                "effect": {
+                    "name": "shockSubCharge",
+                    "sheet": "specials.shock"
+                },
+                "fixPos": false,
+                "flipLeftFace": true,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotateFace": 0,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "time": 0.5,
+                "type": "WAIT"
+            }, {
+                "align": "BOTTOM",
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "proxy": "targetMarker",
+                "type": "SHOOT_PROXY"
+            }, {
+                "focusType": "SELF",
+                "offsetX": 0,
+                "offsetY": -64,
+                "speed": "FAST",
+                "target": "TARGET",
+                "transition": "EASE_IN_OUT",
+                "type": "FOCUS_CAMERA",
+                "wait": false,
+                "waitSkip": 0,
+                "zoom": 1
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": -1,
+                "effect": {
+                    "name": "dashFast",
+                    "sheet": "specials.shock"
+                },
+                "fixPos": false,
+                "flipLeftFace": false,
+                "group": "hyper",
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotateFace": 0,
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "anim": "spinFull",
+                "type": "SHOW_ANIMATION",
+                "viaWalkConfig": false,
+                "wait": false
+            }, {
+                "type": "SET_Z_VEL",
+                "value": 2000
+            }, {
+                "type": "SET_Z_GRAVITY_FACTOR",
+                "value": 2.5
+            }, {
+                "type": "SET_COLL_TYPE",
+                "value": "IGNORE"
+            }, {
+                "adjustSpeedMax": 300,
+                "cancelIfBelowFall": false,
+                "distance": 0,
+                "missileMode": 0,
+                "offset": {
+                    "x": 0,
+                    "y": 4
+                },
+                "stopBeforeTime": 0,
+                "stopType": "Z_ZENITH",
+                "type": "JUMP_TARGET_MOVEMENT"
+            }, {
+                "type": "SET_Z_VEL",
+                "value": -600
+            }, {
+                "type": "FACE_TO_TARGET",
+                "value": false
+            }, {
+                "face": "SOUTH",
+                "rotate": true,
+                "rotateSpeed": 3,
+                "type": "SET_FACE"
+            }, {
+                "anim": "jump",
+                "followUp": "specialHitDown",
+                "type": "SHOW_ANIMATION",
+                "viaWalkConfig": false,
+                "wait": false
+            }, {
+                "adjustSpeedMax": 300,
+                "cancelIfBelowFall": false,
+                "distance": 0,
+                "missileMode": 0,
+                "offset": {
+                    "x": 0,
+                    "y": 4
+                },
+                "stopBeforeTime": 0.1,
+                "stopType": "LANDED",
+                "type": "JUMP_TARGET_MOVEMENT"
+            }, {
+                "focusType": "SELF",
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "FASTEST",
+                "transition": "EASE_IN_OUT",
+                "type": "FOCUS_CAMERA",
+                "wait": false,
+                "waitSkip": 0,
+                "zoom": 2
+            }, {
+                "type": "WAIT_UNTIL_ON_GROUND"
+            }, {
+                "group": "hyper",
+                "type": "CLEAR_EFFECTS"
+            }, {
+                "actionDetached": false,
+                "align": "BOTTOM",
+                "duration": 0.7,
+                "effect": {
+                    "name": "waldoBeat",
+                    "sheet": "specials.shock"
+                },
+                "fixPos": false,
+                "flipLeftFace": true,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "rotateFace": 0,
+                "target2": "SELF",
+                "target2Offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 480
+                },
+                "type": "SHOW_EFFECT",
+                "wait": false,
+                "waitSkip": 0
+            }, {
+                "anim": "aim",
+                "followUp": "specialHitDownImpact",
+                "type": "SHOW_ANIMATION",
+                "viaWalkConfig": false,
+                "wait": false
+            }, {
+                "align": "BOTTOM",
+                "alwaysFull": true,
+                "attack": {
+                    "damageFactor": 0.5,
+                    "element": "SHOCK",
+                    "guardable": "",
+                    "limiter": "",
+                    "reverse": false,
+                    "skillBonus": "",
+                    "stunSteps": [{
+                        "type": "BLOCK_XY"
+                    }],
+                    "type": "LIGHT"
+                },
+                "centralAngle": 1,
+                "checkCollision": false,
+                "clockwise": false,
+                "duration": 0.066,
+                "expandRadius": 0,
+                "fixPos": false,
+                "flipLeftFace": 0,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "radius": 16,
+                "rectangular": false,
+                "repeat": true,
+                "type": "CIRCLE_ATTACK",
+                "uniformHitDir": false,
+                "yScale": 0,
+                "zHeight": 16
+            }, {
+                "time": 0.7,
+                "type": "WAIT"
+            }, {
+                "type": "STOP_REPEATING_FORCE"
+            }, {
+                "align": "BOTTOM",
+                "alwaysFull": true,
+                "attack": {
+                    "damageFactor": 2,
+                    "element": "SHOCK",
+                    "fly": "MEDIUM",
+                    "guardable": "",
+                    "limiter": "",
+                    "reverse": false,
+                    "skillBonus": "",
+                    "stunSteps": [{
+                        "type": "BLOCK_XY"
+                    }],
+                    "type": "MASSIVE"
+                },
+                "centralAngle": 1,
+                "checkCollision": false,
+                "clockwise": false,
+                "duration": 0.066,
+                "expandRadius": 0,
+                "fixPos": false,
+                "flipLeftFace": 0,
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "radius": 16,
+                "rectangular": false,
+                "repeat": false,
+                "type": "CIRCLE_ATTACK",
+                "uniformHitDir": false,
+                "yScale": 0,
+                "zHeight": 16
+            }, {
+                "key": "marker",
+                "kind": "ACTION_PROXY",
+                "type": "SET_TEMP_TARGET"
+            }, {
+                "type": "FACE_TO_TARGET_OFFSET",
+                "value": 0.5
+            }, {
+                "immediately": true,
+                "type": "FACE_TO_TARGET",
+                "value": false
+            }, {
+                "type": "SET_Z_VEL",
+                "value": 500
+            }, {
+                "type": "SET_Z_GRAVITY_FACTOR",
+                "value": 2.5
+            }, {
+                "duration": 0.5,
+                "transition": "EASE_IN_OUT",
+                "type": "SET_CAMERA_ZOOM",
+                "zoom": 1.5
+            }, {
+                "adjustSpeedMax": 500,
+                "cancelIfBelowFall": false,
+                "distance": 0,
+                "missileMode": 0,
+                "stopBeforeTime": 0,
+                "stopType": "LANDED",
+                "type": "JUMP_TARGET_MOVEMENT"
+            }, {
+                "align": "BOTTOM",
+                "faceDistance": 0,
+                "name": "startPos",
+                "target": "TARGET",
+                "type": "SET_ATTRIB_POS"
+            }, {
+                "kind": "FIRST_HIT",
+                "type": "SET_TEMP_TARGET"
+            }, {
+                "focusType": "BETWEEN_TARGET",
+                "offsetX": 0,
+                "offsetY": 0,
+                "speed": "FAST",
+                "transition": "EASE_OUT",
+                "type": "FOCUS_CAMERA",
+                "wait": false,
+                "waitSkip": 0,
+                "zoom": 1.5
+            }, {
+                "duration": 0.2,
+                "keySpline": "EASE_OUT",
+                "newPos": {
+                    "actorAttrib": "startPos"
+                },
+                "timePerTile": false,
+                "type": "INTERPOLATE_POSITION"
+            }, {
+                "group": "slow",
+                "type": "CLEAR_EFFECTS"
+            }, {
+                "removeEntityStatic": false,
+                "time": 0.3,
+                "type": "CLEAR_SLOW_MOTION"
+            }, {
+                "type": "SET_INVINCIBLE",
+                "value": 0
+            }, {
+                "time": 0.8,
+                "type": "WAIT"
+            }, {
+                "group": "aura",
+                "type": "CLEAR_EFFECTS"
+            }, {
+                "align": "BOTTOM",
+                "attack": {
+                    "element": "SHOCK",
+                    "fly": "MASSIVE+",
+                    "guardable": "",
+                    "limiter": "",
+                    "reverse": false,
+                    "skillBonus": "",
+                    "stunSteps": [{
+                        "type": "END_LOCK"
+                    }],
+                    "type": "MASSIVE"
+                },
+                "hitCount": 1,
+                "hitDelay": 0,
+                "hitDir": "AWAY",
+                "selectType": "STUN_LOCKED",
+                "type": "DIRECT_HIT"
+            }, {
+                "time": 0.2,
+                "type": "WAIT"
+            }],
+            "ignoreLastHit": false,
+            "missed": [],
+            "orthoDirFactor": 0,
+            "time": 0.5,
+            "type": "TACKLE",
+            "withBranches": true
+        }, {
+            "blockData": {
+                "action": 0,
+                "dash": 0,
+                "move": 0,
+                "reaim": 0
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "GUARD_SPECIAL1",
+    "content": {
+        "description": {
+            "de_DE": "Blocke einen Angriff und verlangsame die Zeit für alles außer dich selbst.",
+            "en_US": "Block one attack and slow down time for everything but yourself.",
+            "ja_JP": "攻撃を一度だけ防ぎ、自分以外の時間の流れを遅くする。",
+            "ko_KR": "한 공격을 차단하고 자신을 제외한 모든 시간을 느리게 만듭니다.",
+            "langUid": 127,
+            "zh_CN": "防御一次进攻，并减缓除了你自己的一切时间。"
+        },
+        "name": {
+            "en_US": "Clock Block",
+            "ja_JP": "クロック・ブロック",
+            "ko_KR": "시계 차단",
+            "langUid": 126,
+            "zh_CN": "时钟防御"
+        },
+        "steps": [{
+            "anim": "guard",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "blockData": {
+                "action": -1,
+                "dash": 0,
+                "move": -1,
+                "reaim": -1
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "timeGuardAura",
+                "sheet": "specials.shock"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 8
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "timeGuardAuraClock",
+                "sheet": "specials.shock"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 8
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "actionDetached": false,
+            "name": "derp",
+            "shield": {
+                "settings": {
+                    "baseFactor": 0,
+                    "range": 0.5,
+                    "stableOverride": "MASSIVE"
+                },
+                "type": "DIRECTIONAL"
+            },
+            "type": "ADD_SHIELD"
+        }, {
+            "maxTime": 1.4,
+            "meleeOnly": false,
+            "type": "WAIT_UNTIL_GUARDED"
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "name": "derp",
+            "type": "REMOVE_SHIELD"
+        }, {
+            "conditions": [{
+                "negated": false,
+                "type": "HAS_BLOCKED_HITS"
+            }],
+            "thenStep": [{
+                "group": "aura",
+                "sticking": false,
+                "type": "REMOVE_PROXIES"
+            }, {
+                "align": "BOTTOM",
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "proxy": "lightningSlowMo",
+                "type": "SHOOT_PROXY"
+            }, {
+                "time": 0.2,
+                "type": "WAIT"
+            }],
+            "type": "COMBAT_IF",
+            "withElse": false
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "GUARD_SPECIAL2",
+    "content": {
+        "description": {
+            "de_DE": "Blocke einen Angriff und stoppe die Zeit für alles außer dich selbst.",
+            "en_US": "Block one attack and stop time for everything but yourself.",
+            "ja_JP": "攻撃を一度だけ防ぎ、自分以外の時間を止める。",
+            "ko_KR": "한 공격을 차단하고 자신을 제외한 시간을 멈춥니다.",
+            "langUid": 207,
+            "zh_CN": "格挡一次攻击，并停止除自己之外的一切时间。"
+        },
+        "name": {
+            "en_US": "Glitch Time",
+            "ja_JP": "グリッチタイム",
+            "ko_KR": "글리치 타임",
+            "langUid": 206,
+            "zh_CN": "时间静止"
+        },
+        "steps": [{
+            "anim": "guard",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "blockData": {
+                "action": -1,
+                "dash": 0,
+                "move": -1,
+                "reaim": -1
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "timeGuardAura",
+                "sheet": "specials.shock"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 8
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "timeGuardAuraClock",
+                "sheet": "specials.shock"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 8
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "actionDetached": false,
+            "name": "derp",
+            "perfectGuardTime": 5,
+            "shield": {
+                "settings": {
+                    "baseFactor": 0,
+                    "range": 0.5,
+                    "stableOverride": "MASSIVE"
+                },
+                "type": "DIRECTIONAL"
+            },
+            "type": "ADD_SHIELD"
+        }, {
+            "maxTime": 1.4,
+            "meleeOnly": false,
+            "type": "WAIT_UNTIL_GUARDED"
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "name": "derp",
+            "type": "REMOVE_SHIELD"
+        }, {
+            "conditions": [{
+                "negated": false,
+                "type": "HAS_BLOCKED_HITS"
+            }],
+            "thenStep": [{
+                "group": "aura",
+                "sticking": false,
+                "type": "REMOVE_PROXIES"
+            }, {
+                "align": "BOTTOM",
+                "offset": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "proxy": "lightningStop",
+                "type": "SHOOT_PROXY"
+            }, {
+                "time": 0.2,
+                "type": "WAIT"
+            }],
+            "type": "COMBAT_IF",
+            "withElse": false
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "THROW_NORMAL_REV",
+    "content": {
+        "steps": [{
+            "blockData": {
+                "action": -1,
+                "dash": 0,
+                "move": 0.3,
+                "reaim": 0.4
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "ignoreCurrentTarget": false,
+            "prevHitBehavior": "NONE",
+            "searchType": "IN_VIEW",
+            "type": "SET_CLOSE_TEMP_TARGET"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "shootShock",
+                "sheet": "combat.hexacast"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 12
+            },
+            "rotateFace": 6,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0.01,
+            "centralAngle": 0.2,
+            "circularArea": false,
+            "clockwise": false,
+            "count": 3,
+            "delay": 0,
+            "duration": 0.4,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 12
+            },
+            "proxy": "defaultShock",
+            "random": false,
+            "repeat": false,
+            "startDist": 8,
+            "startDistCollide": "CLOSER",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "anim": "attackEndLoop",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 80
+        }, {
+            "time": 0.5,
+            "type": "WAIT"
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "THROW_SPECIAL2",
+    "content": {
+        "description": {
+            "en_US": "Throw a shock ball that will bounce off an enemy and create a sphere that emits multiple homing projectiles. ",
+            "ja_JP": "電撃の玉を放つ攻撃。玉は敵に当たると跳ね返り、大量のホーミング弾を放つ大きな球体を発生させる。",
+            "ko_KR": "적에게 맞고 튀어 나오는 전기 공을 던지고 다수의 자동 유도 발사체를 내뿜는 구를 만듭니다.",
+            "langUid": 203,
+            "zh_CN": "投掷一个闪电球，击中敌人后会反弹，并生成一颗球体，射出多枚归航导弹。"
+        },
+        "name": {
+            "en_US": "Radiant Swarm",
+            "ja_JP": "ライトニングスワーム",
+            "ko_KR": "빛나는 무리",
+            "langUid": 202,
+            "zh_CN": "辐射集群"
+        },
+        "steps": [{
+            "blockData": {
+                "action": 0.5,
+                "dash": 0,
+                "move": 0.5,
+                "reaim": 0.52
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "proxy": "shockHomingGen",
+            "type": "SHOOT_PROXY_PLAYER"
+        }, {
+            "anim": "special",
+            "followUp": "specialLoop",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 80
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "stopBeforeEdge": false,
+            "time": 0.1,
+            "type": "MOVE_TO_DIR"
+        }, {
+            "time": 0.52,
+            "type": "WAIT"
+        }, {
+            "anim": "specialPost",
+            "followUp": "idle",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "THROW_SPECIAL3",
+    "content": {
+        "description": {
+            "de_DE": "<<A<<[CHANGED 2017/12/14]",
+            "en_US": "It's hammer time. Throw a ball that chains multiple enemies together and evaporates them with a massive lightning bolt.",
+            "ja_JP": "審判が下される。球体を放って複数の敵をつなぎ留めたのち、巨大な稲妻でまとめて消し去る攻撃。<<A<<[CHANGED 2017/11/27]",
+            "ko_KR": "망치를 휘두를 시간입니다! 다수의 적을 함께 묶어놓는 공을 던지며 대규모의 번개로 증발시킵니다. <<A<<[CHANGED 2017/11/20]",
+            "langUid": 250,
+            "zh_CN": "射出一枚炮弹，连接多个敌人，随后用巨型闪电摧毁他们。<<A<<[CHANGED 2017/12/12]"
+        },
+        "name": {
+            "de_DE": "<<A<<[CHANGED 2017/12/14]",
+            "en_US": "Mjölnir",
+            "ja_JP": "ミョルニル<<A<<[CHANGED 2017/11/27]",
+            "ko_KR": "묠니르<<A<<[CHANGED 2017/11/20]",
+            "langUid": 249,
+            "zh_CN": "雷神之锤<<A<<[CHANGED 2017/12/12]"
+        },
+        "steps": [{
+            "blockData": {
+                "action": 0.5,
+                "dash": 0,
+                "move": 0.5,
+                "reaim": 0.52
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "proxy": "lightningStarter3",
+            "type": "SHOOT_PROXY_PLAYER"
+        }, {
+            "anim": "specialShoot",
+            "followUp": "throwMirrEnd",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 80
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "stopBeforeEdge": false,
+            "time": 0.1,
+            "type": "MOVE_TO_DIR"
+        }, {
+            "time": 0.52,
+            "type": "WAIT"
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "erase"
+}, {
+    "type": "SET_KEY",
+    "index": "last"
+}, {
+    "type": "SET_KEY",
+    "index": "intersect"
+}, {
+    "type": "SET_KEY",
+    "index": "random"
+}, {
+    "type": "ENTER",
+    "index": ["THROW_NORMAL", "steps"]
+}, {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 1,
+    "content": {
+        "ignoreCurrentTarget": false,
+        "prevHitBehavior": "NONE",
+        "searchType": "IN_VIEW",
+        "type": "SET_CLOSE_TEMP_TARGET"
+    }
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 7
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 7
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 7
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 7
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 7
+}, {
+    "type": "EXIT",
+    "count": 2
+}]

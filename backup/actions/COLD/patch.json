@@ -1,0 +1,2151 @@
+[{
+    "type": "SET_KEY",
+    "index": "ATTACK_SPECIAL1",
+    "content": {
+        "description": {
+            "de_DE": "Schleudere ein mächtiges Geschoss, welches Gegner durchdringt.",
+            "en_US": "Fire a powerful projectile that will fly through enemies.",
+            "ja_JP": "敵を貫通する強力な砲弾を発射する攻撃。",
+            "ko_KR": "적을 통과하는 강력한 발사체를 발사합니다.",
+            "langUid": 72,
+            "zh_CN": "射出一个可穿透敌人的强力钢弹。"
+        },
+        "dmgType": "RANGED",
+        "name": {
+            "en_US": "Ball of Steel",
+            "ja_JP": "スティールボール",
+            "ko_KR": "강철의 공",
+            "langUid": 71,
+            "zh_CN": "钢弹射击"
+        },
+        "status": false,
+        "steps": [{
+            "blockData": {
+                "action": 0.5,
+                "dash": 0,
+                "move": 0.5,
+                "reaim": 0.5
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "proxy": "magicMissibleIce4",
+            "type": "SHOOT_PROXY_PLAYER"
+        }, {
+            "anim": "specialLoop",
+            "followUp": "throwMirrEnd",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 80
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "stopBeforeEdge": false,
+            "time": 0.1,
+            "type": "MOVE_TO_DIR"
+        }, {
+            "anim": "postShoot",
+            "followUp": "idle",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 0.52,
+            "type": "WAIT"
+        }],
+        "stunType": ""
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "ATTACK_SPECIAL2",
+    "content": {
+        "description": {
+            "de_DE": "Stoße Gegner weg und erschaffe einige Eiskristalle vor dir, die Projektile blocken und Gegner bei Berührung verletzen. Verursacht \\c[3]Frostig\\c[0].",
+            "en_US": "Blast enemies away and spawn several icicles in front of you, blocking projectiles and damaging enemies on contact. Causes \\c[3]Chill\\c[0].",
+            "ja_JP": "近くにいる敵を吹き飛ばし、つららを前方に数個発生させる。つららは触れた敵にダメージを与え、飛び道具も防いでくれる。敵を\\c[3]凍結\\c[0]状態にする。",
+            "ko_KR": "적을 날려버리고 자신의 앞에 다수의 고드름을 생성해 발사체를 막고 이에 닿는 적에 대미지를 가합니다. \\c[3]동상\\c[0] 상태로 만듭니다.",
+            "langUid": 117,
+            "zh_CN": "在你的前方召唤出树根冰柱，阻挡敌人的射击。"
+        },
+        "name": {
+            "en_US": "Brisk Barrier",
+            "ja_JP": "ブリスクバリア",
+            "ko_KR": "얼음 장벽",
+            "langUid": 116,
+            "zh_CN": "冰墙"
+        },
+        "steps": [{
+            "blockData": {
+                "action": 0.5,
+                "dash": 0,
+                "move": 0.6,
+                "reaim": 0.6
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "anim": "specialPre",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 0.15,
+            "type": "WAIT"
+        }, {
+            "anim": "specialLoop",
+            "followUp": "specialLoop",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 1,
+                "element": "COLD",
+                "fly": "MASSIVE",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "spFactor": 0,
+                "status": 1,
+                "type": "MASSIVE"
+            },
+            "centralAngle": 1,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 48,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 4,
+            "rectangular": false,
+            "repeat": false,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 1,
+            "zHeight": 16
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "coldExplodeSmall",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "time": 0.05,
+            "type": "WAIT"
+        }, {
+            "group": "wall",
+            "sticking": false,
+            "type": "REMOVE_PROXIES"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 0.3,
+            "circularArea": true,
+            "clockwise": false,
+            "count": 3,
+            "delay": 0,
+            "duration": 0.2,
+            "flipLeftFace": 0,
+            "maxGroundDistance": 16,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "magicMissibleIce4",
+            "random": false,
+            "repeat": false,
+            "startDist": 32,
+            "startDistCollide": "CLOSER",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 0.4,
+            "circularArea": true,
+            "clockwise": false,
+            "count": 5,
+            "delay": 0,
+            "duration": 0.2,
+            "flipLeftFace": 0,
+            "maxGroundDistance": 16,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "icicleSmall",
+            "random": false,
+            "repeat": false,
+            "startDist": 48,
+            "startDistCollide": "CLOSER",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.7,
+            "type": "WAIT"
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "ATTACK_SPECIAL3",
+    "content": {
+        "description": {
+            "de_DE": "<<A<<[CHANGED 2017/12/14]",
+            "en_US": "Begin a dance of multiple huge ice whirl attacks and lock enemies in and end it all with a massive pirouette that blast enemies away.",
+            "ja_JP": "多段ヒットする巨大な氷の回転攻撃で、踊りながら敵を攻撃する。ダンスの最後につまさき立ちで回転し、敵を吹き飛ばす。<<A<<[CHANGED 2017/11/27]",
+            "ko_KR": "다수의 거대 얼음 소용돌이 공격으로 춤을 시작하고, 적을 그 안에 가둬 적을 날려버리는 거대한 피루엣으로 마무리합니다.<<A<<[CHANGED 2017/11/20]",
+            "langUid": 244,
+            "zh_CN": "开始进行超大范围的冰风攻击锁定敌人，最后再用回旋震开敌人。<<A<<[CHANGED 2017/12/12]"
+        },
+        "name": {
+            "de_DE": "<<A<<[CHANGED 2017/12/14]",
+            "en_US": "Polar Pirouette",
+            "ja_JP": "ポーラー・ピルエット<<A<<[CHANGED 2017/11/27]",
+            "ko_KR": "폴라 피루엣<<A<<[CHANGED 2017/11/20]",
+            "langUid": 243,
+            "zh_CN": "激寒之舞<<A<<[CHANGED 2017/12/12]"
+        },
+        "steps": [{
+            "blockData": {
+                "action": -1,
+                "charge": -1,
+                "dash": 0,
+                "move": -1,
+                "reaim": -1
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "anim": "Charge",
+            "followUp": "specialSidePrep",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "focusType": "SELF",
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "NORMAL",
+            "transition": "EASE_OUT",
+            "type": "FOCUS_CAMERA",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 3
+        }, {
+            "factor": 0.01,
+            "inversAccelerate": false,
+            "keepEntityStatic": true,
+            "time": 0,
+            "type": "ADD_SLOW_MOTION"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "sweepingAura",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": true,
+            "group": "aura",
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "actionDetached": false,
+            "align": "CENTER",
+            "duration": -1,
+            "effect": {
+                "name": "sweepingCharge",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": true,
+            "group": "charge",
+            "offset": {
+                "x": 14,
+                "y": -6,
+                "z": 0
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "type": "SET_HIT_STABLE",
+            "value": "MASSIVE"
+        }, {
+            "time": 0.6,
+            "type": "WAIT"
+        }, {
+            "group": "charge",
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "type": "SET_FRICTION",
+            "value": 0.3
+        }, {
+            "type": "SET_RELATIVE_SPEED",
+            "value": 0.5
+        }, {
+            "removeEntityStatic": false,
+            "time": 0,
+            "type": "CLEAR_SLOW_MOTION"
+        }, {
+            "duration": 0.2,
+            "fadeIn": 0.1,
+            "fadeOut": 0.2,
+            "type": "SET_ZOOM_BLUR",
+            "zoomType": "LIGHT"
+        }, {
+            "duration": 0.2,
+            "transition": "EASE_OUT",
+            "type": "SET_CAMERA_ZOOM",
+            "zoom": 1
+        }, {
+            "anim": "spinShort",
+            "followUp": "attackMirrEnd",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "hugeSweep1",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": true,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": false,
+            "attack": {
+                "damageFactor": 1.5,
+                "element": "COLD",
+                "fly": "MEDIUM",
+                "guardable": "",
+                "limiter": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "stunSteps": [{
+                    "type": "Z_VEL",
+                    "value": 0
+                }, {
+                    "type": "START_LOCK"
+                }, {
+                    "distance": 32,
+                    "maxTime": 0.1,
+                    "speed": 200,
+                    "type": "PULL"
+                }],
+                "type": "MASSIVE",
+                "visualType": "MEDIUM"
+            },
+            "centralAngle": 1.5,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.3,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 8,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 128,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "startAngle": -0.25,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "allowStop": true,
+            "rotateSpeed": 1,
+            "stopBeforeEdge": false,
+            "time": 0.6,
+            "type": "PLAYER_MOVE_TO_DIR"
+        }, {
+            "duration": 0.2,
+            "transition": "EASE_OUT",
+            "type": "SET_CAMERA_ZOOM",
+            "zoom": 1.1
+        }, {
+            "anim": "spinShortRev",
+            "followUp": "attackMirrEndRev",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "hugeSweep2",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": true,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": false,
+            "attack": {
+                "damageFactor": 1.5,
+                "element": "COLD",
+                "fly": "MEDIUM",
+                "guardable": "",
+                "limiter": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "stunSteps": [{
+                    "type": "Z_VEL",
+                    "value": 0
+                }, {
+                    "type": "START_LOCK"
+                }, {
+                    "distance": 32,
+                    "maxTime": 0.1,
+                    "speed": 200,
+                    "type": "PULL"
+                }],
+                "type": "MASSIVE",
+                "visualType": "MEDIUM"
+            },
+            "centralAngle": 1.5,
+            "checkCollision": true,
+            "clockwise": true,
+            "duration": 0.3,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 8,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 112,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "startAngle": -0.25,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "allowStop": true,
+            "rotateSpeed": 0.3,
+            "stopBeforeEdge": false,
+            "time": 0.5,
+            "type": "PLAYER_MOVE_TO_DIR"
+        }, {
+            "duration": 0.2,
+            "transition": "EASE_OUT",
+            "type": "SET_CAMERA_ZOOM",
+            "zoom": 1.2
+        }, {
+            "anim": "spinShort",
+            "followUp": "attackMirrEnd",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "hugeSweep3",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": true,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": false,
+            "attack": {
+                "damageFactor": 1.5,
+                "element": "COLD",
+                "fly": "MEDIUM",
+                "guardable": "",
+                "limiter": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "stunSteps": [{
+                    "type": "Z_VEL",
+                    "value": 0
+                }, {
+                    "type": "START_LOCK"
+                }, {
+                    "distance": 32,
+                    "maxTime": 0.1,
+                    "speed": 200,
+                    "type": "PULL"
+                }],
+                "type": "MASSIVE",
+                "visualType": "MEDIUM"
+            },
+            "centralAngle": 1.5,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.3,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 8,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 96,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "startAngle": -0.25,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "allowStop": true,
+            "rotateSpeed": 1,
+            "stopBeforeEdge": false,
+            "time": 0.4,
+            "type": "PLAYER_MOVE_TO_DIR"
+        }, {
+            "duration": 0.2,
+            "transition": "EASE_OUT",
+            "type": "SET_CAMERA_ZOOM",
+            "zoom": 1.3
+        }, {
+            "anim": "spinShortRev",
+            "followUp": "attackMirrEnd",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "hugeSweep4",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": true,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": false,
+            "attack": {
+                "damageFactor": 2,
+                "element": "COLD",
+                "fly": "MEDIUM",
+                "guardable": "",
+                "limiter": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "stunSteps": [{
+                    "type": "Z_VEL",
+                    "value": 0
+                }, {
+                    "type": "START_LOCK"
+                }, {
+                    "distance": 32,
+                    "maxTime": 0.1,
+                    "speed": 200,
+                    "type": "PULL"
+                }],
+                "type": "MASSIVE",
+                "visualType": "MEDIUM"
+            },
+            "centralAngle": 1.5,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.3,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 8,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 80,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "startAngle": -0.25,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "allowStop": true,
+            "rotateSpeed": 1,
+            "stopBeforeEdge": false,
+            "time": 0.3,
+            "type": "PLAYER_MOVE_TO_DIR"
+        }, {
+            "duration": 0.8,
+            "transition": "LINEAR",
+            "type": "SET_CAMERA_ZOOM",
+            "zoom": 2
+        }, {
+            "anim": "spinFull",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_HIT_STABLE",
+            "value": "HEAVY"
+        }, {
+            "align": "BOTTOM",
+            "duration": 1,
+            "fadeRadius": 0,
+            "minRadius": 32,
+            "pull": true,
+            "radius": 120,
+            "strength": "WALK_ESCAPE",
+            "type": "PUSH_PULL_FORCE",
+            "zHeight": 32
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "hugeSweep5",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": true,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": false,
+            "attack": {
+                "damageFactor": 2,
+                "element": "COLD",
+                "fly": "MEDIUM",
+                "guardable": "",
+                "limiter": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "spFactor": 0,
+                "stunSteps": [{
+                    "type": "Z_VEL",
+                    "value": 0
+                }, {
+                    "type": "START_LOCK"
+                }, {
+                    "type": "BLOCK_XY"
+                }],
+                "type": "HEAVY",
+                "visualType": "MEDIUM"
+            },
+            "centralAngle": 3.5,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.7,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 8,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 72,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "startAngle": -0.25,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "allowStop": true,
+            "rotateSpeed": 0.5,
+            "stopBeforeEdge": false,
+            "time": 0.65,
+            "type": "PLAYER_MOVE_TO_DIR"
+        }, {
+            "anim": "spinShort",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 0.05,
+            "type": "WAIT"
+        }, {
+            "focusType": "SELF",
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "FASTEST",
+            "transition": "LINEAR",
+            "type": "FOCUS_CAMERA",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 3
+        }, {
+            "factor": 0.01,
+            "inversAccelerate": false,
+            "keepEntityStatic": true,
+            "time": 0,
+            "type": "ADD_SLOW_MOTION"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "coldSubChargeMega",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": true,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "time": 0.5,
+            "type": "WAIT"
+        }, {
+            "removeEntityStatic": false,
+            "time": 0,
+            "type": "CLEAR_SLOW_MOTION"
+        }, {
+            "duration": 0.2,
+            "transition": "LINEAR",
+            "type": "SET_CAMERA_ZOOM",
+            "zoom": 1
+        }, {
+            "duration": 0.2,
+            "fadeIn": 0,
+            "fadeOut": 0.2,
+            "type": "SET_ZOOM_BLUR",
+            "zoomType": "LIGHT"
+        }, {
+            "anim": "spinShortRev",
+            "followUp": "attackMirrEndRev",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "hugeSweepFinal",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": true,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 8,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": false,
+            "attack": {
+                "damageFactor": 3,
+                "element": "COLD",
+                "fly": "MASSIVE+",
+                "guardable": "",
+                "limiter": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "spFactor": 0,
+                "stunSteps": [{
+                    "type": "END_LOCK"
+                }],
+                "type": "MEDIUM"
+            },
+            "centralAngle": 1,
+            "checkCollision": true,
+            "clockwise": true,
+            "duration": 0.2,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 8,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 128,
+            "rectangular": false,
+            "repeat": false,
+            "skillBonus": "MELEE_DMG",
+            "startAngle": -0.25,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "time": 0.35,
+            "type": "WAIT"
+        }, {
+            "time": 0.6,
+            "type": "WAIT"
+        }, {
+            "blockData": {
+                "action": 0,
+                "charge": 0,
+                "dash": 0,
+                "move": 0,
+                "reaim": 0
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "anim": "preIdle",
+            "followUp": "idle",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 0.05,
+            "type": "WAIT"
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "ATTACK_FINISHER"
+}, {
+    "type": "SET_KEY",
+    "index": "DASH_SPECIAL1",
+    "content": {
+        "description": {
+            "de_DE": "Sprinte und hinterlasse einen Pfad voller Eiskristallen, welche Gegner bei Berührung verletzen.<<A<<[CHANGED 2017/07/04]",
+            "en_US": "Dash with high speed, leaving a trail of icicles behind you, damaging enemies on contact. Causes \\c[3]Chill\\c[0].",
+            "ja_JP": "高速でダッシュし、通った後につららを残す。つららに触れた敵はダメージを受ける。敵を\\c[3]凍結\\c[0]状態にする。<<A<<[CHANGED 2017/08/03]",
+            "ko_KR": "고속으로 대시하고 뒤에 고드름 길을 남겨 이에 닿는 적에게 대미지를 가합니다. \\c[3]동상\\c[0] 상태로 만듭니다.",
+            "langUid": 119,
+            "zh_CN": "高速冲刺，在冲刺路线上留下一道冰柱，并对接触的敌人造成伤害。造成\\c[3]寒冷\\c[0]效果。"
+        },
+        "name": {
+            "en_US": "Indigo Strike",
+            "ja_JP": "インディゴストライク",
+            "ko_KR": "남색 타격",
+            "langUid": 118,
+            "zh_CN": "靛色突袭"
+        },
+        "steps": [{
+            "blockData": {
+                "action": 0.5,
+                "dash": 0.6,
+                "move": 0.6,
+                "reaim": 0.6
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "global": false,
+            "loop": false,
+            "sound": "media/sound/battle/dash-3.ogg",
+            "type": "PLAY_SOUND",
+            "volume": 0.9
+        }, {
+            "anim": "spinFull",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_JUMPING",
+            "value": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 450
+        }, {
+            "type": "SET_ACCEL_SPEED",
+            "value": 2
+        }, {
+            "type": "SET_COLL_TYPE",
+            "value": "IGNORE"
+        }, {
+            "actionDetached": false,
+            "align": "CENTER",
+            "duration": 0.5,
+            "effect": {
+                "name": "dashTrail",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "type": "SET_FACE_TO_DIR"
+        }, {
+            "type": "SET_INVINCIBLE",
+            "value": 0.4
+        }, {
+            "group": "wall",
+            "sticking": false,
+            "type": "REMOVE_PROXIES"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 0,
+            "circularArea": false,
+            "clockwise": false,
+            "count": 3,
+            "delay": 0,
+            "duration": 0.1,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "icicleSmall",
+            "random": false,
+            "repeat": true,
+            "startDistCollide": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 1.25,
+                "element": "COLD",
+                "fly": "MEDIUM",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "spFactor": 0,
+                "status": 1,
+                "type": "HEAVY"
+            },
+            "centralAngle": 0,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.5,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 24,
+            "rectangular": false,
+            "repeat": true,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "collideCancel": 0.125,
+            "stopBeforeEdge": false,
+            "time": 0.4,
+            "type": "MOVE_FORWARD"
+        }, {
+            "type": "SET_COLL_TYPE",
+            "value": "VIRTUAL"
+        }, {
+            "collideCancel": 0.125,
+            "stopBeforeEdge": false,
+            "time": 0.1,
+            "type": "MOVE_FORWARD"
+        }, {
+            "type": "STOP_REPEATING_FORCE"
+        }, {
+            "time": 0.2,
+            "type": "WAIT"
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "DASH_SPECIAL2",
+    "content": {
+        "description": {
+            "de_DE": "Sprinte und hinterlasse einen Pfad voller Eiskristallen, welche Gegner bei Berührung verletzen.<<A<<[CHANGED 2017/07/04]",
+            "en_US": "Dash with high speed, leaving a trail of icicles behind you, damaging enemies on contact. Causes \\c[3]Chill\\c[0].",
+            "ja_JP": "高速でダッシュし、通った後につららを残す。つららに触れた敵はダメージを受ける。敵を\\c[3]凍結\\c[0]状態にする。<<A<<[CHANGED 2017/08/03]",
+            "ko_KR": "고속으로 대시하고 뒤에 고드름 길을 남겨 이에 닿는 적에게 대미지를 가합니다. \\c[3]동상\\c[0] 상태로 만듭니다.",
+            "langUid": 119,
+            "zh_CN": "高速冲刺，在冲刺路线上留下一道冰柱，并对接触的敌人造成伤害。造成\\c[3]寒冷\\c[0]效果。"
+        },
+        "name": {
+            "en_US": "Indigo Strike",
+            "ja_JP": "インディゴストライク",
+            "ko_KR": "남색 타격",
+            "langUid": 118,
+            "zh_CN": "靛色突袭"
+        },
+        "steps": [{
+            "blockData": {
+                "action": 0.5,
+                "dash": 0.6,
+                "move": 0.6,
+                "reaim": 0.6
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "global": false,
+            "loop": false,
+            "sound": "media/sound/battle/dash-3.ogg",
+            "type": "PLAY_SOUND",
+            "volume": 0.9
+        }, {
+            "anim": "spinFull",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_JUMPING",
+            "value": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 450
+        }, {
+            "type": "SET_ACCEL_SPEED",
+            "value": 2
+        }, {
+            "type": "SET_COLL_TYPE",
+            "value": "IGNORE"
+        }, {
+            "actionDetached": false,
+            "align": "CENTER",
+            "duration": 0.5,
+            "effect": {
+                "name": "dashTrail",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "type": "SET_FACE_TO_DIR"
+        }, {
+            "type": "SET_INVINCIBLE",
+            "value": 0.4
+        }, {
+            "group": "wall",
+            "sticking": false,
+            "type": "REMOVE_PROXIES"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 0,
+            "circularArea": false,
+            "clockwise": false,
+            "count": 1,
+            "delay": 0,
+            "duration": 0.1,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "magicMissibleIce4",
+            "random": false,
+            "repeat": true,
+            "startDistCollide": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 1.25,
+                "element": "COLD",
+                "fly": "MEDIUM",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "MELEE_DMG",
+                "spFactor": 0,
+                "status": 1,
+                "type": "HEAVY"
+            },
+            "centralAngle": 0,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.5,
+            "expandRadius": 0,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 24,
+            "rectangular": false,
+            "repeat": true,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 0,
+            "zHeight": 0
+        }, {
+            "collideCancel": 0.125,
+            "stopBeforeEdge": false,
+            "time": 0.4,
+            "type": "MOVE_FORWARD"
+        }, {
+            "type": "SET_COLL_TYPE",
+            "value": "VIRTUAL"
+        }, {
+            "collideCancel": 0.125,
+            "stopBeforeEdge": false,
+            "time": 0.1,
+            "type": "MOVE_FORWARD"
+        }, {
+            "type": "STOP_REPEATING_FORCE"
+        }, {
+            "time": 0.2,
+            "type": "WAIT"
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "GUARD_SPECIAL1",
+    "content": {
+        "description": {
+            "de_DE": "Stoße Gegner weg und erschaffe einige Eiskristalle vor dir, die Projektile blocken und Gegner bei Berührung verletzen. Verursacht \\c[3]Frostig\\c[0].",
+            "en_US": "Blast enemies away and spawn several icicles in front of you, blocking projectiles and damaging enemies on contact. Causes \\c[3]Chill\\c[0].",
+            "ja_JP": "近くにいる敵を吹き飛ばし、つららを前方に数個発生させる。つららは触れた敵にダメージを与え、飛び道具も防いでくれる。敵を\\c[3]凍結\\c[0]状態にする。",
+            "ko_KR": "적을 날려버리고 자신의 앞에 다수의 고드름을 생성해 발사체를 막고 이에 닿는 적에 대미지를 가합니다. \\c[3]동상\\c[0] 상태로 만듭니다.",
+            "langUid": 117,
+            "zh_CN": "在你的前方召唤出树根冰柱，阻挡敌人的射击。"
+        },
+        "name": {
+            "en_US": "Brisk Barrier",
+            "ja_JP": "ブリスクバリア",
+            "ko_KR": "얼음 장벽",
+            "langUid": 116,
+            "zh_CN": "冰墙"
+        },
+        "steps": [{
+            "blockData": {
+                "action": 0.5,
+                "dash": 0,
+                "move": 0.6,
+                "reaim": 0.6
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "anim": "specialPre",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 0.15,
+            "type": "WAIT"
+        }, {
+            "anim": "special",
+            "followUp": "specialLoop",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "align": "BOTTOM",
+            "alwaysFull": true,
+            "attack": {
+                "damageFactor": 1,
+                "element": "COLD",
+                "fly": "MASSIVE",
+                "guardable": "",
+                "reverse": false,
+                "skillBonus": "RANGED_DMG",
+                "spFactor": 0,
+                "status": 1,
+                "type": "MASSIVE"
+            },
+            "centralAngle": 1,
+            "checkCollision": true,
+            "clockwise": false,
+            "duration": 0.1,
+            "expandRadius": 48,
+            "fixPos": false,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "radius": 4,
+            "rectangular": false,
+            "repeat": false,
+            "type": "CIRCLE_ATTACK",
+            "uniformHitDir": false,
+            "yScale": 1,
+            "zHeight": 16
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "coldExplodeSmall",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "time": 0.05,
+            "type": "WAIT"
+        }, {
+            "group": "wall",
+            "sticking": false,
+            "type": "REMOVE_PROXIES"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 0.3,
+            "circularArea": true,
+            "clockwise": false,
+            "count": 3,
+            "delay": 0,
+            "duration": 0.2,
+            "flipLeftFace": 0,
+            "maxGroundDistance": 16,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "icicleSmall",
+            "random": false,
+            "repeat": false,
+            "startDist": 32,
+            "startDistCollide": "CLOSER",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 0.4,
+            "circularArea": true,
+            "clockwise": false,
+            "count": 5,
+            "delay": 0,
+            "duration": 0.2,
+            "flipLeftFace": 0,
+            "maxGroundDistance": 16,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "icicleSmall",
+            "random": false,
+            "repeat": false,
+            "startDist": 48,
+            "startDistCollide": "CLOSER",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.7,
+            "type": "WAIT"
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "GUARD_SPECIAL2",
+    "content": {
+        "description": {
+            "en_US": "Spawn multiple icicles around you an create a protective but slowing shield that hurt enemies on contact.",
+            "ja_JP": "周りにつららを発生させる。触れた敵にダメージを与えるシールドも発生させるが、動きは遅くなる。",
+            "ko_KR": "자신 주변에 다수의 고드름을 생성해 이에 닿으면 적을 느리게 하는 방어막을 만듭니다.<<C<<\"an create a protective\" should be \"and create a protective\"?",
+            "langUid": 181,
+            "zh_CN": "在身周衍生多枚冰锥，并创造一道具有防护性，但会减慢速度的护盾。对触碰的敌人造成伤害。"
+        },
+        "name": {
+            "en_US": "Icy Bastion",
+            "ja_JP": "アイス・フォートレス",
+            "ko_KR": "얼음 요새",
+            "langUid": 180,
+            "zh_CN": "寒冰堡垒"
+        },
+        "steps": [{
+            "blockData": {
+                "action": -1,
+                "dash": 0,
+                "move": -1,
+                "reaim": -1
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "group": "wall",
+            "sticking": false,
+            "type": "REMOVE_PROXIES"
+        }, {
+            "group": "shield",
+            "sticking": false,
+            "type": "REMOVE_PROXIES"
+        }, {
+            "name": "techShield",
+            "type": "REMOVE_SHIELD"
+        }, {
+            "focusType": "SELF",
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "FASTEST",
+            "transition": "EASE_IN_OUT",
+            "type": "FOCUS_CAMERA",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 1.5
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "coldSubCharge",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "anim": "Charge",
+            "followUp": "charge",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 0.25,
+            "type": "WAIT"
+        }, {
+            "anim": "attackMirr",
+            "followUp": "attackMirrEnd",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "duration": 0.1,
+            "transition": "EASE_IN_OUT",
+            "type": "SET_CAMERA_ZOOM",
+            "zoom": 1
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "coldGuard2Activate",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "duration": 0.2,
+            "fadeIn": 0,
+            "fadeOut": 0.2,
+            "type": "SET_ZOOM_BLUR",
+            "zoomType": "LIGHT"
+        }, {
+            "align": "BOTTOM",
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "iceSlowShield",
+            "type": "SHOOT_PROXY"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 1,
+            "circularArea": true,
+            "clockwise": false,
+            "count": 8,
+            "delay": 0,
+            "duration": 0.2,
+            "flipLeftFace": 0,
+            "maxGroundDistance": 16,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "icicleSmall",
+            "random": false,
+            "repeat": false,
+            "startDist": 32,
+            "startDistCollide": "CLOSER",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 1,
+            "circularArea": true,
+            "clockwise": true,
+            "count": 12,
+            "delay": 0,
+            "duration": 0.2,
+            "flipLeftFace": 0,
+            "maxGroundDistance": 16,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "icicleSmall",
+            "random": false,
+            "repeat": false,
+            "startDist": 64,
+            "startDistCollide": "DROP",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.1,
+            "type": "WAIT"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 1,
+            "circularArea": true,
+            "clockwise": true,
+            "count": 8,
+            "delay": 0,
+            "duration": 0.2,
+            "flipLeftFace": 0,
+            "maxGroundDistance": 16,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "icicleSmall",
+            "random": false,
+            "repeat": false,
+            "startDist": 96,
+            "startDistCollide": "DROP",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.4,
+            "type": "WAIT"
+        }, {
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "type": "RESET_CAMERA",
+            "wait": false,
+            "waitSkip": 0
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "GUARD_SPECIAL3",
+    "content": {
+        "description": {
+            "de_DE": "<<A<<[CHANGED 2017/12/14]",
+            "en_US": "Winter is here. Summon multiple huge icicles around you and create a protective but slow barrier that hurts enemies. Causes \\c[3]Chill\\c[0].",
+            "ja_JP": "無慈悲なる冬の到来。自身の周りに巨大なつららを複数召喚するとともに、バリアを発生させる。バリアは移動力と引き換えに防御力を高め、触れた敵にダメージを与える。敵を\\c[3]凍結\\c[0]状態にする。<<A<<[CHANGED 2017/11/27]",
+            "ko_KR": "겨울이 다가왔습니다. 주변에 다수의 거대 고드름을 소환하며, 적에게 피해를 주고 방어력을 갖췄지만 느린 방벽을 생성합니다. \\c[3]동상\\c[0] 상태로 만듭니다.<<A<<[CHANGED 2017/11/20]",
+            "langUid": 242,
+            "zh_CN": "寒冬已至。在你的身边召唤数枚巨型冰枪，然后创造一个可以伤害敌人的保护性屏障。造成\\c[3]寒冷\\c[0]效果。<<A<<[CHANGED 2017/12/12]"
+        },
+        "name": {
+            "de_DE": "<<A<<[CHANGED 2017/12/14]",
+            "en_US": "Fimbulvetr",
+            "ja_JP": "フィンブルヴェトル<<A<<[CHANGED 2017/11/27]",
+            "ko_KR": "겨울 속 겨울<<A<<[CHANGED 2017/11/20]",
+            "langUid": 241,
+            "zh_CN": "芬布尔之冬<<A<<[CHANGED 2017/12/12]"
+        },
+        "steps": [{
+            "blockData": {
+                "action": -1,
+                "dash": 0,
+                "move": -1,
+                "reaim": -1
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "group": "wall",
+            "sticking": false,
+            "type": "REMOVE_PROXIES"
+        }, {
+            "group": "shield",
+            "sticking": false,
+            "type": "REMOVE_PROXIES"
+        }, {
+            "name": "techShield",
+            "type": "REMOVE_SHIELD"
+        }, {
+            "type": "SET_HIT_STABLE",
+            "value": "MASSIVE"
+        }, {
+            "factor": 0.4,
+            "inversAccelerate": true,
+            "keepEntityStatic": false,
+            "time": 0.1,
+            "type": "ADD_SLOW_MOTION"
+        }, {
+            "align": "BOTTOM",
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "iceSlowShield2",
+            "type": "SHOOT_PROXY"
+        }, {
+            "focusType": "SELF",
+            "offsetX": 0,
+            "offsetY": 0,
+            "speed": "FASTEST",
+            "transition": "EASE_IN_OUT",
+            "type": "FOCUS_CAMERA",
+            "wait": false,
+            "waitSkip": 0,
+            "zoom": 1.5
+        }, {
+            "duration": 1.3,
+            "transition": "EASE_IN",
+            "type": "SET_CAMERA_ZOOM",
+            "zoom": 3
+        }, {
+            "align": "BOTTOM",
+            "duration": -1,
+            "fadeRadius": 0,
+            "minRadius": 0,
+            "pull": false,
+            "radius": 128,
+            "strength": "NO_ESCAPE",
+            "type": "PUSH_PULL_FORCE",
+            "zHeight": 32
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": -1,
+            "effect": {
+                "name": "preBastionCharge",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "anim": "Charge",
+            "followUp": "charge",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 1.3,
+            "type": "WAIT"
+        }, {
+            "type": "STOP_REPEATING_FORCE"
+        }, {
+            "anim": "attackEndLoop",
+            "followUp": "attackMirrEnd",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "CLEAR_EFFECTS"
+        }, {
+            "removeEntityStatic": false,
+            "time": 0.2,
+            "type": "CLEAR_SLOW_MOTION"
+        }, {
+            "duration": 0.3,
+            "transition": "JUMPY",
+            "type": "SET_CAMERA_ZOOM",
+            "zoom": 2
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "coldGuard3Activate",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "duration": 0.2,
+            "fadeIn": 0,
+            "fadeOut": 0.2,
+            "type": "SET_ZOOM_BLUR",
+            "zoomType": "LIGHT"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0.05,
+            "centralAngle": 1,
+            "circularArea": true,
+            "clockwise": true,
+            "count": 6,
+            "delay": 0,
+            "duration": 0.2,
+            "flipLeftFace": 0,
+            "maxGroundDistance": 16,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "icicleSmall",
+            "random": false,
+            "repeat": false,
+            "startDist": 48,
+            "startDistCollide": "DROP",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.4,
+            "type": "WAIT"
+        }, {
+            "duration": 0.3,
+            "transition": "JUMPY",
+            "type": "SET_CAMERA_ZOOM",
+            "zoom": 1.5
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "coldGuard3Sub",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "duration": 0.2,
+            "fadeIn": 0,
+            "fadeOut": 0.2,
+            "type": "SET_ZOOM_BLUR",
+            "zoomType": "LIGHT"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0.05,
+            "centralAngle": 1,
+            "circularArea": true,
+            "clockwise": true,
+            "count": 8,
+            "delay": 0,
+            "duration": 0.2,
+            "flipLeftFace": 0,
+            "maxGroundDistance": 16,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "icicleSmall",
+            "random": false,
+            "repeat": false,
+            "startDist": 80,
+            "startDistCollide": "DROP",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.4,
+            "type": "WAIT"
+        }, {
+            "duration": 0.3,
+            "transition": "JUMPY",
+            "type": "SET_CAMERA_ZOOM",
+            "zoom": 1
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "coldGuard3Sub",
+                "sheet": "specials.cold"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotateFace": 0,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "duration": 0.2,
+            "fadeIn": 0,
+            "fadeOut": 0.2,
+            "type": "SET_ZOOM_BLUR",
+            "zoomType": "LIGHT"
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0.05,
+            "centralAngle": 1,
+            "circularArea": true,
+            "clockwise": true,
+            "count": 12,
+            "delay": 0,
+            "duration": 0.2,
+            "flipLeftFace": 0,
+            "maxGroundDistance": 16,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "proxy": "magicMissibleBoom",
+            "random": false,
+            "repeat": false,
+            "startDist": 128,
+            "startDistCollide": "DROP",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.4,
+            "type": "WAIT"
+        }, {
+            "speed": "NORMAL",
+            "transition": "EASE_IN_OUT",
+            "type": "RESET_CAMERA",
+            "wait": false,
+            "waitSkip": 0
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "THROW_NORMAL_REV",
+    "content": {
+        "steps": [{
+            "blockData": {
+                "action": -1,
+                "dash": 0,
+                "move": 0.3,
+                "reaim": 0.4
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "ignoreCurrentTarget": false,
+            "prevHitBehavior": "NONE",
+            "searchType": "IN_VIEW",
+            "type": "SET_CLOSE_TEMP_TARGET"
+        }, {
+            "actionDetached": false,
+            "align": "BOTTOM",
+            "duration": 0,
+            "effect": {
+                "name": "shootCold",
+                "sheet": "combat.hexacast"
+            },
+            "fixPos": false,
+            "flipLeftFace": false,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 12
+            },
+            "rotateFace": 6,
+            "type": "SHOW_EFFECT",
+            "wait": false,
+            "waitSkip": 0
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0.01,
+            "centralAngle": 0.2,
+            "circularArea": false,
+            "clockwise": false,
+            "count": 3,
+            "delay": 0,
+            "duration": 0.4,
+            "flipLeftFace": 0,
+            "offset": {
+                "x": 0,
+                "y": 0,
+                "z": 12
+            },
+            "proxy": "defaultCold",
+            "random": false,
+            "repeat": false,
+            "startDist": 8,
+            "startDistCollide": "CLOSER",
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "anim": "attackEndLoop",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 80
+        }, {
+            "time": 0.5,
+            "type": "WAIT"
+        }]
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "THROW_SPECIAL2",
+    "content": {
+        "description": {
+            "de_DE": "Schleudere ein mächtiges Geschoss, welches Gegner durchdringt.",
+            "en_US": "Fire a powerful projectile that will fly through enemies.",
+            "ja_JP": "敵を貫通する強力な砲弾を発射する攻撃。",
+            "ko_KR": "적을 통과하는 강력한 발사체를 발사합니다.",
+            "langUid": 72,
+            "zh_CN": "射出一个可穿透敌人的强力钢弹。"
+        },
+        "dmgType": "RANGED",
+        "name": {
+            "en_US": "Ball of Steel",
+            "ja_JP": "スティールボール",
+            "ko_KR": "강철의 공",
+            "langUid": 71,
+            "zh_CN": "钢弹射击"
+        },
+        "status": false,
+        "steps": [{
+            "blockData": {
+                "action": 0.5,
+                "dash": 0,
+                "move": 0.5,
+                "reaim": 0.5
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "proxy": "magicCold",
+            "type": "SHOOT_PROXY_PLAYER"
+        }, {
+            "anim": "specialLoop",
+            "followUp": "throwMirrEnd",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "type": "SET_SPEED",
+            "value": 80
+        }, {
+            "dir": {
+                "actorAttrib": "dashDir"
+            },
+            "stopBeforeEdge": false,
+            "time": 0.1,
+            "type": "MOVE_TO_DIR"
+        }, {
+            "anim": "postShoot",
+            "followUp": "idle",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "time": 0.52,
+            "type": "WAIT"
+        }],
+        "stunType": ""
+    }
+}, {
+    "type": "SET_KEY",
+    "index": "THROW_SPECIAL3",
+    "content": {
+        "description": {
+            "de_DE": "Schleudere einen Hagel kleiner Geschosse in einem engen Radius.",
+            "en_US": "Fire a mass of small shots in a narrow angle.",
+            "ja_JP": "狭い射角内に小さな弾丸を大量に発射する攻撃。",
+            "ko_KR": "좁은 각도로 대량의 작은 총알을 발사합니다.",
+            "langUid": 74,
+            "zh_CN": "在很窄的范围内发射出大量小型飞弹。"
+        },
+        "dmgType": "RANGED",
+        "name": {
+            "en_US": "Bullet Rain",
+            "ja_JP": "バレット・レイン",
+            "ko_KR": "빗발치는 총알",
+            "langUid": 73,
+            "zh_CN": "飞弹之雨"
+        },
+        "status": false,
+        "steps": [{
+            "blockData": {
+                "action": 0.8,
+                "dash": 0.5,
+                "move": 0.92,
+                "reaim": 1.02
+            },
+            "type": "SET_PLAYER_ACTION_BLOCK"
+        }, {
+            "time": 0,
+            "type": "PLAYER_ADJUST_FACE"
+        }, {
+            "anim": "attackEndLoop",
+            "followUp": "attackMirrEnd",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 0.02,
+            "circularArea": false,
+            "clockwise": true,
+            "count": 1,
+            "delay": 0,
+            "duration": 0.1,
+            "flipLeftFace": 8,
+            "offset": {
+                "z": 12
+            },
+            "proxy": "magic",
+            "random": false,
+            "repeat": false,
+            "startDistCollide": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.2,
+            "type": "WAIT"
+        }, {
+            "time": 0,
+            "type": "PLAYER_ADJUST_FACE"
+        }, {
+            "anim": "attackEndLoop",
+            "followUp": "attackMirrEndRev",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 0.03,
+            "circularArea": false,
+            "clockwise": false,
+            "count": 1,
+            "delay": 0,
+            "duration": 0.1,
+            "flipLeftFace": 8,
+            "offset": {
+                "z": 12
+            },
+            "proxy": "magic",
+            "random": false,
+            "repeat": false,
+            "startDistCollide": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.2,
+            "type": "WAIT"
+        }, {
+            "time": 0,
+            "type": "PLAYER_ADJUST_FACE"
+        }, {
+            "anim": "attackEndLoop",
+            "followUp": "attackMirrEnd",
+            "type": "SHOW_ANIMATION",
+            "viaWalkConfig": false,
+            "wait": false
+        }, {
+            "align": "BOTTOM",
+            "angleVary": 0,
+            "centralAngle": 0.02,
+            "circularArea": false,
+            "clockwise": true,
+            "count": 1,
+            "delay": 0,
+            "duration": 0.1,
+            "flipLeftFace": 8,
+            "offset": {
+                "z": 12
+            },
+            "proxy": "magicCold",
+            "random": false,
+            "repeat": false,
+            "startDistCollide": false,
+            "type": "SHOOT_PROXY_RANGE",
+            "uniformDir": 0
+        }, {
+            "time": 0.72,
+            "type": "WAIT"
+        }],
+        "stunType": ""
+    }
+}, {
+    "type": "ENTER",
+    "index": ["THROW_NORMAL", "steps"]
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 9
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 8
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 7
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 6
+}, {
+    "type": "ADD_ARRAY_ELEMENT",
+    "index": 1,
+    "content": {
+        "ignoreCurrentTarget": false,
+        "prevHitBehavior": "NONE",
+        "searchType": "IN_VIEW",
+        "type": "SET_CLOSE_TEMP_TARGET"
+    }
+}, {
+    "type": "REMOVE_ARRAY_ELEMENT",
+    "index": 7
+}]
